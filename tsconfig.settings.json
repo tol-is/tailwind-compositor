@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": false,
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"outDir": "./dist",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": false,
+		"target": "es5",
+		"baseUrl": "./",
+		"noErrorTruncation": true,
+		"lib": ["es6", "dom"]
+	},
+	"module": "commonjs",
+	"exclude": ["node_modules"]
+}

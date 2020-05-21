@@ -1,0 +1,39 @@
+{
+	"name": "tailwind-plugin",
+	"private": true,
+	"version": "0.0.1",
+	"description": "",
+	"keywords": [
+		"tailwindcss",
+		"typography",
+		"baseline"
+	],
+	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"postinstall": "lerna bootstrap",
+		"start": "npm-run-all --parallel example plugin",
+		"test": "jest --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
+		"example": "lerna exec --scope demo-static -- yarn develop",
+		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
+		"example:old": "yarn workspace demo-static develop",
+		"plugin:old": "yarn workspace tailwind-compositor develop",
+		"release": "lerna publish"
+	},
+	"devDependencies": {
+		"@types/jest": "^25.2.3",
+		"@types/node": "^12.7.5",
+		"benchmark": "^2.1.4",
+		"jest": "^26.0.1",
+		"jest-matcher-css": "^1.1.0",
+		"jshint": "^2.10.2",
+		"lerna": "^3.20.2",
+		"npm-run-all": "^4.1.5",
+		"prun": "^1.0.1",
+		"ts-jest": "^26.0.0"
+	},
+	"dependencies": {
+		"typescript": "^3.9.3"
+	}
+}
