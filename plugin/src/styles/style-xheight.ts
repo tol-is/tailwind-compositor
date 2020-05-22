@@ -1,4 +1,4 @@
-import { StyleTypography, TypographyStyleParams } from '../types';
+import { StyleTypography, TypeStyleParams } from '../types';
 
 /**
  *
@@ -9,7 +9,7 @@ export const styleXHeight = ({
 	baseline,
 	size,
 	leading = 0,
-}: TypographyStyleParams): StyleTypography => {
+}: TypeStyleParams): StyleTypography => {
 	//
 	const preventCollapse = 1;
 

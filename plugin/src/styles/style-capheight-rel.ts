@@ -1,4 +1,4 @@
-import { StyleTypography, TypographyStyleRelParams } from '../types';
+import { StyleTypography, TypeStyleRelParams } from '../types';
 
 /**
  *
@@ -10,7 +10,7 @@ export const styleCapHeightRel = ({
 	root,
 	size,
 	leading = 0,
-}: TypographyStyleRelParams): StyleTypography => {
+}: TypeStyleRelParams): StyleTypography => {
 	//
 	const preventCollapse = 1;
 

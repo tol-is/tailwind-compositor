@@ -1,4 +1,4 @@
-import { StyleTypography, TypographyStyleParams } from '../types';
+import { StyleTypography, TypeStyleParams } from '../types';
 
 /**
  *
@@ -9,7 +9,7 @@ export const styleBaseline = ({
 	baseline,
 	size,
 	leading = 0,
-}: TypographyStyleParams): StyleTypography => {
+}: TypeStyleParams): StyleTypography => {
 	//
 	const preventCollapse = 1;
 
@@ -43,10 +43,8 @@ export const styleBaseline = ({
 	const boundingBoxHeight =
 		((font.ascent + Math.abs(font.descent)) / font.upm) * size;
 	const descendHeight = Math.abs(font.descent / font.upm) * size;
-	const whiteSpaceHalf = ;
-	
-	
-	const baselineOffset = -1 * (((boundingBoxHeight - lineHeight) / 2) - descendHeight);
+	const whiteSpaceHalf = (boundingBoxHeight - lineHeight) / 2;
+	const baselineOffset = -1 * (whiteSpaceHalf - descendHeight);
 
 	return {
 		fontFamily: `"${font.familyName}", ${font.fallback}`,

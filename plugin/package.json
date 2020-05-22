@@ -22,5 +22,8 @@
 		"rollup": "^1.19.4",
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
+	},
+	"dependencies": {
+		"lodash.flattendeep": "^4.4.0"
 	}
 }

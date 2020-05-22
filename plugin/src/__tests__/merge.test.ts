@@ -1,7 +1,7 @@
 import transform from '../theme-transform';
 
-import compositorConfig from './stubs/compositor.config.js';
-import tailwindConfig from './stubs/tailwind.config.js';
+import compositorConfig from './fixtures/compositor.config.js';
+import tailwindConfig from './fixtures/tailwind.config.js';
 
 const transformer = transform(compositorConfig);
 

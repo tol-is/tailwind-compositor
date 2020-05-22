@@ -1,12 +1,10 @@
-import { TypeStyleFontFamilyParams, TypeStyleFontFamily } from '../types';
+import { TypeFamilyParams, StyleFamily } from '../types';
 
 /**
  *
  *
  */
-export const styleFontFamily = (
-	params: TypeStyleFontFamilyParams
-): TypeStyleFontFamily => {
+export const styleFontFamily = (params: TypeFamilyParams): StyleFamily => {
 	//
 	const { font } = params;
 

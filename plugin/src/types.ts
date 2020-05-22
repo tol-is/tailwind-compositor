@@ -2,7 +2,7 @@ import * as CSS from 'csstype';
 
 export type NumberScale = Array<number>;
 
-export interface FontOpenType {
+export interface iFontOpenType {
 	key: string;
 	familyName: string;
 	fallback: string;
@@ -27,48 +27,57 @@ export interface FontOpenType {
 // 	axis: any; // TODO
 // }
 
-export type FontsScale = Array<FontOpenType>;
+export type FontsScale = Array<iFontOpenType>;
 
-export interface Theme {
+type Variants = {
+	baseline: boolean;
+	capheight: boolean;
+	xheight: boolean;
+	rhythm: boolean;
+	measure: boolean;
+};
+
+export interface iTheme {
 	useRem: boolean;
 	root: number;
 	baseline: number;
-	typeScale: NumberScale;
+	type: NumberScale;
 	measure: NumberScale;
 	rhythm: NumberScale;
 	fonts: FontsScale;
+	variants: Variants;
 }
 
 export interface Style extends CSS.Properties {
 	[key: string]: any;
 }
 
-export type TypeStyleFontFamilyParams = {
-	font: FontOpenType;
-};
+export interface TypeFamilyParams {
+	font: iFontOpenType;
+}
 
-export type TypeStyleFontFamily = {
+export interface StyleFamily {
 	fontFamily: CSS.FontFamilyProperty;
 	fontWeight: CSS.FontWeightProperty;
 	fontStyle: CSS.FontStyleProperty;
-};
+}
 
-export type TypographyStyleRelParams = {
-	font: FontOpenType;
+export interface TypeStyleRelParams {
+	font: iFontOpenType;
 	baseline: number;
 	root: number;
 	size: number;
 	leading: number;
-};
+}
 
-export type TypographyStyleParams = {
-	font: FontOpenType;
+export interface TypeStyleParams {
+	font: iFontOpenType;
 	baseline: number;
 	size: number;
 	leading: number;
-};
+}
 
-export type StyleTypography = {
+export interface StyleTypography {
 	fontFamily: CSS.FontFamilyProperty;
 	fontWeight: CSS.FontWeightProperty;
 	fontStyle: CSS.FontStyleProperty;
@@ -83,4 +92,4 @@ export type StyleTypography = {
 		display: CSS.DisplayProperty;
 		height: CSS.HeightProperty<string | number>;
 	};
-};
+}
