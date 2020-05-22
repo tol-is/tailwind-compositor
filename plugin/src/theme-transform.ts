@@ -11,14 +11,15 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 	// first get some tailwind
 	// tailwind config values
 	const {
-		theme: themeTw = {},
-		plugins: pluginsTw = [],
-		corePlugins: corePluginsTw = {},
+		theme = {},
+		plugins = {},
+		corePlugins,
+		variants: variants,
 		...tailwindRest
 	} = tailwindConfig;
 
 	// extend is nested under theme
-	const { extend: extendTw = {} } = themeTw;
+	const { extend = {} } = theme;
 
 	// get necessary params from compositor
 	// we only need type and rhythm
@@ -31,7 +32,7 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 	// so transform to rem or px
 	// depending on useRem
 
-	const typeScaleTransformed = useRem
+	const typeScale = useRem
 		? pxScaleToRem(root)(type)
 		: type.map(v => `${v}px`);
 
@@ -39,49 +40,43 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 	// rhythm scale is described in baseline units
 	// transform to tailwind format
 	// rem or px depending on useRem param
-	const spacingTransformed = useRem
+	const spacingScale = useRem
 		? baselineScaleToRem(baseline)(root)(rhythm)
 		: baselineScaleToPx(baseline)(rhythm);
 
 	// deconstruct tailwind extend
 	// and get height, minHeight, maxHeight scales
 	// to merge with the spacingScale
+	// don't extend spacing,
 	const {
 		height = {},
 		minHeight = {},
 		maxHeight = {},
-		fontSize: fontSizeExtend = {},
-		...extendRestTw
-	} = extendTw;
+		fontSize = {},
+		...extendRest
+	} = extend;
 
-	const extendTransformed = {
-		...extendRestTw,
-		fontSize: merge(fontSizeExtend, typeScaleTransformed),
-		height: merge(height, spacingTransformed),
-		minHeight: merge(minHeight, spacingTransformed),
-		maxHeight: merge(maxHeight, spacingTransformed),
-	};
-
-	// compose tailwind config object
-	// {
-	//   theme:
-	//   plugins:
-	//   corePlugins:
-	// }
-
-	const out = {
+	//
+	return {
 		...tailwindRest,
 		theme: {
-			...themeTw,
-			...compositorConfig,
-			spacing: spacingTransformed,
-			extend: extendTransformed,
+			...theme,
+			fontSize: typeScale, // overwrite type scale
+			spacing: spacingScale, // overwrite spacing scale
+			// compositor params via theme
+			// rather than plugin below
+			compositor: compositorConfig,
+			extend: {
+				...extendRest,
+				height: merge(height, spacingScale),
+				minHeight: merge(minHeight, spacingScale),
+				maxHeight: merge(maxHeight, spacingScale),
+			},
 		},
-		plugins: [...pluginsTw, compositor(compositorConfig)],
-		corePlugins: merge(corePluginsTw, {}),
+		plugins: [...plugins, compositor()],
+		corePlugins: corePlugins,
+		variants: variants,
 	};
-
-	return out;
 };
 
 export default themeMerge;
