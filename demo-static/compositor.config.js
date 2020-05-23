@@ -1,5 +1,3 @@
-import path from 'path';
-
 const root = 16;
 const baseline = 8;
 
@@ -69,4 +67,12 @@ module.exports = {
 	rhythm,
 	measure,
 	fonts,
+	variants: {
+		background: true,
+		baseline: true,
+		capheight: true,
+		xheight: true,
+		rhythm: true,
+		measure: true,
+	},
 };

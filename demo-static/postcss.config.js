@@ -1,18 +1,16 @@
 const tailwindcss = require('tailwindcss');
-// const twcompo = require('tailwind-compositor');
+const { compositor } = require('tailwind-compositor');
 
-// const compositorConfig = require('./compositor.config.js');
+const compositorConfig = require('./compositor.config.js');
 const tailwindConfig = require('./tailwind.config.js');
 
-// console.log(twcompo);
-// const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
-// debugger;
+const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
 module.exports = {
 	plugins: [
 		require('postcss-import')({
 			plugins: [require('stylelint')],
 		}),
-		tailwindcss(tailwindConfig),
+		tailwindcss(tailwindConfigComposed),
 		require('postcss-preset-env')({
 			stage: 1,
 			autoprefixer: { grid: true },

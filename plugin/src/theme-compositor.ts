@@ -1,9 +1,10 @@
-// import fs from 'fs';
+import fs from 'fs';
 import { iCompositorTheme, iTailwindConfig, iFontOpenType } from './types';
 
-// import getFontMetrics from './get-font-metrics';
+import getFontMetrics from './get-font-metrics';
 import tailwindPluginCompositor from './tailwind-plugin-compositor';
 
+import is from './utils/is';
 import merge from './utils/merge';
 import baselineScaleToRem from './utils/baseline-scale-to-rem';
 import baselineScaleToPx from './utils/baseline-scale-to-px';
@@ -11,34 +12,36 @@ import pxScaleToRem from './utils/px-scale-to-rem';
 
 const cacheFileName = '.compositor';
 
+type TwTheme = {
+	extend: any;
+};
+
 export const compositor = (compositorConfig: iCompositorTheme) => (
 	tailwindConfig: iTailwindConfig
 ): iTailwindConfig => {
 	let fontsConfig: Array<iFontOpenType> = [];
-	// let fontsCached = false;
+	let fontsCached = false;
 
-	// try {
-	// 	if (fs.existsSync(cacheFileName)) {
-	// 		const rawCache: any = fs.readFileSync(cacheFileName);
-	// 		fontsConfig = JSON.parse(rawCache);
-	// 		fontsCached = true;
-	// 	}
-	// } catch (err) {
-	// 	console.error(err);
-	// }
+	try {
+		if (fs.existsSync(cacheFileName)) {
+			const rawCache: any = fs.readFileSync(cacheFileName);
+			fontsConfig = JSON.parse(rawCache);
+			fontsCached = true;
+		}
+	} catch (err) {
+		console.error(err);
+	}
 
 	// first get some tailwind
 	// tailwind config values
 	const {
-		theme,
-		plugins,
-		corePlugins,
-		variants: variants,
+		theme = {} as TwTheme,
+		plugins = [],
 		...tailwindRest
 	} = tailwindConfig;
 
 	// extend is nested under theme
-	const { extend } = theme;
+	const { extend = {} } = theme;
 
 	// get necessary params from compositor
 	// we only need type and rhythm
@@ -47,21 +50,21 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	const { useRem, root, baseline, fonts, type, rhythm } = compositorConfig;
 	//
 
-	// if (!fontsCached || fontsCached) {
-	// 	fontsConfig = [];
-	// 	fonts.forEach(({ file, ...fontRest }) => {
-	// 		let fontOT: iFontOpenType;
-	// 		if (is.string(file) && is.exists(file)) {
-	// 			fontOT = merge({ ...fontRest }, getFontMetrics(file));
-	// 		} else {
-	// 			fontOT = { ...fontRest } as iFontOpenType;
-	// 		}
+	if (!fontsCached) {
+		fontsConfig = [];
+		fonts.forEach(({ file, ...fontRest }) => {
+			let fontOT: iFontOpenType;
+			if (is.string(file) && is.exists(file)) {
+				fontOT = merge({ ...fontRest }, getFontMetrics(file));
+			} else {
+				fontOT = { ...fontRest } as iFontOpenType;
+			}
 
-	// 		fontsConfig.push(fontOT);
-	// 	});
+			fontsConfig.push(fontOT);
+		});
 
-	// 	fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
-	// }
+		fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
+	}
 
 	// console.log(fonts);
 	// [16,22,30,42,56]
@@ -94,7 +97,7 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	} = extend;
 
 	//
-	return {
+	const out = {
 		...tailwindRest,
 		theme: {
 			...theme,
@@ -114,9 +117,10 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 			},
 		},
 		plugins: [...plugins, tailwindPluginCompositor()],
-		corePlugins: corePlugins,
-		variants: variants,
 	};
+
+	console.log(out);
+	return out;
 };
 
 export default compositor;
