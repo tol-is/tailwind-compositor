@@ -16,14 +16,17 @@
 		"develop": "rollup -cw",
 		"build": "rollup -c"
 	},
+	"peerDependencies": {
+		"postcss": "^7.0.30",
+		"tailwindcss": "^1.4.6"
+	},
 	"devDependencies": {
 		"csstype": "^2.6.9",
+		"fontkit": "^1.8.1",
+		"lodash.flattendeep": "^4.4.0",
 		"postcss": "^7.0.30",
 		"rollup": "^1.19.4",
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
-	},
-	"dependencies": {
-		"lodash.flattendeep": "^4.4.0"
 	}
 }

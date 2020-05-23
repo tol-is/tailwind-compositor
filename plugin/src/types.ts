@@ -2,10 +2,13 @@ import * as CSS from 'csstype';
 
 export type NumberScale = Array<number>;
 
+export type FontConfigCache = Array<iFontOpenType>;
+
 export interface iFontOpenType {
 	key: string;
-	familyName: string;
+	file?: string;
 	fallback: string;
+	familyName: string;
 	upm: number;
 	xHeight: number;
 	capHeight: number;
@@ -15,19 +18,21 @@ export interface iFontOpenType {
 	italic: boolean;
 }
 
-// export interface FontVariable {
-// 	key: string;
-// 	familyName: string;
-// 	fallback: string;
-// 	upm: number;
-// 	xHeight: number;
-// 	capHeight: number;
-// 	ascent: number;
-// 	descent: number;
-// 	axis: any; // TODO
-// }
+export type FontConfigFile = {
+	file: string;
+	key: string;
+	familyName: string;
+	fallback: string;
+	weight?: number;
+	italic?: boolean;
+	upm: undefined;
+	xHeight: undefined;
+	capHeight: undefined;
+	ascent: undefined;
+	descent: undefined;
+};
 
-export type FontsScale = Array<iFontOpenType>;
+export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
 type Variants = {
 	baseline: boolean;
@@ -44,7 +49,7 @@ export interface iTheme {
 	type: NumberScale;
 	measure: NumberScale;
 	rhythm: NumberScale;
-	fonts: FontsScale;
+	fonts: FontsConfig;
 	variants: Variants;
 }
 

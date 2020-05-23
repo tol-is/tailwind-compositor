@@ -1,13 +1,33 @@
-import compositor from './tailwind-compositor';
+import fs from 'fs';
+import { iTheme, iFontOpenType } from './types';
+
+import getFontMetrics from './get-font-metrics';
+import tailwindPluginCompositor from './tailwind-plugin-compositor';
 
 const {
+	is,
 	merge,
 	baselineScaleToRem,
 	baselineScaleToPx,
 	pxScaleToRem,
 } = require('./utils');
 
-export const themeMerge = compositorConfig => tailwindConfig => {
+const cacheFileName = '.compositorrc';
+
+export const themeMerge = (compositorConfig: iTheme) => tailwindConfig => {
+	let fontsConfig: Array<iFontOpenType> = [];
+	let fontsCached = false;
+
+	try {
+		if (fs.existsSync(cacheFileName)) {
+			const rawCache: any = fs.readFileSync(cacheFileName);
+			fontsConfig = JSON.parse(rawCache);
+			fontsCached = true;
+		}
+	} catch (err) {
+		console.error(err);
+	}
+
 	// first get some tailwind
 	// tailwind config values
 	const {
@@ -25,8 +45,26 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 	// we only need type and rhythm
 	// to transform to px or rem usings
 	// based on useRem, root and baseline params
-	const { useRem, root, baseline, type, rhythm } = compositorConfig;
+	const { useRem, root, baseline, fonts, type, rhythm } = compositorConfig;
+	//
 
+	if (!fontsCached) {
+		fonts.forEach(({ file, ...fontRest }) => {
+			let fontOT: iFontOpenType;
+			if (is.string(file) && is.exists(file)) {
+				fontOT = merge({ ...fontRest }, getFontMetrics(file));
+			} else {
+				fontOT = { ...fontRest } as iFontOpenType;
+			}
+
+			console.log(fontOT);
+			fontsConfig.push(fontOT);
+		});
+
+		fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
+	}
+
+	// console.log(fonts);
 	// [16,22,30,42,56]
 	// type scale is described in px units
 	// so transform to rem or px
@@ -65,7 +103,10 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 			spacing: spacingScale, // overwrite spacing scale
 			// compositor params via theme
 			// rather than plugin below
-			compositor: compositorConfig,
+			compositor: {
+				...compositorConfig,
+				fonts: fontsConfig,
+			},
 			extend: {
 				...extendRest,
 				height: merge(height, spacingScale),
@@ -73,7 +114,7 @@ export const themeMerge = compositorConfig => tailwindConfig => {
 				maxHeight: merge(maxHeight, spacingScale),
 			},
 		},
-		plugins: [...plugins, compositor()],
+		plugins: [...plugins, tailwindPluginCompositor()],
 		corePlugins: corePlugins,
 		variants: variants,
 	};

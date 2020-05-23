@@ -1,4 +1,4 @@
-import { iTheme } from './types';
+import { iTheme, iFontOpenType } from './types';
 var flattenDeep = require('lodash.flattendeep');
 import {
 	styleFontFamily,
@@ -19,7 +19,7 @@ export const createTextStyles = ({ theme, e, addUtilities }) => {
 		'compositor'
 	);
 
-	const familyStyles = fonts.map(font => {
+	const familyStyles = fonts.map((font: iFontOpenType) => {
 		return {
 			[`.font-${font.key}`]: styleFontFamily({ font }),
 		};
@@ -27,9 +27,10 @@ export const createTextStyles = ({ theme, e, addUtilities }) => {
 
 	const leading = Array.from(new Array(6), (v, i) => i);
 	const sizeStyles = flattenDeep(
-		fonts.map(font =>
+		fonts.map((font: iFontOpenType) =>
 			type.map((size, sizeIdx) => {
 				return leading.map(lead => {
+					// create baseline styles
 					const outputBaseline = useRem
 						? styleBaselineRel({
 								font: font,
@@ -45,6 +46,7 @@ export const createTextStyles = ({ theme, e, addUtilities }) => {
 								leading: lead,
 						  });
 
+					// apply if variant baseline
 					const baselineStyles = variants.baseline && {
 						[`&.${e(`type-${sizeIdx}/${lead}`)}`]: outputBaseline,
 					};

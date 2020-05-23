@@ -8,3 +8,5 @@ export const merge = (a, b) => {
 	}
 	return result;
 };
+
+export default merge;

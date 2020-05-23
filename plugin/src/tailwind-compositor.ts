@@ -1,16 +1,11 @@
-import { iTheme } from './types';
-import createTextStyles from './create-text-styles';
-import createBackgroundStyles from './create-background-styles';
-import createMeasureStyles from './create-measure-styles';
-import createRhythmStyles from './create-rhythm-styles';
+const tailwindcss = require('tailwindcss');
+const postcss = require('postcss');
+const tailwindPlugin = require('./tailwind-compositor-plugin');
 
-export const compositor = () => {
-	return ({ theme, e, addUtilities }) => {
-		createTextStyles({ theme, e, addUtilities });
-		createBackgroundStyles({ theme, e, addUtilities });
-		createMeasureStyles({ theme, e, addUtilities });
-		createRhythmStyles({ theme, e, addUtilities });
-	};
+const compositor = config => css => {
+	return postcss().process(css, {
+		from: undefined,
+	});
 };
 
-export default compositor;
+module.exports = compositor;
