@@ -14,11 +14,14 @@ const {
 
 const cacheFileName = '.compositor';
 
-export const themeMerge = (compositorConfig: iCompositorTheme) => (
+export const compositor = (compositorConfig: iCompositorTheme) => (
 	tailwindConfig: iTailwindConfig
 ): iTailwindConfig => {
 	let fontsConfig: Array<iFontOpenType> = [];
 	let fontsCached = false;
+
+	console.log(compositorConfig);
+	console.log(tailwindConfig);
 
 	try {
 		if (fs.existsSync(cacheFileName)) {
@@ -121,4 +124,4 @@ export const themeMerge = (compositorConfig: iCompositorTheme) => (
 	};
 };
 
-export default themeMerge;
+export default compositor;
