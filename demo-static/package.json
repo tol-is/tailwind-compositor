@@ -1,6 +1,6 @@
 {
 	"name": "demo-static",
-	"version": "0.0.0",
+	"private": true,
 	"description": "",
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
