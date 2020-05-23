@@ -25,7 +25,7 @@
 		"demo:static": "lerna exec --scope demo-static -- npm run develop",
 		"plugin:dev": "lerna exec --scope tailwind-compositor -- npm run develop",
 		"plugin:build": "lerna exec --scope tailwind-compositor -- npm run build",
-		"release": "npm run build && lerna publish"
+		"release": "lerna publish --no-git-reset"
 	},
 	"devDependencies": {
 		"@types/jest": "^25.2.3",
