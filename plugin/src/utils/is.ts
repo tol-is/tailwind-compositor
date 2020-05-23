@@ -23,3 +23,5 @@ export const is = {
 			'inherit',
 		].some(u => value.includes(u)),
 };
+
+export default is;

@@ -1,6 +1,6 @@
 import fontkit from 'fontkit';
 
-import { get } from './utils';
+import get from './utils/get';
 
 type FontKitMetrics = {
 	familyName: string;

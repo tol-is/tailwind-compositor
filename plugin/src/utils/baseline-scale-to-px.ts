@@ -10,3 +10,5 @@ export const baselineScaleToPx = baseline => scale => {
 	}, {});
 	return result;
 };
+
+export default baselineScaleToPx;

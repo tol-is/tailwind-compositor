@@ -12,3 +12,5 @@ export const baselineScaleToRem = baseline => root => scale => {
 	}, {});
 	return result;
 };
+
+export default baselineScaleToRem;

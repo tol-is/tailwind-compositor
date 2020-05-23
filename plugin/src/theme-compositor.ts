@@ -1,16 +1,13 @@
-import fs from 'fs';
+// import fs from 'fs';
 import { iCompositorTheme, iTailwindConfig, iFontOpenType } from './types';
 
-import getFontMetrics from './get-font-metrics';
+// import getFontMetrics from './get-font-metrics';
 import tailwindPluginCompositor from './tailwind-plugin-compositor';
 
-const {
-	is,
-	merge,
-	baselineScaleToRem,
-	baselineScaleToPx,
-	pxScaleToRem,
-} = require('./utils');
+import merge from './utils/merge';
+import baselineScaleToRem from './utils/baseline-scale-to-rem';
+import baselineScaleToPx from './utils/baseline-scale-to-px';
+import pxScaleToRem from './utils/px-scale-to-rem';
 
 const cacheFileName = '.compositor';
 

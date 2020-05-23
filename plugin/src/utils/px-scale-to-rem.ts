@@ -14,3 +14,5 @@ export const pxScaleToRem = root => scale => {
 	}, {});
 	return result;
 };
+
+export default pxScaleToRem;

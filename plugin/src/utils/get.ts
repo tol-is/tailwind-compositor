@@ -6,3 +6,5 @@ export const get = (obj: any, key, def, p: number = 0, undef?) => {
 	}
 	return obj === undef ? def : obj;
 };
+
+export default get;

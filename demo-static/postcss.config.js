@@ -1,10 +1,10 @@
 const tailwindcss = require('tailwindcss');
-const twcompo = require('node_modules/tailwind-compositor/dist/index.js');
+// const twcompo = require('tailwind-compositor');
 
 // const compositorConfig = require('./compositor.config.js');
 const tailwindConfig = require('./tailwind.config.js');
 
-console.log(twcompo);
+// console.log(twcompo);
 // const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
 // debugger;
 module.exports = {

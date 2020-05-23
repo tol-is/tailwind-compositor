@@ -8,3 +8,5 @@ export const mem = func => {
 		return mem[key];
 	};
 };
+
+export default mem;

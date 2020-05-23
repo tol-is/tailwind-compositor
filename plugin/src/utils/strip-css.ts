@@ -1,4 +1,6 @@
 // https://github.com/benface/jest-matcher-css/blob/master/index.js
-export const stripcss = function(str) {
+export const stripcss = function (str) {
 	return str.replace(/[;\s]/g, '');
 };
+
+export default stripcss;
