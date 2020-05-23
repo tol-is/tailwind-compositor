@@ -1,3 +1,5 @@
+const path = require('path');
+
 const root = 16;
 const baseline = 8;
 
@@ -17,46 +19,34 @@ const measure = [12, 16, 18, 30, 35, 50, 55, 60, 65];
 const fonts = [
 	{
 		key: 'sans-400',
-		familyName: 'IBM Plex Sans',
 		fallback: 'sans-serif',
-		upm: 1000,
-		xHeight: 525,
-		capHeight: 698,
-		ascent: 1025,
-		descent: -275,
-		weight: 400,
-		italic: false,
+		file: path.resolve('./fonts/inter/Inter-Regular.woff2'),
 	},
-	// {
-	// 	key: 'sans-400',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-Regular.woff2'),
-	// },
-	// {
-	// 	key: 'sans-400i',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-Italic.woff2'),
-	// },
-	// {
-	// 	key: 'sans-700',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-Bold.woff2'),
-	// },
-	// {
-	// 	key: 'sans-700i',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-BoldItalic.woff2'),
-	// },
-	// {
-	// 	key: 'sans-600',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-SemiBold.woff2'),
-	// },
-	// {
-	// 	key: 'sans-600i',
-	// 	fallback: 'sans-serif',
-	// 	file: path.resolve('./fonts/inter/Inter-SemiBoldItalic.woff2'),
-	// },
+	{
+		key: 'sans-400i',
+		fallback: 'sans-serif',
+		file: path.resolve('./fonts/inter/Inter-Italic.woff2'),
+	},
+	{
+		key: 'sans-700',
+		fallback: 'sans-serif',
+		file: path.resolve('./fonts/inter/Inter-Bold.woff2'),
+	},
+	{
+		key: 'sans-700i',
+		fallback: 'sans-serif',
+		file: path.resolve('./fonts/inter/Inter-BoldItalic.woff2'),
+	},
+	{
+		key: 'sans-600',
+		fallback: 'sans-serif',
+		file: path.resolve('./fonts/inter/Inter-SemiBold.woff2'),
+	},
+	{
+		key: 'sans-600i',
+		fallback: 'sans-serif',
+		file: path.resolve('./fonts/inter/Inter-SemiBoldItalic.woff2'),
+	},
 ];
 
 module.exports = {

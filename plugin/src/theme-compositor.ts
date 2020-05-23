@@ -107,7 +107,7 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 			// rather than plugin below
 			compositor: {
 				...compositorConfig,
-				fonts: fonts,
+				fonts: fontsConfig,
 			},
 			extend: {
 				...extendRest,
@@ -119,7 +119,6 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 		plugins: [...plugins, tailwindPluginCompositor()],
 	};
 
-	console.log(out);
 	return out;
 };
 
