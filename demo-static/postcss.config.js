@@ -1,10 +1,12 @@
 const tailwindcss = require('tailwindcss');
-const { themeTransform } = require('tailwind-compositor');
+const { transform } = require('tailwind-compositor');
 
 const compositorConfig = require('./compositor.config.js');
 const tailwindConfig = require('./tailwind.config.js');
 
-const transformer = themeTransform(compositorConfig);
+const transformer = transform(compositorConfig);
+
+console.log(transformer(tailwindConfig));
 
 module.exports = {
 	plugins: [tailwindcss(transformer(tailwindConfig))],
