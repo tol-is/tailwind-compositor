@@ -23,29 +23,14 @@ const fonts = [
 		file: path.resolve('./fonts/inter/Inter-Regular.woff2'),
 	},
 	{
-		key: 'sans-400i',
-		fallback: 'sans-serif',
-		file: path.resolve('./fonts/inter/Inter-Italic.woff2'),
-	},
-	{
 		key: 'sans-700',
 		fallback: 'sans-serif',
 		file: path.resolve('./fonts/inter/Inter-Bold.woff2'),
 	},
 	{
-		key: 'sans-700i',
-		fallback: 'sans-serif',
-		file: path.resolve('./fonts/inter/Inter-BoldItalic.woff2'),
-	},
-	{
 		key: 'sans-600',
 		fallback: 'sans-serif',
 		file: path.resolve('./fonts/inter/Inter-SemiBold.woff2'),
-	},
-	{
-		key: 'sans-600i',
-		fallback: 'sans-serif',
-		file: path.resolve('./fonts/inter/Inter-SemiBoldItalic.woff2'),
 	},
 ];
 

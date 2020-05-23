@@ -1,5 +1,6 @@
 const tailwindcss = require('tailwindcss');
 const { compositor } = require('tailwind-compositor');
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 const compositorConfig = require('./compositor.config.js');
 const tailwindConfig = require('./tailwind.config.js');
@@ -11,6 +12,15 @@ module.exports = {
 			plugins: [require('stylelint')],
 		}),
 		tailwindcss(tailwindConfigComposed),
+		...(process.env.NODE_ENV === 'production'
+			? [
+					purgecss({
+						defaultExtractor: content =>
+							content.match(/[\w-/:]+(?<!:)/g) || [],
+						content: ['./index.html'],
+					}),
+			  ]
+			: []),
 		require('postcss-preset-env')({
 			stage: 1,
 			autoprefixer: { grid: true },
