@@ -3,5 +3,6 @@
 	"packages": ["plugin", "demo-static"],
 	"version": "independent",
 	"npmClient": "yarn",
-	"licence": "MIT"
+	"licence": "MIT",
+	"useWorkspaces": true
 }
