@@ -1,10 +1,10 @@
 const tailwindcss = require('tailwindcss');
-// const { compositor } = require('tailwind-compositor');
+const twcompo = require('tailwind-compositor');
 
 // const compositorConfig = require('./compositor.config.js');
 const tailwindConfig = require('./tailwind.config.js');
 
-console.log('asds');
+console.log('twcompo');
 // const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
 // debugger;
 module.exports = {

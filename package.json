@@ -22,9 +22,9 @@
 		"build": "npm-run-all --parallel plugin:build",
 		"tdd": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"clear": "jest --u ",
-		"demo:static": "lerna exec --scope demo-static -- npm run develop",
-		"plugin:dev": "lerna exec --scope tailwind-compositor -- npm run develop",
-		"plugin:build": "lerna exec --scope tailwind-compositor -- npm run build",
+		"demo:static": "lerna exec --scope tailwind-compositor-demo-static -- yarn run develop",
+		"plugin:dev": "lerna exec --scope tailwind-compositor -- yarn develop",
+		"plugin:build": "lerna exec --scope tailwind-compositor -- yarn build",
 		"release": "lerna publish --no-git-reset"
 	},
 	"devDependencies": {
