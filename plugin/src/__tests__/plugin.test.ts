@@ -2,7 +2,7 @@ import postcss from 'postcss';
 import tailwindcss from 'tailwindcss';
 
 import { merge } from '../utils';
-import transform from '../theme-transform';
+import compositor from '../theme-compositor';
 
 import compositorBaseConfig from './fixtures/compositor.config.js';
 import tailwindConfig from './fixtures/tailwind.config.js';
@@ -12,12 +12,10 @@ const createPostCSSConfig = ({ config, input = '@tailwind utilities;' }) => {
 	const compositorConfig = merge(compositorBaseConfig, config);
 
 	// transform tailwind theme
-	const tailwindConfigTransformed = transform(compositorConfig)(
-		tailwindConfig
-	);
+	const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
 
 	// run postcss
-	return postcss([tailwindcss(tailwindConfigTransformed)])
+	return postcss([tailwindcss(tailwindConfigComposed)])
 		.process(input, {
 			from: undefined,
 		})

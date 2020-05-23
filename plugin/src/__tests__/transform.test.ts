@@ -1,7 +1,7 @@
 import { iCompositorTheme } from '../types';
 import path from 'path';
 import { merge } from '../utils';
-import transform from '../theme-transform';
+import compositor from '../theme-compositor';
 
 import compositorBaseConfig from './fixtures/compositor.config.js';
 import tailwindConfig from './fixtures/tailwind.config.js';
@@ -11,8 +11,8 @@ const createConfig = config => {
 		compositorBaseConfig,
 		config
 	);
-	const tailwindTransformed = transform(compositorConfig)(tailwindConfig);
-	return tailwindTransformed;
+	const tailwindConfigComposed = compositor(compositorConfig)(tailwindConfig);
+	return tailwindConfigComposed;
 };
 
 test('simple transform', () => {
