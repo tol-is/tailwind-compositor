@@ -1,4 +1,4 @@
-import { iTheme, iFontOpenType } from './types';
+import { iTailwindTheme, iCompositorTheme, iFontOpenType } from './types';
 var flattenDeep = require('lodash.flattendeep');
 import {
 	styleFontFamily,
@@ -14,10 +14,23 @@ import {
  *
  *
  */
-export const createTextStyles = ({ theme, e, addUtilities }) => {
-	const { useRem, root, baseline, fonts, type, variants }: iTheme = theme(
-		'compositor'
-	);
+export const createTextStyles = ({
+	theme,
+	e,
+	addUtilities,
+}: {
+	theme: iTailwindTheme;
+	e: any;
+	addUtilities: Function;
+}) => {
+	const {
+		useRem,
+		root,
+		baseline,
+		fonts,
+		type,
+		variants,
+	}: iCompositorTheme = theme('compositor');
 
 	const familyStyles = fonts.map((font: iFontOpenType) => {
 		return {

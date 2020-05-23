@@ -1,12 +1,20 @@
-import { iTheme } from './types';
+import { iTailwindTheme, iCompositorTheme } from './types';
 import { owlX, owlY } from './styles';
 
 /**
  *
  *
  */
-export const createRhythmStyles = ({ theme, e, addUtilities }) => {
-	const { variants }: iTheme = theme('compositor');
+export const createRhythmStyles = ({
+	theme,
+	e,
+	addUtilities,
+}: {
+	theme: iTailwindTheme;
+	e: any;
+	addUtilities: Function;
+}) => {
+	const { variants }: iCompositorTheme = theme('compositor');
 
 	if (!variants.rhythm) return;
 

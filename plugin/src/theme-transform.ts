@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { iTheme, iFontOpenType } from './types';
+import { iCompositorTheme, iTailwindConfig, iFontOpenType } from './types';
 
 import getFontMetrics from './get-font-metrics';
 import tailwindPluginCompositor from './tailwind-plugin-compositor';
@@ -12,9 +12,11 @@ const {
 	pxScaleToRem,
 } = require('./utils');
 
-const cacheFileName = '.compositorrc';
+const cacheFileName = '.compositor';
 
-export const themeMerge = (compositorConfig: iTheme) => tailwindConfig => {
+export const themeMerge = (compositorConfig: iCompositorTheme) => (
+	tailwindConfig: iTailwindConfig
+): iTailwindConfig => {
 	let fontsConfig: Array<iFontOpenType> = [];
 	let fontsCached = false;
 
@@ -31,15 +33,15 @@ export const themeMerge = (compositorConfig: iTheme) => tailwindConfig => {
 	// first get some tailwind
 	// tailwind config values
 	const {
-		theme = {},
-		plugins = {},
+		theme,
+		plugins,
 		corePlugins,
 		variants: variants,
 		...tailwindRest
 	} = tailwindConfig;
 
 	// extend is nested under theme
-	const { extend = {} } = theme;
+	const { extend } = theme;
 
 	// get necessary params from compositor
 	// we only need type and rhythm
@@ -57,7 +59,6 @@ export const themeMerge = (compositorConfig: iTheme) => tailwindConfig => {
 				fontOT = { ...fontRest } as iFontOpenType;
 			}
 
-			console.log(fontOT);
 			fontsConfig.push(fontOT);
 		});
 

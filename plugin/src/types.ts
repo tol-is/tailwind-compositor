@@ -4,6 +4,19 @@ export type NumberScale = Array<number>;
 
 export type FontConfigCache = Array<iFontOpenType>;
 
+export type iTailwindTheme = Function;
+
+export type iTailwindConfig = {
+	theme: {
+		extend: any;
+		[key: string]: any;
+	};
+	variants: any;
+	corePlugins: any;
+	plugins: any;
+	compositor: iCompositorTheme;
+};
+
 export interface iFontOpenType {
 	key: string;
 	file?: string;
@@ -35,6 +48,7 @@ export type FontConfigFile = {
 export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
 type Variants = {
+	background: boolean;
 	baseline: boolean;
 	capheight: boolean;
 	xheight: boolean;
@@ -42,7 +56,7 @@ type Variants = {
 	measure: boolean;
 };
 
-export interface iTheme {
+export interface iCompositorTheme {
 	useRem: boolean;
 	root: number;
 	baseline: number;

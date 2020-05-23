@@ -1,8 +1,18 @@
-import { iTheme } from './types';
+import { iTailwindTheme, iCompositorTheme } from './types';
 import { measure } from './styles/style-measure';
 
-const createMeasureStyles = ({ theme, e, addUtilities }) => {
-	const { measure: measureScale, variants }: iTheme = theme('compositor');
+const createMeasureStyles = ({
+	theme,
+	e,
+	addUtilities,
+}: {
+	theme: iTailwindTheme;
+	e: any;
+	addUtilities: Function;
+}) => {
+	const { measure: measureScale, variants }: iCompositorTheme = theme(
+		'compositor'
+	);
 
 	if (!variants.measure) return;
 
