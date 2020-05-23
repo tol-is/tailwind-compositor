@@ -75,8 +75,8 @@ typings/
 # Storybook
 storybook-static
 
-# only support yarn
-package-lock.json
+# only support npm
+yarn-lock.json
 
 # Mac files
 .DS_Store
