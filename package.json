@@ -14,10 +14,12 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"develop": "npm-run-all --parallel demo:static plugin:dev",
+		"build": "npm-run-all --parallel plugin:build",
 		"tdd": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"clear": "jest --u ",
 		"demo:static": "lerna exec --scope demo-static -- yarn develop",
 		"plugin:dev": "lerna exec --scope tailwind-compositor -- yarn develop",
+		"plugin:build": "lerna exec --scope tailwind-compositor -- yarn build",
 		"release": "lerna publish"
 	},
 	"devDependencies": {

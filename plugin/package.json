@@ -1,6 +1,6 @@
 {
 	"name": "tailwind-compositor",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
 	"main": "dist/index.js",
@@ -18,7 +18,8 @@
 	},
 	"peerDependencies": {
 		"postcss": "^7.0.30",
-		"tailwindcss": "^1.4.6"
+		"tailwindcss": "^1.4.6",
+		"fontkit": "^1.8.1"
 	},
 	"devDependencies": {
 		"csstype": "^2.6.9",
