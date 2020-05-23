@@ -10894,9 +10894,9 @@ table@^5.4.6:
     string-width "^3.0.0"
 
 tailwind-compositor@latest:
-  version "0.0.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/tailwind-compositor/-/tailwind-compositor-0.0.1-alpha.0.tgz#1afceee6869a93aaa17452664d0e61af96623509"
-  integrity sha512-sP7IqOBu5heSQw4lO+/uRpVJxS9M4UqMazKowb5NjWpqeqwipwYjwkHYtrKVzGCN45Z+BaSYDLwDOufcv4nnDw==
+  version "0.0.1-alpha.1"
+  resolved "https://registry.yarnpkg.com/tailwind-compositor/-/tailwind-compositor-0.0.1-alpha.1.tgz#c855dfe29c3e216e1877a7539b149fa56bdfb432"
+  integrity sha512-nfuqWPdSfyrmtIBcL3CAjjNsKH2X4EVeV3V6qgEouc1JUHhdgD9NgKkOoa/QKeOB+rBN7GwYQzPDOBOt8x2Ysw==
 
 tailwindcss@^1.4.6:
   version "1.4.6"

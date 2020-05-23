@@ -29,5 +29,6 @@
 		"rollup": "^1.19.4",
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
-	}
+	},
+	"gitHead": "a3f7e2e8a287fcca4ede816597b6eae9853ab3cc"
 }

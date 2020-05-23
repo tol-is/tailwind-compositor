@@ -18,20 +18,17 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	tailwindConfig: iTailwindConfig
 ): iTailwindConfig => {
 	let fontsConfig: Array<iFontOpenType> = [];
-	let fontsCached = false;
+	// let fontsCached = false;
 
-	console.log(compositorConfig);
-	console.log(tailwindConfig);
-
-	try {
-		if (fs.existsSync(cacheFileName)) {
-			const rawCache: any = fs.readFileSync(cacheFileName);
-			fontsConfig = JSON.parse(rawCache);
-			fontsCached = true;
-		}
-	} catch (err) {
-		console.error(err);
-	}
+	// try {
+	// 	if (fs.existsSync(cacheFileName)) {
+	// 		const rawCache: any = fs.readFileSync(cacheFileName);
+	// 		fontsConfig = JSON.parse(rawCache);
+	// 		fontsCached = true;
+	// 	}
+	// } catch (err) {
+	// 	console.error(err);
+	// }
 
 	// first get some tailwind
 	// tailwind config values
@@ -53,20 +50,21 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	const { useRem, root, baseline, fonts, type, rhythm } = compositorConfig;
 	//
 
-	if (!fontsCached) {
-		fonts.forEach(({ file, ...fontRest }) => {
-			let fontOT: iFontOpenType;
-			if (is.string(file) && is.exists(file)) {
-				fontOT = merge({ ...fontRest }, getFontMetrics(file));
-			} else {
-				fontOT = { ...fontRest } as iFontOpenType;
-			}
+	// if (!fontsCached || fontsCached) {
+	// 	fontsConfig = [];
+	// 	fonts.forEach(({ file, ...fontRest }) => {
+	// 		let fontOT: iFontOpenType;
+	// 		if (is.string(file) && is.exists(file)) {
+	// 			fontOT = merge({ ...fontRest }, getFontMetrics(file));
+	// 		} else {
+	// 			fontOT = { ...fontRest } as iFontOpenType;
+	// 		}
 
-			fontsConfig.push(fontOT);
-		});
+	// 		fontsConfig.push(fontOT);
+	// 	});
 
-		fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
-	}
+	// 	fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
+	// }
 
 	// console.log(fonts);
 	// [16,22,30,42,56]
@@ -109,7 +107,7 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 			// rather than plugin below
 			compositor: {
 				...compositorConfig,
-				fonts: fontsConfig,
+				fonts: fonts,
 			},
 			extend: {
 				...extendRest,

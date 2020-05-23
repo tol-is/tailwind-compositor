@@ -15,8 +15,22 @@ const createConfig = config => {
 	return tailwindConfigComposed;
 };
 
-test('simple transform', () => {
-	// const tailwindConfig = createConfig({});
-	// expect(tailwindConfig).toMatchSnapshot();
-	expect(true).toBe(true);
+test('transform with font files', () => {
+	const tailwindConfig = createConfig({
+		fonts: [
+			{
+				file: path.resolve(
+					'plugin/src/__tests__/',
+					'fixtures/inter/Inter-Regular.woff'
+				),
+				key: 'sans-400',
+				familyName: 'Inter',
+				fallback: 'sans-serif',
+				weight: 400,
+				italic: true,
+			},
+		],
+	});
+	console.log(tailwindConfig);
+	expect(tailwindConfig).toMatchSnapshot();
 });
