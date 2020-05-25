@@ -47,8 +47,8 @@ export type FontConfigFile = {
 
 export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
-type Variants = {
-	background: boolean;
+type Utilities = {
+	xray: boolean;
 	baseline: boolean;
 	capheight: boolean;
 	xheight: boolean;
@@ -64,7 +64,7 @@ export interface iCompositorTheme {
 	measure: NumberScale;
 	rhythm: NumberScale;
 	fonts: FontsConfig;
-	variants: Variants;
+	utilities: Utilities;
 }
 
 export interface Style extends CSS.Properties {

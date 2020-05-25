@@ -14,9 +14,9 @@ export const createRhythmStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { variants }: iCompositorTheme = theme('compositor');
+	const { utilities }: iCompositorTheme = theme('compositor');
 
-	if (!variants.rhythm) return;
+	if (!utilities.rhythm) return;
 
 	const rhythmScale: Array<string> = theme('spacing');
 

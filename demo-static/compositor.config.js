@@ -14,6 +14,7 @@ rhythm.half = 0.5;
 
 // measure scale in characters unit
 const measure = [12, 16, 18, 30, 35, 50, 55, 60, 65];
+measure.auto = 'auto';
 
 // font config
 const fonts = [

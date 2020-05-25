@@ -45,8 +45,8 @@ Object {
         16,
       ],
       "useRem": false,
-      "variants": Object {
-        "background": true,
+      "utilities": Object {
+        "xray": true,
         "baseline": true,
         "capheight": true,
         "measure": true,

@@ -1,7 +1,7 @@
 import { Style } from '../types';
 
-export const measure = ({ length }: { length: number }): Style => {
+export const measure = ({ space }: { space: string }): Style => {
 	return {
-		maxWidth: `${length}ch`,
+		maxWidth: `${space}`,
 	};
 };

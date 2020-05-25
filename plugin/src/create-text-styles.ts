@@ -29,7 +29,7 @@ export const createTextStyles = ({
 		baseline,
 		fonts,
 		type,
-		variants,
+		utilities,
 	}: iCompositorTheme = theme('compositor');
 
 	const familyStyles = fonts.map((font: iFontOpenType) => {
@@ -60,7 +60,7 @@ export const createTextStyles = ({
 						  });
 
 					// apply if variant baseline
-					const baselineStyles = variants.baseline && {
+					const baselineStyles = utilities.baseline && {
 						[`&.${e(`type-${sizeIdx}/${lead}`)}`]: outputBaseline,
 					};
 
@@ -79,14 +79,14 @@ export const createTextStyles = ({
 								leading: lead,
 						  });
 
-					const capHeightStyles = variants.capheight && {
+					const capHeightStyles = utilities.capheight && {
 						[`&.${e(
 							`capheight-${sizeIdx}/${lead}`
 						)}`]: outputCapHeight,
 					};
 
 					const outputXHeight =
-						variants.xheight && useRem
+						utilities.xheight && useRem
 							? styleXHeight({
 									font: font,
 									baseline: baseline,
@@ -100,7 +100,7 @@ export const createTextStyles = ({
 									size: size,
 									leading: lead,
 							  });
-					const xHeightStyles = variants.xheight && {
+					const xHeightStyles = utilities.xheight && {
 						[`&.${e(`xheight-${sizeIdx}/${lead}`)}`]: outputXHeight,
 					};
 

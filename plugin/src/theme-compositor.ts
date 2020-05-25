@@ -47,7 +47,15 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	// we only need type and rhythm
 	// to transform to px or rem usings
 	// based on useRem, root and baseline params
-	const { useRem, root, baseline, fonts, type, rhythm } = compositorConfig;
+	const {
+		useRem,
+		root,
+		baseline,
+		fonts,
+		type,
+		rhythm,
+		measure,
+	} = compositorConfig;
 	//
 
 	if (!fontsCached) {
@@ -66,7 +74,6 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 		fs.writeFileSync(cacheFileName, JSON.stringify(fontsConfig));
 	}
 
-	// console.log(fonts);
 	// [16,22,30,42,56]
 	// type scale is described in px units
 	// so transform to rem or px
@@ -83,6 +90,14 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	const spacingScale = useRem
 		? baselineScaleToRem(baseline)(root)(rhythm)
 		: baselineScaleToPx(baseline)(rhythm);
+
+	//
+	// measure scale is described in ch units
+	// transform to tailwind format
+	// string or ch
+	const measureScale = measure.map(m => {
+		return is.num(m) ? `${m}ch` : m;
+	});
 
 	// deconstruct tailwind extend
 	// and get height, minHeight, maxHeight scales
@@ -107,6 +122,7 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 			// rather than plugin below
 			compositor: {
 				...compositorConfig,
+				measure: measureScale,
 				fonts: fontsConfig,
 			},
 			extend: {

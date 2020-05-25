@@ -10,15 +10,16 @@ const createMeasureStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { measure: measureScale, variants }: iCompositorTheme = theme(
+	const { measure: measureScale, utilities }: iCompositorTheme = theme(
 		'compositor'
 	);
 
-	if (!variants.measure) return;
+	if (!utilities.measure) return;
 
-	const measureStyles = measureScale.map((length, idx) => {
+	const measureStyles = Object.keys(measureScale).map(key => {
+		const space: string = measureScale[key];
 		return {
-			[`.${e(`measure-${idx}`)}`]: measure({ length }),
+			[`.${e(`measure-${key}`)}`]: measure({ space }),
 		};
 	});
 

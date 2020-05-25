@@ -51,8 +51,9 @@ test('simple transform', () => {
 // test('baseline styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		variants: {
-// 			baseline: true,
+// 		utilities: {
+// 			xray: true,
+//      baseline: true,
 // 			capheight: false,
 // 			xheight: false,
 // 			rhythm: false,
@@ -67,8 +68,9 @@ test('simple transform', () => {
 // test('capheight styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		variants: {
-// 			baseline: false,
+// 		utilities: {
+// 			xray: false,
+//      baseline: false,
 // 			capheight: true,
 // 			xheight: false,
 // 			rhythm: false,
@@ -83,7 +85,8 @@ test('simple transform', () => {
 // test('xheight styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		variants: {
+// 		utilities: {
+// 			xray: false,
 // 			baseline: false,
 // 			capheight: false,
 // 			xheight: true,
@@ -99,7 +102,8 @@ test('simple transform', () => {
 // test('rhythm styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		variants: {
+// 		utilities: {
+// 		  xray: false,
 // 			baseline: false,
 // 			capheight: false,
 // 			xheight: false,
@@ -115,12 +119,14 @@ test('simple transform', () => {
 // test('measure styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		variants: {
+// 		utilities: {
+// 		  xray: false,
 // 			baseline: false,
 // 			capheight: false,
 // 			xheight: false,
 // 			rhythm: false,
 // 			measure: true,
+// 		},
 // 		},
 // 	};
 // 	return createPostCSSConfig({ config: config }).then(css => {
