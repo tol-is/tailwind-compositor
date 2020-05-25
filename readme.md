@@ -4,12 +4,6 @@ Compositor is a system of constraints designed to produce aesthetically pleasing
 
 TL;DR A baseline grid system for [tailwindcss](https://tailwindcss.com/).
 
----
-
-## How it works?
-
-Using font metrics, the compositor utilities, crop the white space around the text and align layout elements and lines of text, to a meaningful, baseline rhythm.
-
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-slideshow.gif" width="500"/>
 
 _\* 16px baseline for demonstration purpose_
@@ -362,13 +356,13 @@ Compositor also applies the spacing scale to tailwind sizing scales, width, min/
 
 There is no right and wrong when it comes to typographic expression. This is simply a guide to help us design and implement consistent vertical typographic rhythm.
 
-#### High Fault Tolerance
+#### High margin of error
 
 Many design systems only provide a series of independent token collections, for family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. Most of these combinations don't produce useful results, or even worse don't exist at all.
 
 For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible and makes typophiles very sad.
 
-#### Unpredictable Rhythm
+#### Unpredictable rhythm
 
 Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. The bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height.
 
@@ -376,7 +370,7 @@ Traditionally, in typography, space between lines of text is measured from the b
 
 [Vertical Metrics](https://vertical-metrics.netlify.app)
 
-As a result, when rendering text, unline any other dom element, the browser adds white-space above and below each line of text. So our layout implementation can behave unpredictably, and require optical adjustments, depending on the order of UI components, font, font-size and line-height.
+As a result, when rendering text, unline any other dom element, the browser adds space above and below each line of text. So our layout implementation may require optical adjustments, depending on the order of UI components, font, font-size and line-height.
 
 #### Solution
 
