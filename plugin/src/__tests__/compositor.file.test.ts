@@ -31,6 +31,5 @@ test('transform with font files', () => {
 			},
 		],
 	});
-	console.log(tailwindConfig);
 	expect(tailwindConfig).toMatchSnapshot();
 });

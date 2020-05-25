@@ -22,18 +22,28 @@ Object {
       "baseline": 8,
       "fonts": Array [
         Object {
+          "ascent": 2728,
+          "capHeight": 2048,
+          "descent": -680,
           "fallback": "sans-serif",
           "familyName": "Inter",
-          "file": "/Users/tol-is/Workspace/oss/tailwind-plugin-baseline/plugin/src/__tests__/fixtures/inter/Inter-Regular.woff",
-          "italic": true,
+          "italic": false,
           "key": "sans-400",
+          "upm": 2816,
           "weight": 400,
+          "xHeight": 1536,
         },
       ],
       "measure": Array [
-        15,
-        20,
+        "15ch",
+        "20ch",
       ],
+      "options": Object {
+        "measure": true,
+        "rhythm": true,
+        "type": true,
+        "xray": true,
+      },
       "rhythm": Array [
         0,
         1,
@@ -45,14 +55,6 @@ Object {
         16,
       ],
       "useRem": false,
-      "options": Object {
-        "xray": true,
-        "baseline": true,
-        "capheight": true,
-        "measure": true,
-        "rhythm": true,
-        "xheight": true,
-      },
     },
     "extend": Object {
       "height": Object {

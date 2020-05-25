@@ -1,14 +1,6 @@
 import { iTailwindTheme, iCompositorTheme, iFontOpenType } from './types';
 var flattenDeep = require('lodash.flattendeep');
-import {
-	styleFontFamily,
-	styleBaselineRel,
-	styleBaseline,
-	styleCapHeightRel,
-	styleCapHeight,
-	styleXHeightRel,
-	styleXHeight,
-} from './styles';
+import { styleFontFamily, styleBaselineRel, styleBaseline } from './styles';
 
 /**
  *
@@ -59,12 +51,12 @@ export const createTextStyles = ({
 								leading: lead,
 						  });
 
-					// apply if variant baseline
-					const baselineStyles = options.baseline && {
-						[`&.${e(`type-${sizeIdx}/${lead}`)}`]: outputBaseline,
+					// apply if variant type is enabled
+					const baselineStyles = options.type && {
+						[`&.${e(`text-${sizeIdx}/${lead}`)}`]: outputBaseline,
 					};
 
-					const outputCapHeight = useRem
+					/*const outputCapHeight = useRem
 						? styleCapHeightRel({
 								font: font,
 								root: root,
@@ -102,13 +94,11 @@ export const createTextStyles = ({
 							  });
 					const xHeightStyles = options.xheight && {
 						[`&.${e(`xheight-${sizeIdx}/${lead}`)}`]: outputXHeight,
-					};
+					}; */
 
 					return {
 						[`.font-${font.key}`]: {
 							...baselineStyles,
-							...capHeightStyles,
-							...xHeightStyles,
 						},
 					};
 				});

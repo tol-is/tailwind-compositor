@@ -49,9 +49,7 @@ export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
 type UtilityOptions = {
 	xray: boolean;
-	baseline: boolean;
-	capheight: boolean;
-	xheight: boolean;
+	type: boolean;
 	rhythm: boolean;
 	measure: boolean;
 };
