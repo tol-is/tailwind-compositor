@@ -43,8 +43,8 @@ module.exports = {
 	rhythm,
 	measure,
 	fonts,
-	variants: {
-		background: true,
+	options: {
+		xray: true,
 		baseline: true,
 		capheight: true,
 		xheight: true,
