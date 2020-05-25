@@ -11,13 +11,13 @@ Compositor is essentially a system of constraints, that helps implement aestheti
 
 You will need postcss, tailwindcss and fontkit installed along with the plugin
 
-##### dependencies
+#### dependencies
 
 ```
 npm install postcss fontkit tailwindcss tailwind-compositor
 ```
 
-##### postcss.config.js
+#### postcss.config.js
 
 In your `postcss.config.js` you will need to import your standard `tailwind.config.js`, but also your `compositor.config.js`.
 
@@ -46,7 +46,7 @@ module.exports = {
 
 ## Configuration
 
-##### compositor.config.js
+#### compositor.config.js
 
 ```
 const compositorConfig = {
@@ -188,17 +188,17 @@ options: {
 
 #### Font and Font Style
 
-```
-<p class="font-sans-400 type-3/2">
-  Amet et non nisi ex
-</p>
-```
-
 -   `font-{font-key} font style`
 -   `type-{type_scale_index}/{leading_in_baseline_units} baseline bbox`
 -   `capheight-{type_scale_index}/{leading_in_baseline_units} cap-height bbox`
 -   `xheight-{type_scale_index}/{leading_in_baseline_units} x-height bbox`
     `
+
+```
+<p class="font-sans-400 type-3/2">
+  Amet et non nisi ex
+</p>
+```
 
 ```
 // family / style
@@ -226,7 +226,7 @@ options: {
 
 ---
 
-#### Rhythm, Size and Spacing
+#### Rhythm, Spacing and Size.
 
 -   `rhythm-{rhythm_scale_index}` Vertical rhythm (alias)
 -   `rhythm-y-{rhythm_scale_index}` Vertical rhythm
@@ -252,16 +252,20 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 -   `p-{rhythm_scale_index}` Padding
 -   ...etc
 
-By default compositor will use the same scale to extend the other tailwind sizing scales, width, min/max width and height min/max.
-
 ```
 <section class="px-4 py-5">
   <h3 class="sans400 type-7/3 mb-4" />
   <input type="text" class="h-8 mb-4" />
-  <button class="h-8 mb-px" />
   <p class="sans400i type-1/2" />
 </section>
+```
 
+Compositor also applies the spacing scale to other tailwind sizing scales, width, min/max width and height min/max.
+
+```
+<section class="min-h-10 flex flex-col items-end">
+  <button class="h-8" />
+</section>
 ```
 
 ---
@@ -288,22 +292,22 @@ In most cases that's working well, but in typography, the vast majority of these
 
 For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
 
-#### Undesirable White Space
+#### Unpredictable Rhythm
 
 Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently and center vertically, the bounding box, or the distance from the ascender to the descender, to the line-height.
 
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
 
-As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our rhythm is unpredictable and layout elements out of the intented position by `(ascent + abs(descent)) - lineHeight / 2`.
+As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our rhythm can be unpredictable and our implementations require optical adjustments.
 
 ## Solution
 
-Compositor at the core, attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
+Compositor at the core, attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
 
 ---
 
-### Can i use it?
+## Can i use it?
 
 1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. **You must use purgecss with this library.** For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
 
@@ -313,4 +317,17 @@ Compositor at the core, attempts to solve these problems. The configuration is b
 
 4. If you can't use it on production, compositor can be of value, as an educational or design and prototyping tool.
 
+--
+
+## Todos
+
+-   Website
+-   Built-in typescales
+-   Breakpoing configuration with useRem
+-   Batteries included themes
+-   Color
+-   React/Emotion version
+
 ---
+
+Special thanks to Michael Taranto, who I've never met, but their original [basekick](https://github.com/michaeltaranto/basekick) recipe made this possible.
