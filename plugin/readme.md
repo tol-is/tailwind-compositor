@@ -171,12 +171,16 @@ You can preconfigure each font style manually, or use the `file` property to ref
 
 Options provide a set of properties used to enable/disable individual compositor utilities. Unlike tailwind, compositor's utilities are all responsive and only responsive.
 
-**baseline** Enable baseline typographic utilities
-**capheight** Enable capheight typographic utilities
-**xheight** Enable xheight typographic utilities
-**rhythm** Enable rhythm utilities
-**measure** Enable measure utilities
-**xray** Enable xray utilities
+```
+options: {
+    xray: true, //Enable debug utilities
+    baseline: true, // Enable baseline typographic utilities
+    capheight: true, // Enable capheight typographic utilities
+    xheight: true, // Enable xheight typographic utilities
+    rhythm: true, // Enable rhythm utilities
+    measure: true, //Enable measure utilities
+  }
+```
 
 ---
 
