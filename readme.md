@@ -5,6 +5,16 @@ Compositor is a system of constraints, that helps implement aesthetically pleasi
 > It is not important that the result should be this or that. What is important, is that the form should and must take it's shape, in obedience to an order or formula. It is in the design of the formula and not in the design of the form, that the creative pleasure resides. And thus the aim of the creative work
 > _Karl Gerstner - Designing Programmes_
 
+## What is it?
+
+Given a list of fonts, a typescale, and the a baseline rhythm value, compositor creates a set of typographic utilities, making sure every line of text follows a baseline grid rhythm.
+
+The compact syntax looks like this example. A text style that's using a sans-serif font, at 400 weight in italics. Glyphs align to the baseline grid, font-size is the 10th index of the typescale and there are 3 baseline units in between text lines. Those parameters combined, represent a single text style.
+
+```
+  <p class="font-sans-400i type-10/3">
+```
+
 ---
 
 ## Installation
@@ -276,7 +286,7 @@ Compositor also applies the spacing scale to other tailwind sizing scales, width
 
 ## Motivation
 
-There is not right and wrong when it comes to artistic expression. And typography is just that. But when the purpose is to make a reading experience pleasing, consistent, predictable rhythm, between lines of text and layout elements is one proven method based on mathematical thinking.
+There is no right and wrong when it comes to artistic expression and that applies to typography also. But when the purpose is to make a reading experience pleasing, then a consistent, predictable rhythm, between lines of text and layout elements is one method that's been proven to work.
 
 #### High Fault Tolerance
 
@@ -288,16 +298,16 @@ For example, if we don't load a particular webfont, when a browser can't find th
 
 #### Unpredictable Rhythm
 
-Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently and center vertically, the bounding box, or the distance from the ascender to the descender, to the line-height.
+Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. And the bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height.
 
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
 
-As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our rhythm can be unpredictable and our implementations require optical adjustments.
+As a result, when rendering text, unline any other dom element, the browser adds white-space above and below each text. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our rhythm can be unpredictable and our implementations require optical adjustments.
 
 ## Solution
 
-Compositor at the core, attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
+Compositor attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics, compositor crops the white space around text and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
 
 ---
 
@@ -305,11 +315,11 @@ Compositor at the core, attempts to solve these problems. The configuration is b
 
 1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. **You must use purgecss with this library.** For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
 
-2. Currently, the system should only work with horizontal text, but at this moment, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
+2. Currently, the system should only work with horizontal text, but so far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
-3. It should work with most fonts, but some fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
+3. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
 
-4. If you can't use it on production, compositor can be of value, as an educational or design and prototyping tool.
+4. If you can't use it on production, compositor can be a practical educational or design and prototyping tool.
 
 --
 
@@ -318,7 +328,7 @@ Compositor at the core, attempts to solve these problems. The configuration is b
 -   Website
 -   Built-in typescales
 -   Breakpoing configuration with useRem
--   Batteries included themes
+-   Themes
 -   Color
 -   React/Emotion version
 
