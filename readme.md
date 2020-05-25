@@ -180,9 +180,9 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-### Tailwind Utilities
+## Tailwind Utilities
 
-#### Typographic Utilities
+#### Typography
 
 ```
 <p class="font-sans-400 type-3/2">
