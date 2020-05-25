@@ -1,6 +1,6 @@
 # Tailwind Compositor
 
-Compositor is essentially a system of constraints, that helps implement aesthetically pleasing, predictable typographic compositions, based on objective, rational, constant dimensions of space.
+Compositor is essentially a system of constraints, that helps implement aesthetically pleasing, predictable typographic compositions, based on mathematical thinking and objective, rational, constant dimensions of space.
 
 > It is not important that the result should be this or that. What is important, is that the form should and must take it's shape, in obedience to an order or formula. It is in the design of the formula and not in the design of the form, that the creative pleasure resides. And thus the aim of the creative work
 > _Karl Gerstner - Designing Programmes_
@@ -180,9 +180,9 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-## Tailwind Utilities
+## Tailwind Utility Classes
 
-#### Typography
+#### Font and Font Style
 
 ```
 <p class="font-sans-400 type-3/2">
@@ -190,10 +190,10 @@ Options provide a set of properties used to enable/disable individual compositor
 </p>
 ```
 
--   `font-{font-key} // font style`
--   `type-{type_scale_index}/{leading_in_baseline_units} // baseline bbox`
--   `capheight-{type_scale_index}/{leading_in_baseline_units} // cap-height bbox`
--   `xheight-{type_scale_index}/{leading_in_baseline_units} // x-height bbox`
+-   `font-{font-key} font style`
+-   `type-{type_scale_index}/{leading_in_baseline_units} baseline bbox`
+-   `capheight-{type_scale_index}/{leading_in_baseline_units} cap-height bbox`
+-   `xheight-{type_scale_index}/{leading_in_baseline_units} x-height bbox`
     `
 
 ```
@@ -209,7 +209,7 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-#### Measure
+#### Line Width
 
 -   `measure-{measure_scale_index}`
 
@@ -222,7 +222,7 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-#### Rhythm
+#### Rhythm, Size and Spacing
 
 -   `rhythm-{rhythm_scale_index}` Vertical rhythm (alias)
 -   `rhythm-y-{rhythm_scale_index}` Vertical rhythm
@@ -241,11 +241,12 @@ Options provide a set of properties used to enable/disable individual compositor
 </section>
 ```
 
----
-
-#### Size and Spacing
-
 When the tailwind theme is composed, the rhythm scale is transformed to tailwindcss spacing scale so thereafter, can be used for all spacing utilities, margin, padding and grid-gap.
+
+-   `mx-{rhythm_scale_index}` Margin X
+-   `ml-{rhythm_scale_index}` Margin Left
+-   `p-{rhythm_scale_index}` Padding
+-   ...etc
 
 By default compositor will use the same scale to extend the other tailwind sizing scales, width, min/max width and height min/max.
 
@@ -261,7 +262,9 @@ By default compositor will use the same scale to extend the other tailwind sizin
 
 ---
 
-#### XRay
+#### Dev Utils
+
+-   `bg-baseline` Background grid lines.
 
 ```
 <section class="bg-baseline" />
@@ -271,35 +274,39 @@ By default compositor will use the same scale to extend the other tailwind sizin
 
 ## Motivation
 
+There is not right and wrong when it comes to artistic expression. And typography is just that. But when the purpose is to make a reading experience pleasing, consistent, predictable rhythm, between lines of text and layout elements is one proven method based on mathematical thinking.
+
+#### High Fault Tolerance
+
+Many design systems only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably.
+
+In most cases that's working well, but in typography, the vast majority of these combinations don't produce useful results, or even worse don't exist at all.
+
+For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
+
+#### Undesirable White Space
+
 Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently and center vertically, the bounding box, or the distance from the ascender to the descender, to the line-height.
 
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
 
-As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our intended rhythm is unpredictable and layout elements out of the intented position by `(ascent + abs(descent)) - lineHeight / 2`.
-
-#### High Fault Tolerance
-
-The second problem with many design systems, is that they only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. In most cases that's working well, but in typography, the vast majority of these combinations don't produce useful results, or even worse don't exist at all.
-
-For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
-
----
+As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our rhythm is unpredictable and layout elements out of the intented position by `(ascent + abs(descent)) - lineHeight / 2`.
 
 ## Solution
 
-Compositor attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
+Compositor at the core, attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
 
 ---
 
 ### Can i use it?
 
-1. Depending on your typescale and number of webfonts, the output can be way beyond anything you should consider shipping, in terms of file size. **You must use purgecss with this library.** For many use cases, personal blogs, minimal aesthetic, it should be fine.
+1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. **You must use purgecss with this library.** For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
 
-2. Currently, the system should only work with horizontal tex, but at this moment, it's hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
+2. Currently, the system should only work with horizontal text, but at this moment, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
 3. It should work with most fonts, but some fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
 
-4. If you can't use it on production, compositor can offer value, as an educational or design and prototyping tool.
+4. If you can't use it on production, compositor can be of value, as an educational or design and prototyping tool.
 
 ---
