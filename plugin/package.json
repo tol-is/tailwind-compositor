@@ -3,6 +3,7 @@
 	"version": "0.0.1-rc.2",
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
+	"homepage": "https://github.com/a7sc11u/tailwind-compositor#readme",
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"files": [
@@ -30,5 +31,5 @@
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
 	},
-	"gitHead": "21207697aa55d53b18af6902e8d5b91723491073"
+	"gitHead": "6608f29647c5a38f0d471f07e00f5b060b94801a"
 }
