@@ -7,33 +7,6 @@ Compositor is essentially a system of constraints, that helps implement aestheti
 
 ---
 
----
-
-## Motivation
-
-Traditionally, in typography, space between lines of text is measured from the baseline. The browsers behave differently and center vertically, the bounding box, or the distance from the ascender to the descender, to the line-height.
-
-As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding, depending on the order of UI components, font, font-size and line-height the space between two elements, will be out the intended rhythm by `(ascent + abs(descent)) - lineHeight / 2`.
-
-[Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
-<img src="./plugin/images/vertical-metrics.png" width="400"/>
-
-#### High Fault Tolerance
-
-The second problem regarding web typography in most design systems, is that most systems only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. The vast majority of these combinations don't produce useful results, or even worse don't exist at all.
-
-For example, when a browser can't find the true bold or italic version of a font, because for example, we don't load this particular style, it will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
-
----
-
-## Solution
-
-The compositor attempts to solve these problems using font metrics to crop the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe. Also implements a baseline grid system that allows us to anchor layout elements to a meaningful rhythm,
-
----
-
----
-
 ## Installation
 
 You will need postcss, tailwindcss and fontkit installed along with the plugin
@@ -68,8 +41,6 @@ module.exports = {
   ],
 };
 ```
-
----
 
 ---
 
@@ -198,7 +169,7 @@ You can preconfigure each font style manually, or use the `file` property to ref
 
 #### - `options`
 
-enable config can be used to enable/disable individual compositor utilities. Unlike tailwind, compositor's utilities are only responsive.
+Options provide a set of properties used to enable/disable individual compositor utilities. Unlike tailwind, compositor's utilities are all responsive and only responsive.
 
 **baseline** Enable baseline typographic utilities
 **capheight** Enable capheight typographic utilities
@@ -209,20 +180,20 @@ enable config can be used to enable/disable individual compositor utilities. Unl
 
 ---
 
-### Utilities
+### Tailwind Utilities
 
 #### Typographic Utilities
 
 ```
-<p class="font-sans-400 type-3/2 measure-8">
+<p class="font-sans-400 type-3/2">
   Amet et non nisi ex
 </p>
 ```
 
 -   `font-{font-key} // font style`
--   `type-{typeScale}/{leading} // baseline bbox`
--   `capheight-{typeScale}/{leading} // cap-height bbox`
--   `xheight-{typeScale}/{leading} // x-height bbox`
+-   `type-{type_scale_index}/{leading_in_baseline_units} // baseline bbox`
+-   `capheight-{type_scale_index}/{leading_in_baseline_units} // cap-height bbox`
+-   `xheight-{type_scale_index}/{leading_in_baseline_units} // x-height bbox`
     `
 
 ```
@@ -253,9 +224,9 @@ enable config can be used to enable/disable individual compositor utilities. Unl
 
 #### Rhythm Utility
 
--   `rhythm-{rhythm_scale_index}`
--   `rhythm-y-{rhythm_scale_index}`
--   `rhythm-x-{rhythm_scale_index}`
+-   `rhythm-{rhythm_scale_index}` Vertical rhythm (alias)
+-   `rhythm-y-{rhythm_scale_index}` Vertical rhythm
+-   `rhythm-x-{rhythm_scale_index}` Horizontal Rhythm
 
 ```
 <section class="rhythm-3 lg:rhythm-5" />
@@ -274,7 +245,7 @@ enable config can be used to enable/disable individual compositor utilities. Unl
 
 #### Size and Spacing
 
-When the tailwind theme is composed, the rhythm scale is transformed to tailwindcss spacing scale and can be used thereafter for all spacing utilities, margin, padding and grid-gap.
+When the tailwind theme is composed, the rhythm scale is transformed to tailwindcss spacing scale so thereafter, can be used for all spacing utilities, margin, padding and grid-gap.
 
 By default compositor will use the same scale to extend the other tailwind sizing scales, width, min/max width and height min/max.
 
@@ -298,16 +269,35 @@ By default compositor will use the same scale to extend the other tailwind sizin
 
 ---
 
+## Motivation
+
+Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently and center vertically, the bounding box, or the distance from the ascender to the descender, to the line-height.
+
+[Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
+<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
+
+As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, will break the intended rhythm by `(ascent + abs(descent)) - lineHeight / 2`.
+
+#### High Fault Tolerance
+
+The second problem with most (if not all) design systems, is that most systems only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. In most cases that's working well, but in typography, the vast majority of these combinations don't produce useful results, or even worse don't exist at all.
+
+For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
+
+---
+
+## Solution
+
+The compositor attempts to solve these problems using font metrics to crop the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe. Also implements a baseline grid system that allows us to anchor layout elements to a meaningful rhythm. The configuration is build with absolute, integer values and transformed to css styles on build time.
+
 ---
 
 ### Can i use it?
 
-1. You can definitely use it as an educational or prototyping tool.
+1. Depending on your typescale and number of webfonts, the output can be way beyond anything you should consider shipping, in terms of file size. **You must use purgecss with this library.** For many use cases, personal blogs, minimal aesthetic, it should be fine.
 
-2. Depending on your typescale and number of webfonts, the output can be way beyond anything you should consider shipping, in terms of file size. **You must use purgecss with this library.** For many use cases, personal blogs, minimal aesthetic, it should be fine.
+2. Currently, the system should only work with horizontal tex, but at this moment, it's hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
-3. Currently, the system should only work with horizontal layouts, but at this moment, it's hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
-
-4. It really depends on your font. Some fonts are poorly designed (some very popular too) and don't render identically across browsers and operating systems. The error might be negligible in reading size, but display text can be problematic.
+3. It should work with most fonts, but some fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
 
 ---
