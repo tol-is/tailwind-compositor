@@ -121,25 +121,25 @@ const compositorConfig = {
 }
 ```
 
-#### `1/8 useRem: bool`
+#### 1/8 useRem: bool
 
 When useRem is set to true, all spacing and font-size utilities, will be transformed to `rem` units. Otherwise remain as configured, in `px`. It is recommended to favour `rem` units over `px`, however sometimes while in development, it's more efficient to communicate values with designers using `px` units, or absolute `baseline` units. With `useRem` you can switch all the values with a single configuration.
 
 ---
 
-#### `2/8 - root: integer`
+#### 2/8 - root: integer
 
 The root font size `1rem` in `px` units.
 
 ---
 
-#### `3/8 - baseline: integer`
+#### 3/8 - baseline: integer
 
 The baseline grid row height, in `px` units.
 
 ---
 
-#### `4/8 - type : array[integer]`
+#### 4/8 - type : array[integer]
 
 ```
 type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72]
@@ -149,7 +149,7 @@ The system's typographic scale, in `px` units.
 
 ---
 
-#### `5/8 - rhythm : array[integer]`
+#### 5/8 - rhythm : array[integer]
 
 ```
 rhythm: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12]
@@ -159,7 +159,7 @@ The system's size and spacing scale, in `baseline` units, used for `rhythm`, `ma
 
 ---
 
-#### `6/8 - measure : array[integer]`
+#### 6/8 - measure : array[integer]
 
 ```
 measure: [10, 15, 20, 30, 35, 50, 55, 60, 65]
@@ -169,7 +169,7 @@ Separate scale used for `measure` (line-width) utilities, configured in `ch` uni
 
 ---
 
-#### `7/8 - fonts : array[opentype]`
+#### 7/8 - fonts : array[opentype]
 
 The font scale provides all the information needed to render text styles. Each entry describes a font/weight/style set, and only those that are part of the system will be enabled.
 
@@ -218,7 +218,7 @@ You can adjust to whatever feels more intuitive to you. Theres is no constraint.
 
 ---
 
-#### `8/8 - options : object`
+#### 8/8 - options : object
 
 Options properties, are used to enable/disable individual compositor utilities.
 
@@ -386,7 +386,7 @@ Compositor only enables font styles configured in the system, and the baseline g
 
 ## Can I use it?
 
-1. On production, it depends on your typescale and number of webfonts. **You must use purgecss.** The output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
+1. it depends on your typescale and number of webfonts. **You must use purgecss.** The output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
 
 2. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but display text can be more problematic.
 
