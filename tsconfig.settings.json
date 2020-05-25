@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"strict": false,
 		"noImplicitAny": false,
 		"allowSyntheticDefaultImports": true,
 		"declaration": true,
@@ -12,7 +13,6 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": false,
 		"target": "es5",
 		"baseUrl": "./",
 		"noErrorTruncation": true,

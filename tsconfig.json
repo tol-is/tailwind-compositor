@@ -1,4 +1,4 @@
 {
-  "files": [], // do not remove!
-  "extends": "./tsconfig.settings.json"
+	"extends": "./tsconfig.settings.json",
+	"files": [] // do not remove!
 }
