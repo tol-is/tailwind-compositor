@@ -10,11 +10,11 @@ export const createBackgroundStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { utilities, baseline, root, useRem }: iCompositorTheme = theme(
+	const { options, baseline, root, useRem }: iCompositorTheme = theme(
 		'compositor'
 	);
 
-	if (!utilities.xray) return;
+	if (!options.xray) return;
 
 	const baselineBgStyles = {
 		[`.bg-baseline`]: useRem

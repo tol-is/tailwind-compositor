@@ -16,7 +16,7 @@ Traditionally, in typography, space between lines of text is measured from the b
 As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding, depending on the order of UI components, font, font-size and line-height the space between two elements, will be out the intended rhythm by `(ascent + abs(descent)) - lineHeight / 2`.
 
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
-<img src="./plugin/images/vertical-metrics.png" width="400"/>
+<img src="./images/vertical-metrics.png" width="400"/>
 
 #### High Fault Tolerance
 

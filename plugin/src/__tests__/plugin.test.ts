@@ -51,7 +51,7 @@ test('simple transform', () => {
 // test('baseline styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		utilities: {
+// 		options: {
 // 			xray: true,
 //      baseline: true,
 // 			capheight: false,
@@ -68,7 +68,7 @@ test('simple transform', () => {
 // test('capheight styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		utilities: {
+// 		options: {
 // 			xray: false,
 //      baseline: false,
 // 			capheight: true,
@@ -85,7 +85,7 @@ test('simple transform', () => {
 // test('xheight styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		utilities: {
+// 		options: {
 // 			xray: false,
 // 			baseline: false,
 // 			capheight: false,
@@ -102,7 +102,7 @@ test('simple transform', () => {
 // test('rhythm styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		utilities: {
+// 		options: {
 // 		  xray: false,
 // 			baseline: false,
 // 			capheight: false,
@@ -119,7 +119,7 @@ test('simple transform', () => {
 // test('measure styles', () => {
 // 	const config = {
 // 		useRem: false,
-// 		utilities: {
+// 		options: {
 // 		  xray: false,
 // 			baseline: false,
 // 			capheight: false,

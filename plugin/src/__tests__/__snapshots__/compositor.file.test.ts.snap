@@ -45,7 +45,7 @@ Object {
         16,
       ],
       "useRem": false,
-      "utilities": Object {
+      "options": Object {
         "xray": true,
         "baseline": true,
         "capheight": true,
