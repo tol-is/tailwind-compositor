@@ -1,6 +1,6 @@
 # Tailwind Compositor
 
-Compositor is essentially a system of constraints, that helps implement aesthetically pleasing, predictable typographic compositions, based on mathematical thinking and objective, rational, constant dimensions of space.
+Compositor is a system of constraints, that helps implement aesthetically pleasing, predictable typographic compositions, based on mathematical thinking and objective, rational, constant dimensions of space.
 
 > It is not important that the result should be this or that. What is important, is that the form should and must take it's shape, in obedience to an order or formula. It is in the design of the formula and not in the design of the form, that the creative pleasure resides. And thus the aim of the creative work
 > _Karl Gerstner - Designing Programmes_
@@ -11,13 +11,11 @@ Compositor is essentially a system of constraints, that helps implement aestheti
 
 You will need postcss, tailwindcss and fontkit installed along with the plugin
 
-#### dependencies
-
 ```
 npm install postcss fontkit tailwindcss tailwind-compositor
 ```
 
-#### postcss.config.js
+#### - postcss.config.js
 
 In your `postcss.config.js` you will need to import your standard `tailwind.config.js`, but also your `compositor.config.js`.
 
@@ -42,11 +40,7 @@ module.exports = {
 };
 ```
 
----
-
-## Configuration
-
-#### compositor.config.js
+#### - compositor.config.js
 
 ```
 const compositorConfig = {
