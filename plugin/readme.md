@@ -9,11 +9,17 @@ Compositor is a system of constraints, that helps implement aesthetically pleasi
 
 Given a list of fonts, a typescale, and the a baseline rhythm value, compositor creates a set of typographic utilities, making sure every line of text follows a baseline grid rhythm.
 
-The compact syntax looks like this example. A text style that's using a sans-serif font, at 400 weight in italics. Glyphs align to the baseline grid, font-size is the 10th index of the typescale and there are 3 baseline units in between text lines. Those parameters combined, represent a single text style.
+[Baseline Grid Example](https://basekick-gui.netlify.app/)
+<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-type.gif" width="600"/>
+
+## Syntax
 
 ```
-  <p class="font-sans-400i type-10/3">
+  <h3 class="font-sans-600i type-10/3" />
+  <p class="font-sans-400 type-5/3">
 ```
+
+The compact tailwind syntax looks like this example. The heading 3 style is using a sans font the we configured, at 600-semibold weight, italic style. Glyphs align to the baseline grid, the font-size is the 10th index of the typescale and the space between lines is exactly 3 baseline units. Those two utilities, represent a single text style of 6 parameters.
 
 ---
 
@@ -266,6 +272,12 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 
 Compositor also applies the spacing scale to other tailwind sizing scales, width, min/max width and height min/max.
 
+-   `h-{rhythm_scale_index}` Height
+-   `min-h-{rhythm_scale_index}` Min Height
+-   `max-h-{rhythm_scale_index}` Max Height
+-   ...etc
+-
+
 ```
 <section class="min-h-10 flex flex-col items-end">
   <button class="h-8" />
@@ -286,7 +298,9 @@ Compositor also applies the spacing scale to other tailwind sizing scales, width
 
 ## Motivation
 
-There is no right and wrong when it comes to artistic expression and that applies to typography also. But when the purpose is to make a reading experience pleasing, then a consistent, predictable rhythm, between lines of text and layout elements is one method that's been proven to work.
+There is no right and wrong when it comes to artistic expression.
+
+But when the purpose is to make a reading experience pleasing, then a consistent, predictable rhythm, between lines of text and layout elements is one method, that over the last 80 years or so has been repeatedly proven to produce timeless quality.
 
 #### High Fault Tolerance
 
@@ -298,7 +312,7 @@ For example, if we don't load a particular webfont, when a browser can't find th
 
 #### Unpredictable Rhythm
 
-Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. And the bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height.
+Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. The bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height. Within the bounding box, glyphs are aligned to the baseline.
 
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
@@ -313,11 +327,11 @@ Compositor attempts to solve these problems. The configuration is based on ratio
 
 ## Can i use it?
 
-1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. **You must use purgecss with this library.** For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
+1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine. **You must use purgecss with this library.**
 
-2. Currently, the system should only work with horizontal text, but so far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
+2. Currently, the system only works for horizontal text So far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
-3. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
+3. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but display sizes can result to a couple pixels off the baseline.
 
 4. If you can't use it on production, compositor can be a practical educational or design and prototyping tool.
 
