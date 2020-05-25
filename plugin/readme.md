@@ -7,19 +7,11 @@ Compositor is a system of constraints, that helps implement aesthetically pleasi
 
 ## What is it?
 
-Given a list of fonts, a typescale, and the a baseline rhythm value, compositor creates a set of typographic utilities, making sure every line of text follows a baseline grid rhythm.
+Given a list of fonts, a typescale, and the a baseline rhythm value, compositor creates a set of typographic utilities, making sure every line of text anchors to a baseline grid, along with a set of additional typographic space and size utilities.
 
 [Baseline Grid Example](https://basekick-gui.netlify.app/)
+
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-type.gif" width="600"/>
-
-## Syntax
-
-```
-  <h3 class="font-sans-600i type-10/3" />
-  <p class="font-sans-400 type-5/3">
-```
-
-The compact tailwind syntax looks like this example. The heading 3 style is using a sans font the we configured, at 600-semibold weight, italic style. Glyphs align to the baseline grid, the font-size is the 10th index of the typescale and the space between lines is exactly 3 baseline units. Those two utilities, represent a single text style of 6 parameters.
 
 ---
 
@@ -198,28 +190,20 @@ options: {
 
 #### Font and Font Style
 
--   `font-{font-key} font style`
--   `type-{type_scale_index}/{leading_in_baseline_units} baseline bbox`
--   `capheight-{type_scale_index}/{leading_in_baseline_units} cap-height bbox`
--   `xheight-{type_scale_index}/{leading_in_baseline_units} x-height bbox`
+-   font style: `font-{font-key}`
+-   baseline type: `type-{type_scale_index}/{leading_baseline_units}`
+-   capheight type: `capheight-{type_scale_index}/{leading__baseline_units}`
+-   xheight type: `xheight-{type_scale_index}/{leading_baseline_units}`
     `
 
 ```
-<p class="font-sans-400 type-3/2">
-  Amet et non nisi ex
-</p>
-```
-
-```
-// family / style
-<p class="font-sans-400" />
-<p class="font-sans-400i" />
-
-// bounding box / type scale / leading
-<div class="font-sans-400 type-10/3" />
+// family-style | crop-typescale/leading
+<h3 class="font-sans-400i type-10/3" />
 <div class="font-sans-400 capheight-5/3" />
 <div class="font-sans-400 xheight-5/3" />
 ```
+
+In the example above, the h3 tag, is styled with a sans font that we configured, at 600-semibold weight, italics. Glyphs align to the baseline grid, the font-size is the 10th index of the typescale and the space between lines is exactly 3 baseline units. These two utilities combined, represent a complete text style.
 
 ---
 
@@ -238,9 +222,9 @@ options: {
 
 #### Rhythm, Spacing and Size.
 
--   `rhythm-{rhythm_scale_index}` Vertical rhythm (alias)
--   `rhythm-y-{rhythm_scale_index}` Vertical rhythm
--   `rhythm-x-{rhythm_scale_index}` Horizontal Rhythm
+-   Vertical rhythm (alias): `rhythm-{rhythm_scale_index}`
+-   Vertical rhythm: `rhythm-y-{rhythm_scale_index}`
+-   Horizontal Rhythm: `rhythm-x-{rhythm_scale_index}`
 
 ```
 <section class="rhythm-3 lg:rhythm-5" />
@@ -257,9 +241,9 @@ options: {
 
 When the tailwind theme is composed, the rhythm scale is transformed to tailwindcss spacing scale so thereafter, can be used for all spacing utilities, margin, padding and grid-gap.
 
--   `mx-{rhythm_scale_index}` Margin X
--   `ml-{rhythm_scale_index}` Margin Left
--   `p-{rhythm_scale_index}` Padding
+-   Margin X: `mx-{rhythm_scale_index}`
+-   Margin Left: `ml-{rhythm_scale_index}`
+-   Padding: `p-{rhythm_scale_index}`
 -   ...etc
 
 ```
@@ -272,9 +256,9 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 
 Compositor also applies the spacing scale to other tailwind sizing scales, width, min/max width and height min/max.
 
--   `h-{rhythm_scale_index}` Height
--   `min-h-{rhythm_scale_index}` Min Height
--   `max-h-{rhythm_scale_index}` Max Height
+-   Height: `h-{rhythm_scale_index}`
+-   Min Height: `min-h-{rhythm_scale_index}`
+-   Max Height: `max-h-{rhythm_scale_index}`
 -   ...etc
 -
 
@@ -288,7 +272,7 @@ Compositor also applies the spacing scale to other tailwind sizing scales, width
 
 #### Dev Utils
 
--   `bg-baseline` Background grid lines.
+-   Background grid lines: `bg-baseline`
 
 ```
 <section class="bg-baseline" />
@@ -325,17 +309,17 @@ Compositor attempts to solve these problems. The configuration is based on ratio
 
 ---
 
-## Can i use it?
+## Can I use it?
 
-1. Depending on your typescale and number of webfonts, the output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine. **You must use purgecss with this library.**
+1. You can definitely use it as a practical educational or design and prototyping tool.
 
-2. Currently, the system only works for horizontal text So far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
+2. On production, it depends on your typescale and number of webfonts. Compositor creates breakpoints*fonts*typescale\*leading classes. That's a lot. The output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine. **You must use purgecss with this library.**
 
-3. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but display sizes can result to a couple pixels off the baseline.
+3. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but display text can be more problematic.
 
-4. If you can't use it on production, compositor can be a practical educational or design and prototyping tool.
+4. Currently, the system only works for horizontal text So far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
---
+---
 
 ## Todos
 
@@ -345,6 +329,7 @@ Compositor attempts to solve these problems. The configuration is based on ratio
 -   Themes
 -   Color
 -   React/Emotion version
+-   Custom IDE
 
 ---
 
