@@ -21,7 +21,7 @@ npm install postcss fontkit tailwindcss tailwind-compositor
 
 In your `postcss.config.js` you will need to import your standard `tailwind.config.js`, but also your `compositor.config.js`.
 
-The `{ compositor }` will receive both, merge with your tailwind config **spacing scale is overwriten**, and return a standard tailwind configuration.
+The `{ compositor }` will receive both, merge with your tailwind config, and return a standard tailwind configuration.
 
 ```
 const tailwindcss = require('tailwindcss');]
@@ -209,7 +209,7 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-#### Measure Utility
+#### Measure
 
 -   `measure-{measure_scale_index}`
 
@@ -222,7 +222,7 @@ Options provide a set of properties used to enable/disable individual compositor
 
 ---
 
-#### Rhythm Utility
+#### Rhythm
 
 -   `rhythm-{rhythm_scale_index}` Vertical rhythm (alias)
 -   `rhythm-y-{rhythm_scale_index}` Vertical rhythm
@@ -250,7 +250,7 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 By default compositor will use the same scale to extend the other tailwind sizing scales, width, min/max width and height min/max.
 
 ```
-<section class="p-4">
+<section class="px-4 py-5">
   <h3 class="sans400 type-7/3 mb-4" />
   <input type="text" class="h-8 mb-4" />
   <button class="h-8 mb-px" />
@@ -276,7 +276,7 @@ Traditionally, in typography, space between lines of text is measured from the b
 [Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
 
-As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, will break the intended rhythm by `(ascent + abs(descent)) - lineHeight / 2`.
+As a result, when rendering text, the browser adds white-space above and below each line and block of text, unline any other dom element. So regardless of margin/padding and depending on the order of UI components, font, font-size and line-height the space between two elements, our intended rhythm is unpredictable and layout elements out of the intented position by `(ascent + abs(descent)) - lineHeight / 2`.
 
 #### High Fault Tolerance
 
@@ -288,7 +288,7 @@ For example, if we don't load a particular webfont, when a browser can't find th
 
 ## Solution
 
-The compositor attempts to solve these problems using font metrics to crop the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe. Also implements a baseline grid system that allows us to anchor layout elements to a meaningful rhythm. The configuration is build with absolute, integer values and transformed to css styles on build time.
+Compositor attempts to solve these problems. The configuration is based on rational values that get transformed to css styles on build time. Using font metrics crops the white space around text, with a modified [basekick](https://github.com/michaeltaranto/basekick) recipe and implements a baseline grid system that allows us to anchor layout elements and lines of text, to a meaningful rhythm.
 
 ---
 
@@ -299,5 +299,7 @@ The compositor attempts to solve these problems using font metrics to crop the w
 2. Currently, the system should only work with horizontal tex, but at this moment, it's hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
 
 3. It should work with most fonts, but some fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but in display sizes can result to a couple pixels off the baseline.
+
+4. If you can't use it on production, compositor can offer value, as an educational or design and prototyping tool.
 
 ---
