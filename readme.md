@@ -239,7 +239,6 @@ options: {
 
 -   font: `font-{font-key}`
 -   Size & Line Height : `text-{type_scale_index}/{leading_baseline_units}`
-    text
 
 ```
 
@@ -373,8 +372,8 @@ For example, if we don't load a particular webfont, when a browser can't find th
 
 Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. The bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height.
 
-[Vertical Metrics Visualization](https://vertical-metrics.netlify.app)
 <img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
+[Vertical Metrics](https://vertical-metrics.netlify.app)
 
 As a result, when rendering text, unline any other dom element, the browser adds white-space above and below each line of text. So our layout implementation can behave unpredictably, and require optical adjustments, depending on the order of UI components, font, font-size and line-height.
 
