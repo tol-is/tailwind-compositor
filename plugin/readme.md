@@ -280,7 +280,7 @@ As a result, when rendering text, the browser adds white-space above and below e
 
 #### High Fault Tolerance
 
-The second problem with most (if not all) design systems, is that most systems only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. In most cases that's working well, but in typography, the vast majority of these combinations don't produce useful results, or even worse don't exist at all.
+The second problem with many design systems, is that they only provide a series of independent token collections, family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. In most cases that's working well, but in typography, the vast majority of these combinations don't produce useful results, or even worse don't exist at all.
 
 For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible.
 
