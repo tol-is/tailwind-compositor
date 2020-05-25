@@ -4,6 +4,7 @@
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
 	"homepage": "https://github.com/a7sc11u/tailwind-compositor#readme",
+	"keywords": ["tailwindcss", "typography", "baseline", "baseline-grid", "baseline-typography", "grid-system", "vertical-rhythm"],
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
 	"files": [
@@ -31,5 +32,5 @@
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
 	},
-	"gitHead": "f0f124d118ed4b4d9594c3cb7227048e0fab5514"
+	"gitHead": "cf096ef91950fa48f95826d9784de1ac7b3728e0"
 }
