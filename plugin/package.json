@@ -31,14 +31,16 @@
 		"postcss": "^7.0.30",
 		"tailwindcss": "^1.4.6"
 	},
+	"dependencies": {
+		"lodash.flattendeep": "^4.4.0"
+	},
 	"devDependencies": {
 		"csstype": "^2.6.9",
 		"fontkit": "^1.8.1",
-		"lodash.flattendeep": "^4.4.0",
 		"postcss": "^7.0.30",
 		"rollup": "^1.19.4",
 		"rollup-plugin-typescript2": "^0.24.0",
 		"tailwindcss": "^1.4.6"
 	},
-	"gitHead": "018c9deb0b0c6ada38b673bd60d82a05ff237651"
+	"gitHead": "b21ceede9d3900e743bff5b2abeefac08bc3cada"
 }
