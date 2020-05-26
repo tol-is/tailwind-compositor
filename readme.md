@@ -4,9 +4,8 @@ Compositor is a system of constraints designed to produce aesthetically pleasing
 
 TL;DR A baseline grid system for [tailwindcss](https://tailwindcss.com/).
 
-<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-slideshow.gif" width="500"/>
-
 _\* 16px baseline for demonstration purpose_
+<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-slideshow.gif" width="500"/>
 
 ```
 
@@ -173,9 +172,12 @@ The `file` property, is used to extract the vertical metrics dynamically from th
 
 You can use the [vertical metrics](https://vertical-metrics.netlify.app) app to manually extract font metrics, or other tools like glyphs, robofont or ask your type foundry.
 
-The `key` property is used to name the utility classes. The configuration bellow will produce two font styles `font-sans-400` which will render Inter Regular and `font-sans-400i` which will render Regular Italic style. The recommended convention is `${family}-${weight}i`.
+The `key` property is used to name the utility classes. The configuration bellow will produce four font styles. The recommended convention is `${family}-${weight}${style}`.
 
-You can adjust to whatever feels more intuitive to you. Theres is no constraint. for example, if you only have two weights, a `font-text` `font-heading` convention would work well.
+1. `font-sans-400` : Inter Regular
+2. `font-sans-400i` : Inter Regular Italic
+3. `font-sans-600i` : Inter Semibold
+4. `font-sans-600i` : Inter Semibold Italic
 
 ```
 {
@@ -392,15 +394,15 @@ Compositor only enables font styles configured in the system, and the baseline g
 
 ## Todos
 
--   Cap Height Alt Crop
--   Optimization
+-   Cap-Height and X-Height crop for vertical centering.
+-   Styles Optimization
 -   Breakpoing configuration with useRem
--   Website
 -   Built-in typescales
--   Themes
--   Color
 -   React/Emotion version
+-   Themes
+-   Components
+-   Website
 
 ---
 
-THis work is based on [basekick](https://github.com/michaeltaranto/basekick) recipe by Michael Taranto.
+This work is based on [basekick](https://github.com/michaeltaranto/basekick) recipe by Michael Taranto.
