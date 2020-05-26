@@ -79,6 +79,9 @@ const compositorConfig = {
   // baseline grid in px units
   baseline: 8,
 
+  // maximum leading
+  leading: 4,
+
   // type scale in px units
   type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72],
 
@@ -120,25 +123,31 @@ const compositorConfig = {
 }
 ```
 
-#### 1/8 useRem: bool
+#### 1/9 useRem: bool
 
 When useRem is set to true, all spacing and font-size utilities, will be transformed to `rem` units. Otherwise remain as configured, in `px`. It is recommended to favour `rem` units over `px`, however sometimes while in development, it's more efficient to communicate values with designers using `px` units, or absolute `baseline` units. With `useRem` you can switch all the values with a single configuration.
 
 ---
 
-#### 2/8 - root: integer
+#### 2/9 - root: integer
 
 The root font size `1rem` in `px` units.
 
 ---
 
-#### 3/8 - baseline: integer
+#### 3/9 - baseline: integer
 
 The baseline grid row height, in `px` units.
 
 ---
 
-#### 4/8 - type : array[integer]
+#### 4/9 - leading: integer
+
+The maximum leading value in baseline units.
+
+---
+
+#### 5/9 - type : array[integer]
 
 ```
 type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72]
@@ -148,7 +157,7 @@ The system's typographic scale, in `px` units.
 
 ---
 
-#### 5/8 - rhythm : array[integer]
+#### 6/9 - rhythm : array[integer]
 
 ```
 rhythm: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12]
@@ -158,7 +167,7 @@ The system's size and spacing scale, in `baseline` units, used for `rhythm`, `ma
 
 ---
 
-#### 6/8 - measure : array[integer]
+#### 7/9 - measure : array[integer]
 
 ```
 measure: [10, 15, 20, 30, 35, 50, 55, 60, 65]
@@ -168,7 +177,7 @@ Separate scale used for `measure` (line-width) utilities, configured in `ch` uni
 
 ---
 
-#### 7/8 - fonts : array[opentype]
+#### 8/9 - fonts : array[opentype]
 
 The font scale provides all the information needed to render text styles. Each entry describes a font/weight/style set, and only those that are part of the system will be enabled.
 
@@ -220,7 +229,7 @@ The `key` property is used to name the utility classes. The configuration bellow
 
 ---
 
-#### 8/8 - options : object
+#### 9/9 - options : object
 
 Options properties, are used to enable/disable individual compositor utilities.
 

@@ -2,6 +2,7 @@ const path = require('path');
 
 const root = 16;
 const baseline = 8;
+const leading = 4;
 
 // type scale in px
 const type = [14, 16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72];
@@ -39,6 +40,7 @@ module.exports = {
 	useRem: true,
 	baseline,
 	root,
+	leading,
 	type,
 	rhythm,
 	measure,

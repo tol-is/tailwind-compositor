@@ -19,6 +19,7 @@ export const createTextStyles = ({
 		useRem,
 		root,
 		baseline,
+		leading,
 		fonts,
 		type,
 		options,
@@ -30,11 +31,12 @@ export const createTextStyles = ({
 		};
 	});
 
-	const leading = Array.from(new Array(6), (v, i) => i);
+	const leadingScale = Array.from(new Array(leading + 1), (v, i) => i);
+
 	const sizeStyles = flattenDeep(
 		fonts.map((font: iFontOpenType) =>
 			type.map((size, sizeIdx) => {
-				return leading.map(lead => {
+				return leadingScale.map(lead => {
 					// create baseline styles
 					const outputBaseline = useRem
 						? styleBaselineRel({

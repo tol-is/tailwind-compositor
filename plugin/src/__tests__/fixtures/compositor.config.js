@@ -1,5 +1,6 @@
 const root = 16;
 const baseline = 8;
+const leading = 4;
 
 // type scale in px
 const type = [14, 16];
@@ -29,6 +30,7 @@ const fonts = [
 module.exports = {
 	useRem: false,
 	baseline,
+	leading,
 	root,
 	type,
 	rhythm,

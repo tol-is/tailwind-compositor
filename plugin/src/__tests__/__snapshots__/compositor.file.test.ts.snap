@@ -34,6 +34,7 @@ Object {
           "xHeight": 1536,
         },
       ],
+      "leading": 4,
       "measure": Array [
         "15ch",
         "20ch",

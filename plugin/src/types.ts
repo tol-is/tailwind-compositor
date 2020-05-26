@@ -58,6 +58,7 @@ export interface iCompositorTheme {
 	useRem: boolean;
 	root: number;
 	baseline: number;
+	leading: number;
 	type: NumberScale;
 	measure: NumberScale;
 	rhythm: NumberScale;
@@ -95,9 +96,6 @@ export interface TypeStyleParams {
 }
 
 export interface StyleTypography {
-	fontFamily: CSS.FontFamilyProperty;
-	fontWeight: CSS.FontWeightProperty;
-	fontStyle: CSS.FontStyleProperty;
 	display: CSS.DisplayProperty;
 	fontSize: CSS.FontSizeProperty<string>;
 	lineHeight: CSS.LineHeightProperty<string | number>;

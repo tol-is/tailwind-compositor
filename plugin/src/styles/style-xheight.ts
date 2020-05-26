@@ -46,9 +46,6 @@ export const styleXHeight = ({
 	const baselineOffset = -1 * (whiteSpaceHalf - descendHeight);
 
 	return {
-		fontFamily: `"${font.familyName}", ${font.fallback}`,
-		fontWeight: font.weight,
-		fontStyle: font.italic ? 'italic' : 'normal',
 		display: 'block',
 		fontSize: `${size}px`,
 		lineHeight: `${lineHeight}px`,
