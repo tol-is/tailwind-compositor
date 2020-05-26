@@ -6,7 +6,7 @@ TL;DR A baseline grid system for [tailwindcss](https://tailwindcss.com/).
 
 _\* 16px baseline for demonstration purpose_
 
-<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/baseline-slideshow.gif" width="500"/>
+<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/typeset-differences.gif" width="500"/>
 
 ```
 
