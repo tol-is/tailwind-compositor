@@ -18,10 +18,11 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"start": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
+		"test": "jest --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"build": "lerna exec --scope tailwind-compositor -- yarn build",
 		"demo:static": "lerna exec --scope tailwind-compositor-demo-static -- yarn run develop",
 		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
-		"release": "lerna publish --no-git-reset"
+		"release": "yarn test && yarn build && lerna publish --no-git-reset"
 	},
 	"devDependencies": {
 		"@types/jest": "^25.2.3",
