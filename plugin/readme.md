@@ -23,6 +23,12 @@ _\* 16px baseline for demonstration purpose_
 
 ---
 
+## Starter
+
+-   [Static html starter](https://github.com/a7sc11u/tailwind-compositor-starter-static)
+
+---
+
 ## Installation
 
 You will need fontkit, postcss and tailwindcss installed along with the plugin
