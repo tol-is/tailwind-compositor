@@ -16,7 +16,7 @@
 	"license": "MIT",
 	"scripts": {
 		"postinstall": "lerna bootstrap",
-		"develop": "npm-run-all -p plugin example tdd",
+		"develop": "npm-run-all -p plugin example",
 		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
 		"example": "lerna exec --scope example -- yarn run develop",
 		"tdd": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",

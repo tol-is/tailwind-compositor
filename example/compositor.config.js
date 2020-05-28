@@ -1,7 +1,12 @@
 const path = require('path');
 
+// root unit `1rem`
 const root = 16;
+
+// baseline grid row height in px
 const baseline = 8;
+
+// max leading count
 const leading = 4;
 
 // type scale in px
