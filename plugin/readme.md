@@ -448,7 +448,7 @@ Compositor only enables font styles configured in the system, and the baseline g
 
 ## Todos
 
--   Cap-Height and X-Height crop for vertical centering.
+-   X-Height crop for vertical centering.
 -   Styles Optimization
 -   Breakpoing configuration with useRem
 -   Built-in typescales

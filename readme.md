@@ -117,7 +117,8 @@ const compositorConfig = {
   // compositor options
   options: {
     xray: true,
-    type: true,
+    baseline: true,
+    capheight: true,
     rhythm: true,
     measure: true,
   },
@@ -237,7 +238,8 @@ Options properties, are used to enable/disable individual compositor utilities.
 ```
 options: {
     xray: true, //Enable debug utilities
-    type: true, // Enable baseline typographic utilities
+    baseline: true, // Enable baseline typographic utilities
+    capheight: true, // Enable capheight typographic utilities
     rhythm: true, // Enable rhythm utilities
     measure: true, //Enable measure utilities
   }
@@ -249,8 +251,9 @@ options: {
 
 #### 1/6 - Typography
 
+##### Font & Font Style
+
 -   font: `font-{font-key}`
--   Size & Line Height : `text-{type_scale_index}/{leading_baseline_units}`
 
 ```
 
@@ -260,8 +263,26 @@ options: {
 // { key: 'sans-600', ... },
 // { key: 'sans-600i', ... },
 // ],
-// type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
 
+// sans semibold italic
+<h3 class="font-sans-600i" />
+
+// sans regular
+<p class="font-sans-400" />
+
+// sans regular italic
+<p class="font-sans-400i" />
+```
+
+##### Baseline Type
+
+-   Default Baseline Style : `text-{type_scale_index}/{leading_baseline_units}`
+
+Baseline utilities, crop the white-space of text blocks, but round to the upper multiple of baseline row height and realign the glyph's baseline to the bottom of the bounding box.
+
+```
+
+// type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
 
 // sans semibold italic - 56px / leading 3
 <h3 class="font-sans-600i text-10/3" />
@@ -271,6 +292,23 @@ options: {
 
 // sans regular italic - 18px / leading 2
 <p class="font-sans-400i text-1/2" />
+```
+
+##### CapHeight Type
+
+-   CapHeight Style : `capheight-{type_scale_index}/{leading_baseline_units}`
+
+Capheight utilities, crop the white-space of text blocks to the cap-height line. The glyph's baseline is realigned to the bottom of the bounding box. Useful when you need to center vertically text labels to icons, logos or within buttons.
+
+```
+
+// type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
+
+<h3 class="font-sans-600i capheight-10/3" />
+
+<p class="font-sans-400 capheight-2/3" />
+
+<p class="font-sans-400i capheight-1/2" />
 ```
 
 ---
@@ -410,7 +448,7 @@ Compositor only enables font styles configured in the system, and the baseline g
 
 ## Todos
 
--   Cap-Height and X-Height crop for vertical centering.
+-   X-Height crop for vertical centering.
 -   Styles Optimization
 -   Breakpoing configuration with useRem
 -   Built-in typescales
