@@ -20,7 +20,7 @@
 		"start": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"test": "jest --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"build": "lerna exec --scope tailwind-compositor -- yarn build",
-		"demo:static": "lerna exec --scope tailwind-compositor-demo-static -- yarn run develop",
+		"example": "lerna exec --scope tailwind-compositor-demo-static -- yarn run develop",
 		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
 		"release": "yarn test && yarn build && lerna publish --no-git-reset"
 	},
