@@ -1,6 +1,6 @@
 {
 	"lerna": "3.0.0",
-	"packages": ["plugin", "demo-static"],
+	"packages": ["plugin", "example"],
 	"version": "independent",
 	"npmClient": "yarn",
 	"licence": "MIT",

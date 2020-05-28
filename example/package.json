@@ -1,10 +1,10 @@
 {
-	"name": "tailwind-compositor-demo-static",
-	"private": true,
+	"name": "example",
 	"description": "",
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
 	"devDependencies": {
+		"@fullhuman/postcss-purgecss": "^2.2.0",
 		"fontkit": "^1.8.1",
 		"parcel": "^1.12.4",
 		"postcss": "^7.0.30",
@@ -19,8 +19,5 @@
 	"scripts": {
 		"develop": "rm -rf .cache && parcel index.html -d dev --target browser"
 	},
-	"gitHead": "687d4c4559fc4813caff7eca184409c8993455d9",
-	"dependencies": {
-		"@fullhuman/postcss-purgecss": "^2.2.0"
-	}
+	"gitHead": "687d4c4559fc4813caff7eca184409c8993455d9"
 }

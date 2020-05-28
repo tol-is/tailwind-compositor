@@ -10,7 +10,7 @@
 	],
 	"workspaces": [
 		"plugin",
-		"demo-static"
+		"example"
 	],
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"main": "index.js",
@@ -20,7 +20,7 @@
 		"start": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"test": "jest --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"build": "lerna exec --scope tailwind-compositor -- yarn build",
-		"example": "lerna exec --scope tailwind-compositor-demo-static -- yarn run develop",
+		"example": "lerna exec --scope example -- yarn run develop",
 		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
 		"release": "yarn test && yarn build && lerna publish --no-git-reset"
 	},
