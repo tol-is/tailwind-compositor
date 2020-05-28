@@ -1,5 +1,5 @@
 import { iTailwindTheme, iCompositorTheme, iFontOpenType } from './types';
-import flattenDeep from 'lodash.flattendeep';
+var flattenDeep = require('lodash.flattendeep');
 
 import {
 	styleFontFamily,
