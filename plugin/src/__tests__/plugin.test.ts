@@ -52,8 +52,25 @@ test('baseline styles', () => {
 	const config = {
 		useRem: false,
 		options: {
-			xray: true,
-			type: true,
+			xray: false,
+			baseline: true,
+			capheight: false,
+			rhythm: false,
+			measure: false,
+		},
+	};
+	return createPostCSSConfig({ config: config }).then(css => {
+		expect(css).toMatchSnapshot();
+	});
+});
+
+test('capheight styles', () => {
+	const config = {
+		useRem: false,
+		options: {
+			xray: false,
+			baseline: false,
+			capheight: true,
 			rhythm: false,
 			measure: false,
 		},
@@ -68,7 +85,8 @@ test('rhythm styles', () => {
 		useRem: false,
 		options: {
 			xray: false,
-			type: false,
+			baseline: false,
+			capheight: false,
 			rhythm: true,
 			measure: false,
 		},
@@ -83,7 +101,8 @@ test('measure styles', () => {
 		useRem: false,
 		options: {
 			xray: false,
-			type: false,
+			baseline: false,
+			capheight: false,
 			rhythm: false,
 			measure: true,
 		},

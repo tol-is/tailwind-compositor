@@ -43,6 +43,7 @@ export const createTextStyles = ({
 		fonts.map((font: iFontOpenType) =>
 			type.map((size, sizeIdx) => {
 				return leadingScale.map(lead => {
+					//
 					// create baseline styles
 					const outputBaseline = useRem
 						? styleBaselineRel({
@@ -64,6 +65,7 @@ export const createTextStyles = ({
 						[`&.${e(`text-${sizeIdx}/${lead}`)}`]: outputBaseline,
 					};
 
+					//
 					const outputCapHeight = useRem
 						? styleCapHeightRel({
 								font: font,
@@ -108,6 +110,7 @@ export const createTextStyles = ({
 					return {
 						[`.font-${font.key}`]: {
 							...baselineStyles,
+							...capHeightStyles,
 						},
 					};
 				});
