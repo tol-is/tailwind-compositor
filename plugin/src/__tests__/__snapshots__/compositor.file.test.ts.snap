@@ -52,6 +52,11 @@ Object {
         2,
       ],
       "root": 16,
+      "styles": Object {
+        "ruler": Object {
+          "color": "rgba(255, 0, 255, 0.3)",
+        },
+      },
       "type": Array [
         14,
         16,

@@ -16,6 +16,12 @@ type TwTheme = {
 	extend: any;
 };
 
+const defaultStyles = {
+	ruler: {
+		color: 'rgba(255, 0, 255, 0.3)',
+	},
+};
+
 export const compositor = (compositorConfig: iCompositorTheme) => (
 	tailwindConfig: iTailwindConfig
 ): iTailwindConfig => {
@@ -122,6 +128,7 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 			// rather than plugin below
 			compositor: {
 				...compositorConfig,
+				styles: defaultStyles,
 				measure: measureScale,
 				fonts: fontsConfig,
 			},

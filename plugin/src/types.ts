@@ -65,6 +65,13 @@ export interface iCompositorTheme {
 	rhythm: NumberScale;
 	fonts: FontsConfig;
 	options: UtilityOptions;
+	styles?: iCompositorThemeStyles;
+}
+
+export interface iCompositorThemeStyles {
+	ruler: {
+		color: string;
+	};
 }
 
 export interface Style extends CSS.Properties {

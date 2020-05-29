@@ -1158,12 +1158,11 @@ exports[`use px 1`] = `
 .bg-baseline {
   position: relative;
   background-repeat: repeat;
-  background-size: 100% 16px;
   background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.08) 8px,
-    transparent 8px
-    );
+		rgba(255, 0, 255, 0.3) 1px,
+		transparent 0
+	);
+  background-size: 100% 8px;
 }
 
 .measure-0 {
@@ -1867,12 +1866,11 @@ exports[`use rem 1`] = `
 .bg-baseline {
   position: relative;
   background-repeat: repeat;
-  background-size: 100% 1rem;
+  background-size: 100% 0.5rem;
   background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.08) 0.5rem,
-    transparent 0.5rem
-    );
+		rgba(255, 0, 255, 0.3) 1px,
+		transparent 0
+	);
 }
 
 .measure-0 {

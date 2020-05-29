@@ -1,29 +1,33 @@
 export const bgBaselineRel = ({
 	baseline,
 	root,
+	color,
 }: {
 	baseline: number;
 	root: number;
+	color?: string;
 }) => ({
 	position: 'relative',
 	backgroundRepeat: 'repeat',
-	backgroundSize: `100% ${(baseline * 2) / root}rem`,
+	backgroundSize: `100% ${baseline / root}rem`,
 	backgroundImage: `linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.08) ${baseline / root}rem,
-    transparent ${baseline / root}rem
-    )`,
+		${color} 1px,
+		transparent 0
+	)`,
 });
 
-export const bgBaseline = ({ baseline }: { baseline: number }) => ({
+export const bgBaseline = ({
+	baseline,
+	color,
+}: {
+	baseline: number;
+	color: string;
+}) => ({
 	position: 'relative',
 	backgroundRepeat: 'repeat',
-	backgroundSize: `100% ${baseline * 2}px`,
 	backgroundImage: `linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.08) ${baseline}px,
-    transparent ${baseline}px
-    )`,
+		${color} 1px,
+		transparent 0
+	)`,
+	backgroundSize: `100% ${baseline}px`,
 });
-
-// DD6EB2
