@@ -7,15 +7,33 @@ const baseline = 8;
 const leading = 4;
 
 // type scale in px
-const type = [14, 16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72];
+const type = [
+	12,
+	14,
+	16,
+	18,
+	20,
+	24,
+	28,
+	32,
+	36,
+	42,
+	48,
+	54,
+	60,
+	68,
+	76,
+	84,
+	92,
+];
 
 // rhythm scale in baseline units
-const rhythm = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12];
+const rhythm = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 14];
 rhythm.px = '1px';
 rhythm.half = 0.5;
 
 // measure scale in characters unit
-const measure = [12, 16, 18, 30, 35, 50, 55, 60, 65];
+const measure = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65];
 measure.auto = 'auto';
 
 // font config
