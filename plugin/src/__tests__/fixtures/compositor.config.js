@@ -1,15 +1,15 @@
-const root = 16;
-const baseline = 8;
-const leading = 4;
+const baseline = 10;
+
+const leading = 2;
 
 // type scale in px
-const type = [14, 16];
+const type = [10, 20];
 
 // rhythm scale in baseline units
 const rhythm = [0, 1, 2];
 
 // measure scale in characters unit
-const measure = [15, 20];
+const measure = [10, 20];
 
 // font config
 const fonts = [
@@ -28,15 +28,15 @@ const fonts = [
 ];
 
 module.exports = {
-	useRem: false,
 	baseline,
 	leading,
-	root,
 	type,
 	rhythm,
 	measure,
 	fonts,
 	options: {
+		useRem: false,
+		root: 10,
 		xray: true,
 		baseline: true,
 		capheight: true,

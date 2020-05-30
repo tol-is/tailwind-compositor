@@ -1,4 +1,4 @@
-import { iTailwindTheme, iCompositorTheme } from './types';
+import { iTailwindTheme, ICompositorConfig } from './types';
 import { owlX, owlY } from './styles';
 
 /**
@@ -14,7 +14,7 @@ export const createRhythmStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { options }: iCompositorTheme = theme('compositor');
+	const { options }: ICompositorConfig = theme('compositor');
 
 	if (!options.rhythm) return;
 

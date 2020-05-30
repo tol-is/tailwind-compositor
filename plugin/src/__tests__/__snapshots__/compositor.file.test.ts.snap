@@ -19,7 +19,7 @@ Object {
       "white": "#fff",
     },
     "compositor": Object {
-      "baseline": 8,
+      "baseline": 10,
       "fonts": Array [
         Object {
           "ascent": 2728,
@@ -34,16 +34,18 @@ Object {
           "xHeight": 1536,
         },
       ],
-      "leading": 4,
-      "measure": Array [
-        "15ch",
-        "20ch",
-      ],
+      "leading": 2,
+      "measure": Object {
+        "0": "10ch",
+        "1": "20ch",
+      },
       "options": Object {
         "baseline": true,
         "capheight": true,
         "measure": true,
         "rhythm": true,
+        "root": 10,
+        "useRem": false,
         "xray": true,
       },
       "rhythm": Array [
@@ -51,28 +53,26 @@ Object {
         1,
         2,
       ],
-      "root": 16,
       "styles": Object {
         "ruler": Object {
           "color": "rgba(255, 0, 255, 0.3)",
         },
       },
       "type": Array [
-        14,
-        16,
+        10,
+        20,
       ],
-      "useRem": false,
     },
     "extend": Object {
       "height": Object {
         "0": "0px",
-        "1": "8px",
-        "2": "16px",
+        "1": "10px",
+        "2": "20px",
       },
       "maxHeight": Object {
         "0": "0px",
-        "1": "8px",
-        "2": "16px",
+        "1": "10px",
+        "2": "20px",
         "extend": "100px",
       },
       "maxWidth": Object {
@@ -80,8 +80,8 @@ Object {
       },
       "minHeight": Object {
         "0": "0px",
-        "1": "8px",
-        "2": "16px",
+        "1": "10px",
+        "2": "20px",
         "extend": "100px",
       },
       "minWidth": Object {
@@ -97,8 +97,8 @@ Object {
       ],
     },
     "fontSize": Array [
-      "14px",
-      "16px",
+      10,
+      20,
     ],
     "fontWeight": Object {
       "bold": "700",
@@ -117,8 +117,8 @@ Object {
     },
     "spacing": Object {
       "0": "0px",
-      "1": "8px",
-      "2": "16px",
+      "1": "10px",
+      "2": "20px",
     },
   },
   "variants": Object {

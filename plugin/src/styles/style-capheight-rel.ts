@@ -35,9 +35,9 @@ export const styleCapHeightRel = ({
 	// line-height in px
 	const lineHeight = typeHeight + leadingHeight;
 
-	// crop white space top
+	// trim white space top
 	const negativeSpace = lineHeight - typeHeight;
-	const cropHeight = negativeSpace;
+	const trimHeight = negativeSpace;
 
 	// align to baseline
 	const boundingBoxHeight =
@@ -54,7 +54,7 @@ export const styleCapHeightRel = ({
 		paddingTop: `${preventCollapse}px`,
 		['&:before']: {
 			content: `''`,
-			marginTop: `calc(${-(cropHeight + preventCollapse) / size}em )`,
+			marginTop: `calc(${-(trimHeight + preventCollapse) / size}em )`,
 			display: 'block',
 			height: 0,
 		},

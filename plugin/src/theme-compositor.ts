@@ -1,5 +1,11 @@
 import fs from 'fs';
-import { iCompositorTheme, iTailwindConfig, iFontOpenType } from './types';
+import {
+	ICompositorConfig,
+	iTailwindConfig,
+	iFontOpenType,
+	UtilityOptions,
+	FontsConfig,
+} from './types';
 
 import getFontMetrics from './get-font-metrics';
 import tailwindPluginCompositor from './tailwind-plugin-compositor';
@@ -9,8 +15,19 @@ import merge from './utils/merge';
 import baselineScaleToRem from './utils/baseline-scale-to-rem';
 import baselineScaleToPx from './utils/baseline-scale-to-px';
 import pxScaleToRem from './utils/px-scale-to-rem';
+import scaleAddSuffix from './utils/scale-add-suffix';
 
 const cacheFileName = '.compositor';
+
+import {
+	type as defaultType,
+	rhythm as defaultRhythm,
+	measure as defaultMeasure,
+	leading as defaultLeading,
+	baseline as defaultBaseline,
+	options as defaultOptions,
+	fonts as defaultFonts,
+} from './default-config';
 
 type TwTheme = {
 	extend: any;
@@ -22,7 +39,7 @@ const defaultStyles = {
 	},
 };
 
-export const compositor = (compositorConfig: iCompositorTheme) => (
+export const compositor = (compositorConfig: ICompositorConfig) => (
 	tailwindConfig: iTailwindConfig
 ): iTailwindConfig => {
 	let fontsConfig: Array<iFontOpenType> = [];
@@ -54,15 +71,20 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	// to transform to px or rem usings
 	// based on useRem, root and baseline params
 	const {
-		useRem,
-		root,
-		baseline,
-		fonts,
-		type,
-		rhythm,
-		measure,
+		baseline = defaultBaseline,
+		fonts = defaultFonts as FontsConfig,
+		type = defaultType,
+		rhythm = defaultRhythm,
+		measure = defaultMeasure,
+		options: configOptions,
 	} = compositorConfig;
 	//
+
+	const options: UtilityOptions = merge(defaultOptions, configOptions);
+
+	if (options.useRem && !is.exists(options.root)) {
+		throw 'With options.useRem:true, options.root is required';
+	}
 
 	if (!fontsCached) {
 		fontsConfig = [];
@@ -84,26 +106,21 @@ export const compositor = (compositorConfig: iCompositorTheme) => (
 	// type scale is described in px units
 	// so transform to rem or px
 	// depending on useRem
-
-	const typeScale = useRem
-		? pxScaleToRem(root)(type)
-		: type.map(v => `${v}px`);
+	const typeScale = options.useRem ? pxScaleToRem(options.root)(type) : type;
 
 	// [1,2,3,4,5]
 	// rhythm scale is described in baseline units
 	// transform to tailwind format
 	// rem or px depending on useRem param
-	const spacingScale = useRem
-		? baselineScaleToRem(baseline)(root)(rhythm)
+	const spacingScale = options.useRem
+		? baselineScaleToRem(baseline)(options.root)(rhythm)
 		: baselineScaleToPx(baseline)(rhythm);
 
 	//
 	// measure scale is described in ch units
 	// transform to tailwind format
 	// string or ch
-	const measureScale = measure.map(m => {
-		return is.num(m) ? `${m}ch` : m;
-	});
+	const measureScale = scaleAddSuffix('ch')(measure);
 
 	// deconstruct tailwind extend
 	// and get height, minHeight, maxHeight scales

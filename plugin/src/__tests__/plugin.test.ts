@@ -32,7 +32,9 @@ const createPostCSSConfig = ({ config, input = '@tailwind utilities;' }) => {
 
 test('use rem', () => {
 	const config = {
-		useRem: true,
+		options: {
+			useRem: true,
+		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {
 		expect(css).toMatchSnapshot();
@@ -41,7 +43,9 @@ test('use rem', () => {
 
 test('use px', () => {
 	const config = {
-		useRem: false,
+		options: {
+			useRem: false,
+		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {
 		expect(css).toMatchSnapshot();
@@ -50,8 +54,8 @@ test('use px', () => {
 
 test('baseline styles', () => {
 	const config = {
-		useRem: false,
 		options: {
+			useRem: false,
 			xray: false,
 			baseline: true,
 			capheight: false,
@@ -66,8 +70,8 @@ test('baseline styles', () => {
 
 test('capheight styles', () => {
 	const config = {
-		useRem: false,
 		options: {
+			useRem: false,
 			xray: false,
 			baseline: false,
 			capheight: true,
@@ -82,8 +86,8 @@ test('capheight styles', () => {
 
 test('rhythm styles', () => {
 	const config = {
-		useRem: false,
 		options: {
+			useRem: false,
 			xray: false,
 			baseline: false,
 			capheight: false,
@@ -98,8 +102,8 @@ test('rhythm styles', () => {
 
 test('measure styles', () => {
 	const config = {
-		useRem: false,
 		options: {
+			useRem: false,
 			xray: false,
 			baseline: false,
 			capheight: false,

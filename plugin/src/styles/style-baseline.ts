@@ -35,9 +35,9 @@ export const styleBaseline = ({
 	// line-height in px
 	const lineHeight = typeHeight + leadingHeight;
 
-	// crop white space top
+	// trim white space top
 	const negativeSpace = lineHeight - typeHeight;
-	const cropHeight = negativeSpace - (negativeSpace % baseline);
+	const trimHeight = negativeSpace - (negativeSpace % baseline);
 
 	// align to baseline
 	const boundingBoxHeight =
@@ -54,7 +54,7 @@ export const styleBaseline = ({
 		paddingTop: `${preventCollapse}px`,
 		['&:before']: {
 			content: `''`,
-			marginTop: `${-(cropHeight + preventCollapse)}px`,
+			marginTop: `${-(trimHeight + preventCollapse)}px`,
 			display: 'block',
 			height: 0,
 		},

@@ -10,3 +10,4 @@ export * from './baseline-scale-to-px';
 export * from './px-scale-to-rem';
 export * from './px-to-rem';
 export * from './get-rhythm';
+export * from './scale-add-suffix';

@@ -1,4 +1,4 @@
-import { iTailwindTheme, iCompositorTheme, iFontOpenType } from './types';
+import { iTailwindTheme, ICompositorConfig, iFontOpenType } from './types';
 var flattenDeep = require('lodash.flattendeep');
 
 import {
@@ -23,14 +23,12 @@ export const createTextStyles = ({
 	addUtilities: Function;
 }) => {
 	const {
-		useRem,
-		root,
 		baseline,
 		leading,
 		fonts,
 		type,
 		options,
-	}: iCompositorTheme = theme('compositor');
+	}: ICompositorConfig = theme('compositor');
 
 	const familyStyles = fonts.map((font: iFontOpenType) => {
 		return {
@@ -46,10 +44,10 @@ export const createTextStyles = ({
 				return leadingScale.map(lead => {
 					//
 					// create baseline styles
-					const outputBaseline = useRem
+					const outputBaseline = options.useRem
 						? styleBaselineRel({
 								font: font,
-								root: root,
+								root: options.root,
 								baseline: baseline,
 								size: size,
 								leading: lead,
@@ -67,10 +65,10 @@ export const createTextStyles = ({
 					};
 
 					//
-					const outputCapHeight = useRem
+					const outputCapHeight = options.useRem
 						? styleCapHeightRel({
 								font: font,
-								root: root,
+								root: options.root,
 								baseline: baseline,
 								size: size,
 								leading: lead,
@@ -90,7 +88,7 @@ export const createTextStyles = ({
 
 					/*
 					const outputXHeight =
-						options.xheight && useRem
+						options.xheight && options.useRem
 							? styleXHeight({
 									font: font,
 									baseline: baseline,
@@ -99,7 +97,7 @@ export const createTextStyles = ({
 							  })
 							: styleXHeightRel({
 									font: font,
-									root: root,
+									root: options.root,
 									baseline: baseline,
 									size: size,
 									leading: lead,

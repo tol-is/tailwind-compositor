@@ -2,25 +2,7 @@
 
 Compositor is a system of constraints designed to produce aesthetically pleasing, typographic compositions, based on objective, constant dimensions of space.
 
-TL;DR A baseline grid system for [tailwindcss](https://tailwindcss.com/).
-
-_\* 16px baseline for demonstration purpose_
-
-<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/typeset-differences.gif" width="500"/>
-
-```
-
-  // tailwind
-  <h1 class="font-sans font-semibold text-5xl leading-tight"/>
-  <p class="font-sans font-normal text-xl leading-relaxed mt-6" />
-
-  // compositor
-  <div class="rhythm-6">
-    <h1 class="sans-600 text-10/2"/>
-    <p class="sans-400 text-3/2" />
-  </div>
-
-```
+A baseline-grid typography system for [tailwindcss](https://tailwindcss.com/).
 
 ---
 
@@ -71,13 +53,8 @@ module.exports = {
 
 ```
 const compositorConfig = {
-  // useRem
-  useRem: true,
 
-  // root (html) font-size in px units
-  root: 16,
-
-  // baseline grid in px units
+  // baseline grid height in px units
   baseline: 8,
 
   // maximum leading
@@ -86,10 +63,10 @@ const compositorConfig = {
   // type scale in px units
   type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72],
 
-  // rhythm in baseline units
+  // spacing scale in baseline units
   rhythm: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12],
 
-  // measure in ch units
+  // line width in ch units
   measure: [10, 15, 20, 30, 35, 50, 55, 60, 65],
 
   // webfonts and vertical metrics
@@ -116,6 +93,8 @@ const compositorConfig = {
 
   // compositor options
   options: {
+    useRem: true,
+    root: 16,
     xray: true,
     baseline: true,
     capheight: true,
@@ -125,31 +104,21 @@ const compositorConfig = {
 }
 ```
 
-#### 1/9 useRem: bool
-
-When useRem is set to true, all spacing and font-size utilities, will be transformed to `rem` units. Otherwise remain as configured, in `px`. It is recommended to favour `rem` units over `px`, however sometimes while in development, it's more efficient to communicate values with designers using `px` units, or absolute `baseline` units. With `useRem` you can switch all the values with a single configuration.
-
 ---
 
-#### 2/9 - root: integer
-
-The root font size `1rem` in `px` units.
-
----
-
-#### 3/9 - baseline: integer
+#### 1/7 - baseline: integer
 
 The baseline grid row height, in `px` units.
 
 ---
 
-#### 4/9 - leading: integer
+#### 2/7 - leading: integer
 
 The maximum leading value in baseline units.
 
 ---
 
-#### 5/9 - type : array[integer]
+#### 3/7 - type : array[integer]
 
 ```
 type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72]
@@ -159,7 +128,7 @@ The system's typographic scale, in `px` units.
 
 ---
 
-#### 6/9 - rhythm : array[integer]
+#### 4/7 - rhythm : array[integer]
 
 ```
 rhythm: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12]
@@ -169,7 +138,7 @@ The system's size and spacing scale, in `baseline` units, used for `rhythm`, `ma
 
 ---
 
-#### 7/9 - measure : array[integer]
+#### 5/7 - measure : array[integer]
 
 ```
 measure: [10, 15, 20, 30, 35, 50, 55, 60, 65]
@@ -179,15 +148,11 @@ Separate scale used for `measure` (line-width) utilities, configured in `ch` uni
 
 ---
 
-#### 8/9 - fonts : array[opentype]
+#### 6/7 - fonts : array[opentype]
 
 The font scale provides all the information needed to render text styles. Each entry describes a font/weight/style set, and only those that are part of the system will be enabled.
 
-The `file` property, is used to extract the vertical metrics dynamically from the font-file. If you want to configure the metrics manually, you can avoid the `file` prop.
-
-**Gotcha** some fonts might be designed as italic, but are not configured as such. If you use the `file` property, you might need to configure the `weight` and `italic` properties manually.
-
-You can use the [vertical metrics](https://vertical-metrics.netlify.app) app to manually extract font metrics, or other tools like glyphs, robofont or ask your type foundry.
+The `file` property, is used to extract the vertical metrics dynamically from the font-file. If you want to configure the metrics manually, you can omit the `file` prop.
 
 The `key` property is used to name the utility classes. The configuration bellow will produce four font styles. The recommended convention is `${family}-${weight}${style}`.
 
@@ -231,18 +196,30 @@ The `key` property is used to name the utility classes. The configuration bellow
 
 ---
 
-#### 9/9 - options : object
+#### 7/7 - Options : object
 
 Options properties, are used to enable/disable individual compositor utilities.
 
+If useRem is set to true, compositor will use the root unit value, to transform all spacing and font-size utilities, to relative units. Line-height will be transformed to unitless ratios.
+
+-   `root: integer` The root font size `1rem` in `px` units
+-   `useRem: boolean` transform to relative units
+-   `xray: boolean` Enable debug utilities
+-   `baseline: boolean` Enable baseline typographic utilities
+-   `capheight: boolean` Enable capheight typographic utilities
+-   `rhythm: boolean` Enable rhythm utilities
+-   `measure: boolean` Enable measure utilities
+
 ```
 options: {
-    xray: true, //Enable debug utilities
-    baseline: true, // Enable baseline typographic utilities
-    capheight: true, // Enable capheight typographic utilities
-    rhythm: true, // Enable rhythm utilities
-    measure: true, //Enable measure utilities
-  }
+  root: 16,
+  useRem: true,
+  xray: true,
+  baseline: true,
+  capheight: true,
+  rhythm: true,
+  measure: true,
+}
 ```
 
 ---
@@ -274,11 +251,11 @@ options: {
 <p class="font-sans-400i" />
 ```
 
-##### Baseline Type
+##### Baseline Typography
 
 -   Default Baseline Style : `text-{type_scale_index}/{leading_baseline_units}`
 
-Baseline utilities, crop the white-space of text blocks, but round to the upper multiple of baseline row height and realign the glyph's baseline to the bottom of the bounding box.
+Baseline utilities, trim the white-space of text blocks, from the baseline, to the nearest baseline-grid row above the cap-height.
 
 ```
 
@@ -294,21 +271,24 @@ Baseline utilities, crop the white-space of text blocks, but round to the upper 
 <p class="font-sans-400i text-1/2" />
 ```
 
-##### CapHeight Type
+##### Cap-Height Trim
 
--   CapHeight Style : `capheight-{type_scale_index}/{leading_baseline_units}`
+-   CapHeight Trim Style : `capheight-{type_scale_index}/{leading_baseline_units}`
 
-Capheight utilities, crop the white-space of text blocks to the cap-height line. The glyph's baseline is realigned to the bottom of the bounding box. Useful when you need to center vertically text labels to icons, logos or within buttons.
+Capheight utilities, trim the white-space of text blocks from the baseline, to the cap-height line. Useful when you need to center vertically text labels to icons, logos or within buttons.
 
 ```
 
 // type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
 
+// sans semibold italic - 56px / leading 3
 <h3 class="font-sans-600i capheight-10/3" />
 
+// sans regular - 20px / leading 3
 <p class="font-sans-400 capheight-2/3" />
 
-<p class="font-sans-400i capheight-1/2" />
+// sans regular italic - 18px / leading 2
+<p class="font-sans-400i text-1/2" />
 ```
 
 ---
@@ -359,7 +339,7 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 
 #### 4/6 - Size
 
-Compositor also applies the spacing scale to tailwind sizing scales, width, min/max width and also height min/max.
+Compositor also applies the spacing scale to tailwind sizing utilities, width, min/max width and also height min/max.
 
 -   Height: `h-{rhythm_scale_index}`
 -   Min Height: `min-h-{rhythm_scale_index}`
@@ -408,55 +388,4 @@ Compositor also applies the spacing scale to tailwind sizing scales, width, min/
 
 ---
 
-## Motivation
-
-There is no right and wrong when it comes to typographic expression. This is simply a guide to help us design and implement consistent vertical typographic rhythm.
-
-#### High margin of error
-
-Many design systems only provide a series of independent token collections, for family, size, weight, style, line-height, letter-spacing that can be applied interchangeably. Most of these combinations don't produce useful results, or even worse don't exist at all.
-
-For example, if we don't load a particular webfont, when a browser can't find the true bold or italic version of a font, will often create faux bold and italics by stretching and slanting the glyphs which renders the information uninteligible and makes typophiles very sad.
-
-#### Unpredictable rhythm
-
-Traditionally, in typography, space between lines of text is measured from the baseline. On the web, browsers behave differently. The bounding box of the text, or the distance from the ascender to the descender, is vertically centered to it's line-height.
-
-<img src="https://github.com/a7sc11u/tailwind-compositor/raw/master/plugin/images/vertical-metrics.png" width="400"/>
-
-[Vertical Metrics](https://vertical-metrics.netlify.app)
-
-As a result, when rendering text, unline any other dom element, the browser adds space above and below each line of text. So our layout implementation may require optical adjustments, depending on the order of UI components, font, font-size and line-height.
-
-#### Solution
-
-Compositor only enables font styles configured in the system, and the baseline grid works as a guide to achieve a better typographic hierarchy and rhythm. The margin of error is minimized and the "correct" solution is easier to identify.
-
----
-
-## Can I use it?
-
-1. it depends on your typescale and number of webfonts. **You must use purgecss.** The output's filesize can be way beyond anything you should consider shipping. For many use cases, such as personal blogs and minimal aesthetic, it should be fine.
-
-2. It should work with every font, however many fonts are poorly designed (some very popular too) and don't use the same vertical metrics to render text across browsers and operating systems. The error might be negligible in reading size, but display text can be more problematic.
-
-3. Currently, the system only works for horizontal text So far, it hasn't been tested thoroughly with non-latin characters. So if you're going to try it, please share your observations.
-
-4. You can definitely use it as a practical educational or design and prototyping tool.
-
----
-
-## Todos
-
--   X-Height crop for vertical centering.
--   Styles Optimization
--   Breakpoing configuration with useRem
--   Built-in typescales
--   React/Emotion version
--   Themes
--   Components
--   Website
-
----
-
-This work is based on [basekick](https://github.com/michaeltaranto/basekick) recipe by Michael Taranto.
+_Inspired by [basekick](https://github.com/michaeltaranto/basekick)_

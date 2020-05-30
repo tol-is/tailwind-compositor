@@ -1,8 +1,5 @@
 const path = require('path');
 
-// root unit `1rem`
-const root = 16;
-
 // baseline grid row height in px
 const baseline = 8;
 
@@ -14,7 +11,6 @@ const type = [14, 16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72];
 
 // rhythm scale in baseline units
 const rhythm = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12];
-
 rhythm.px = '1px';
 rhythm.half = 0.5;
 
@@ -42,15 +38,15 @@ const fonts = [
 ];
 
 module.exports = {
-	useRem: true,
 	baseline,
-	root,
 	leading,
 	type,
 	rhythm,
 	measure,
 	fonts,
 	options: {
+		root: 16,
+		useRem: true,
 		xray: true,
 		baseline: true,
 		capheight: true,

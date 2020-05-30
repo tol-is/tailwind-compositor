@@ -36,9 +36,9 @@ export const styleBaselineRel = ({
 	// line-height in px
 	const lineHeight = typeHeight + leadingHeight;
 
-	// crop white space top
+	// trim white space top
 	const negativeSpace = lineHeight - typeHeight;
-	const cropHeight = negativeSpace - (negativeSpace % baseline);
+	const trimHeight = negativeSpace - (negativeSpace % baseline);
 
 	// align to baseline
 	const boundingBoxHeight =
@@ -56,7 +56,7 @@ export const styleBaselineRel = ({
 		paddingTop: `${preventCollapse}px`,
 		['&:before']: {
 			content: `''`,
-			marginTop: `calc(${-(cropHeight + preventCollapse) / size}em )`,
+			marginTop: `calc(${-(trimHeight + preventCollapse) / size}em )`,
 			display: 'block',
 			height: 0,
 		},

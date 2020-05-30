@@ -1,4 +1,4 @@
-import { iTailwindTheme, iCompositorTheme } from './types';
+import { iTailwindTheme, ICompositorConfig } from './types';
 import { measure } from './styles/style-measure';
 
 const createMeasureStyles = ({
@@ -10,14 +10,14 @@ const createMeasureStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { measure: measureScale, options }: iCompositorTheme = theme(
+	const { measure: measureScale, options }: ICompositorConfig = theme(
 		'compositor'
 	);
 
 	if (!options.measure) return;
 
 	const measureStyles = Object.keys(measureScale).map(key => {
-		const space: string = measureScale[key];
+		const space = measureScale[key];
 		return {
 			[`.${e(`measure-${key}`)}`]: measure({ space }),
 		};

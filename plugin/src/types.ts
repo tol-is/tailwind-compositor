@@ -1,5 +1,9 @@
 import * as CSS from 'csstype';
 
+// type TLengthStyledSystem = string | 0 | number;
+
+// type ObjectOrArray<T> = T[] | { [K: string]: T | ObjectOrArray<T> };
+
 export type NumberScale = Array<number>;
 
 export type FontConfigCache = Array<iFontOpenType>;
@@ -14,7 +18,7 @@ export type iTailwindConfig = {
 	variants: any;
 	corePlugins: any;
 	plugins: any;
-	compositor: iCompositorTheme;
+	compositor: ICompositorConfig;
 };
 
 export interface iFontOpenType {
@@ -47,17 +51,17 @@ export type FontConfigFile = {
 
 export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
-type UtilityOptions = {
+export interface UtilityOptions {
+	useRem: boolean;
+	root?: number;
 	xray: boolean;
 	baseline: boolean;
 	capheight: boolean;
 	rhythm: boolean;
 	measure: boolean;
-};
+}
 
-export interface iCompositorTheme {
-	useRem: boolean;
-	root: number;
+export interface ICompositorConfig {
 	baseline: number;
 	leading: number;
 	type: NumberScale;
@@ -65,7 +69,7 @@ export interface iCompositorTheme {
 	rhythm: NumberScale;
 	fonts: FontsConfig;
 	options: UtilityOptions;
-	styles?: iCompositorThemeStyles;
+	styles: iCompositorThemeStyles;
 }
 
 export interface iCompositorThemeStyles {

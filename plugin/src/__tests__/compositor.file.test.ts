@@ -1,4 +1,4 @@
-import { iCompositorTheme } from '../types';
+import { ICompositorConfig } from '../types';
 import path from 'path';
 import { merge } from '../utils';
 import compositor from '../theme-compositor';
@@ -7,7 +7,7 @@ import compositorBaseConfig from './fixtures/compositor.config.js';
 import tailwindConfig from './fixtures/tailwind.config.js';
 
 const createConfig = config => {
-	const compositorConfig: iCompositorTheme = merge(
+	const compositorConfig: ICompositorConfig = merge(
 		compositorBaseConfig,
 		config
 	);

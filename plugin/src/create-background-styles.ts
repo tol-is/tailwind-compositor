@@ -1,8 +1,4 @@
-import {
-	iTailwindTheme,
-	iCompositorTheme,
-	iCompositorThemeStyles,
-} from './types';
+import { iTailwindTheme, ICompositorConfig } from './types';
 
 import { get } from './utils/get';
 import { bgBaselineRel, bgBaseline } from './styles/style-background';
@@ -16,7 +12,7 @@ export const createBackgroundStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { options, baseline, root, useRem, styles }: iCompositorTheme = theme(
+	const { options, baseline, styles }: ICompositorConfig = theme(
 		'compositor'
 	);
 
@@ -25,8 +21,8 @@ export const createBackgroundStyles = ({
 	if (!options.xray) return;
 
 	const baselineBgStyles = {
-		[`.bg-baseline`]: useRem
-			? bgBaselineRel({ baseline, root, color: rulerColor })
+		[`.bg-baseline`]: options.useRem
+			? bgBaselineRel({ baseline, root: options.root, color: rulerColor })
 			: bgBaseline({ baseline, color: rulerColor }),
 	};
 
