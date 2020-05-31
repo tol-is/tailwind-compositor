@@ -6,6 +6,12 @@ A baseline-grid typography system for [tailwindcss](https://tailwindcss.com/).
 
 ---
 
+Try this prototype to see how the algorithm works
+
+-   [React GUI Prototype](https://compositor.netlify.app/)
+
+---
+
 ## Starter
 
 -   [Static html starter](https://github.com/a7sc11u/tailwind-compositor-starter-static)
@@ -339,7 +345,7 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 
 #### 4/6 - Size
 
-Compositor also applies the spacing scale to tailwind sizing utilities, width, min/max width and also height min/max.
+Compositor also applies the spacing scale to tailwind sizing scales, width, min/max width and also height min/max.
 
 -   Height: `h-{rhythm_scale_index}`
 -   Min Height: `min-h-{rhythm_scale_index}`

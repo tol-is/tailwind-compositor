@@ -6,6 +6,12 @@ A baseline-grid typography system for [tailwindcss](https://tailwindcss.com/).
 
 ---
 
+Try this prototype to see how the algorithm works
+
+-   [React GUI Prototype](https://compositor.netlify.app/)
+
+---
+
 ## Starter
 
 -   [Static html starter](https://github.com/a7sc11u/tailwind-compositor-starter-static)
