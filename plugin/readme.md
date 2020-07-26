@@ -4,17 +4,7 @@ Compositor is a system of constraints designed to produce aesthetically pleasing
 
 A baseline-grid typography system for [tailwindcss](https://tailwindcss.com/).
 
----
-
-Try this prototype to see how the algorithm works
-
--   [React GUI Prototype](https://compositor.netlify.app/)
-
----
-
-## Starter
-
--   [Static html starter](https://github.com/a7sc11u/tailwind-compositor-starter-static)
+Algorithm Demo: [Styled Baseline](https://styled-baseline.netlify.app/)
 
 ---
 
@@ -101,11 +91,11 @@ const compositorConfig = {
   options: {
     useRem: true,
     root: 16,
-    xray: true,
-    baseline: true,
-    capheight: true,
+    snap: true,
+    type: true,
     rhythm: true,
     measure: true,
+    xray: true,
   },
 }
 ```
@@ -177,6 +167,7 @@ The `key` property is used to name the utility classes. The configuration bellow
   upm: 2816,
   xHeight: 1536,
   capHeight: 2048,
+  lineGap: 0,
   ascent: 2728,
   descent: -680
 }
@@ -206,25 +197,27 @@ The `key` property is used to name the utility classes. The configuration bellow
 
 Options properties, are used to enable/disable individual compositor utilities.
 
-If useRem is set to true, compositor will use the root unit value, to transform all spacing and font-size utilities, to relative units. Line-height will be transformed to unitless ratios.
+If `useRem` is set to true, compositor will use the root unit value, to transform all spacing and font-size utilities, to relative units. Line-height will be transformed to unitless ratios.
+
+If `snap` is true, compositor will align each line text to the nearest baseline grid row, otherwise will trim the line-height above the capHeight and below the baseline, and apply a constant lineGap between lines of text.
 
 -   `root: integer` The root font size `1rem` in `px` units
 -   `useRem: boolean` transform to relative units
--   `xray: boolean` Enable debug utilities
--   `baseline: boolean` Enable baseline typographic utilities
--   `capheight: boolean` Enable capheight typographic utilities
+-   `snap: boolean` Align text styles to a baseline grid
+    `type: boolean` Enable typographic utilities
 -   `rhythm: boolean` Enable rhythm utilities
 -   `measure: boolean` Enable measure utilities
+-   `xray: boolean` Enable debug utilities
 
 ```
 options: {
   root: 16,
   useRem: true,
-  xray: true,
-  baseline: true,
-  capheight: true,
+  snap: true,
+  type: true,
   rhythm: true,
   measure: true,
+  xray: true,
 }
 ```
 
@@ -257,11 +250,9 @@ options: {
 <p class="font-sans-400i" />
 ```
 
-##### Baseline Typography
+##### Text Style
 
--   Default Baseline Style : `text-{type_scale_index}/{leading_baseline_units}`
-
-Baseline utilities, trim the white-space of text blocks, from the baseline, to the nearest baseline-grid row above the cap-height.
+-   Text Style : `text-{type_scale_index}/{leading_baseline_units}`
 
 ```
 
@@ -277,25 +268,6 @@ Baseline utilities, trim the white-space of text blocks, from the baseline, to t
 <p class="font-sans-400i text-1/2" />
 ```
 
-##### Cap-Height Trim
-
--   CapHeight Trim Style : `capheight-{type_scale_index}/{leading_baseline_units}`
-
-Capheight utilities, trim the white-space of text blocks from the baseline, to the cap-height line. Useful when you need to center vertically text labels to icons, logos or within buttons.
-
-```
-
-// type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
-
-// sans semibold italic - 56px / leading 3
-<h3 class="font-sans-600i capheight-10/3" />
-
-// sans regular - 20px / leading 3
-<p class="font-sans-400 capheight-2/3" />
-
-// sans regular italic - 18px / leading 2
-<p class="font-sans-400i text-1/2" />
-```
 
 ---
 
@@ -368,7 +340,6 @@ Compositor also applies the spacing scale to tailwind sizing scales, width, min/
 -   Horizontal Rhythm: `rhythm-x-{rhythm_scale_index}`
 
 ```
-
 
 <section class="rhythm-3 lg:rhythm-5" />
   <h3 class="sans400 text-7/3" />
