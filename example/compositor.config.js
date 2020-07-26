@@ -65,10 +65,10 @@ module.exports = {
 	options: {
 		root: 16,
 		useRem: true,
-		xray: true,
-		baseline: true,
-		capheight: true,
+		snap: true,
+		type: true,
 		rhythm: true,
 		measure: true,
+		xray: true,
 	},
 };

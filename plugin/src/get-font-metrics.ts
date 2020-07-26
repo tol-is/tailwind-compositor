@@ -7,6 +7,7 @@ type FontKitMetrics = {
 	upm: number;
 	xHeight: number;
 	capHeight: number;
+	lineGap: number;
 	ascent: number;
 	descent: number;
 	weight: number;
@@ -18,17 +19,14 @@ export const getFontMetrics = (file: string): FontKitMetrics => {
 
 	const weight = font['OS/2'].usWeightClass;
 	const italic = font['OS/2'].fsSelection.italic;
-	const familyName = get(
-		font,
-		'name.records.preferredFamily.en',
-		font.familyName
-	) as string;
+
 
 	return {
-		familyName: familyName,
+		familyName: font.familyName,
 		upm: font.unitsPerEm,
 		xHeight: font.xHeight,
 		capHeight: font.capHeight,
+		lineGap: font.lineGap,
 		ascent: font.ascent,
 		descent: font.descent,
 		weight: weight,

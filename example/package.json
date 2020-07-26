@@ -8,17 +8,18 @@
 		"@fullhuman/postcss-purgecss": "^2.2.0",
 		"fontkit": "^1.8.1",
 		"parcel": "^1.12.4",
-		"postcss": "^7.0.30",
+		"postcss": "^7.0.32",
 		"postcss-import": "^12.0.1",
 		"postcss-preset-env": "^6.7.0",
 		"stylelint": "^13.5.0",
 		"stylelint-config-standard": "^20.0.0",
-		"tailwind-compositor": "0.0.1-rc.14",
-		"tailwindcss": "^1.4.6"
+		"tailwind-compositor": "0.0.1-rc.16",
+		"tailwindcss": "^1.5.2"
 	},
-	"browserslist": "> 1%, not ie 11, not op_mini all",
+	"browserslist": "last 1 Chrome version",
 	"scripts": {
 		"develop": "rm -rf .cache && parcel index.html -d dev --target browser"
 	},
 	"gitHead": "687d4c4559fc4813caff7eca184409c8993455d9"
+
 }

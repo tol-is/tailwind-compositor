@@ -21,6 +21,7 @@ const fonts = [
 		xHeight: 525,
 		capHeight: 698,
 		ascent: 1025,
+    lineGap: 0,
 		descent: -275,
 		weight: 400,
 		italic: false,
@@ -37,10 +38,10 @@ module.exports = {
 	options: {
 		useRem: false,
 		root: 10,
-		xray: true,
-		baseline: true,
-		capheight: true,
+		snap: true,
+		type: true,
 		rhythm: true,
 		measure: true,
+		xray: true,
 	},
 };
