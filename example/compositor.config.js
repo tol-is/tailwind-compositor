@@ -39,19 +39,22 @@ measure.auto = 'auto';
 // font config
 const fonts = [
 	{
-		key: 'sans-400',
+		key: 'serif',
+		familyName: 'Playfair Display',
+		fallback: 'serif',
+		upm: 1000,
+		xHeight: 514,
+		capHeight: 708,
+		ascent: 1082,
+		descent: -251,
+		lineGap: 0,
+		weight: 400,
+		italic: true,
+	},
+	{
+		key: 'sans',
 		fallback: 'sans-serif',
 		file: path.resolve('./fonts/inter/Inter-Regular.woff2'),
-	},
-	{
-		key: 'sans-700',
-		fallback: 'sans-serif',
-		file: path.resolve('./fonts/inter/Inter-Bold.woff2'),
-	},
-	{
-		key: 'sans-600',
-		fallback: 'sans-serif',
-		file: path.resolve('./fonts/inter/Inter-SemiBold.woff2'),
 	},
 ];
 
