@@ -1,7 +1,6 @@
 {
 	"name": "example",
 	"description": "",
-	"version": "0.0.1",
 	"private": true,
 	"author": "Apostolos Christodoulou <a7sc11u@gmail.com> (@a7sc11u)",
 	"license": "MIT",
