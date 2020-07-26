@@ -20,7 +20,6 @@ export const getFontMetrics = (file: string): FontKitMetrics => {
 	const weight = font['OS/2'].usWeightClass;
 	const italic = font['OS/2'].fsSelection.italic;
 
-
 	return {
 		familyName: font.familyName,
 		upm: font.unitsPerEm,

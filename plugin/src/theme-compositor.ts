@@ -91,7 +91,7 @@ export const compositor = (compositorConfig: ICompositorConfig) => (
 		fonts.forEach(({ file, ...fontRest }) => {
 			let fontOT: iFontOpenType;
 			if (is.string(file) && is.exists(file)) {
-				fontOT = merge({ ...fontRest }, getFontMetrics(file));
+				fontOT = merge(getFontMetrics(file), { ...fontRest });
 			} else {
 				fontOT = { ...fontRest } as iFontOpenType;
 			}

@@ -13,7 +13,7 @@
 		"postcss-preset-env": "^6.7.0",
 		"stylelint": "^13.5.0",
 		"stylelint-config-standard": "^20.0.0",
-		"tailwind-compositor": "0.0.1-rc.16",
+		"tailwind-compositor": "1.0.0",
 		"tailwindcss": "^1.5.2"
 	},
 	"browserslist": "last 1 Chrome version",
@@ -21,5 +21,4 @@
 		"develop": "rm -rf .cache && parcel index.html -d dev --target browser"
 	},
 	"gitHead": "687d4c4559fc4813caff7eca184409c8993455d9"
-
 }
