@@ -3,10 +3,7 @@ var flattenDeep = require('lodash.flattendeep');
 
 import {
 	styleFontFamily,
-	styleBaselineRel,
-	styleBaseline,
-	styleCapHeight,
-	styleCapHeightRel,
+  styleText
 } from './styles';
 
 /**
@@ -33,6 +30,14 @@ export const createTextStyles = ({
 	const familyStyles = fonts.map((font: iFontOpenType) => {
 		return {
 			[`.font-${font.key}`]: styleFontFamily({ font }),
+      [`[class^='text-'], [class*=' text-']`]: {
+        display: 'block',
+        ['&::before, &::after']: {
+			    content: `''`,
+			    display: 'block',
+		    	height: 0,
+		    },
+      }
 		};
 	});
 
@@ -44,72 +49,24 @@ export const createTextStyles = ({
 				return leadingScale.map(lead => {
 					//
 					// create baseline styles
-					const outputBaseline = options.useRem
-						? styleBaselineRel({
-								font: font,
-								root: options.root,
-								baseline: baseline,
-								size: size,
-								leading: lead,
-						  })
-						: styleBaseline({
-								font: font,
-								baseline: baseline,
-								size: size,
-								leading: lead,
-						  });
+					const outputTextStyle = styleText({
+            font: font,
+            baseline: baseline,
+            size: size,
+            leading: lead,
+            snap: options.snap,
+            root: options.root,
+            useRem: options.useRem
+          });
 
 					// apply if variant type is enabled
-					const baselineStyles = options.baseline && {
-						[`&.${e(`text-${sizeIdx}/${lead}`)}`]: outputBaseline,
+					const textStyles = {
+						[`&.${e(`text-${sizeIdx}/${lead}`)}`]: outputTextStyle,
 					};
-
-					//
-					const outputCapHeight = options.useRem
-						? styleCapHeightRel({
-								font: font,
-								root: options.root,
-								baseline: baseline,
-								size: size,
-								leading: lead,
-						  })
-						: styleCapHeight({
-								font: font,
-								baseline: baseline,
-								size: size,
-								leading: lead,
-						  });
-
-					const capHeightStyles = options.capheight && {
-						[`&.${e(
-							`capheight-${sizeIdx}/${lead}`
-						)}`]: outputCapHeight,
-					};
-
-					/*
-					const outputXHeight =
-						options.xheight && options.useRem
-							? styleXHeight({
-									font: font,
-									baseline: baseline,
-									size: size,
-									leading: lead,
-							  })
-							: styleXHeightRel({
-									font: font,
-									root: options.root,
-									baseline: baseline,
-									size: size,
-									leading: lead,
-							  });
-					const xHeightStyles = options.xheight && {
-						[`&.${e(`xheight-${sizeIdx}/${lead}`)}`]: outputXHeight,
-					}; */
 
 					return {
 						[`.font-${font.key}`]: {
-							...baselineStyles,
-							...capHeightStyles,
+							...textStyles,
 						},
 					};
 				});

@@ -24,10 +24,6 @@ test('transform with font files', () => {
 					'fixtures/inter/Inter-Regular.woff'
 				),
 				key: 'sans-400',
-				familyName: 'Inter',
-				fallback: 'sans-serif',
-				weight: 400,
-				italic: true,
 			},
 		],
 	});

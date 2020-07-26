@@ -2,749 +2,997 @@
 
 exports[`baseline styles 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.font-sans-400.text-0\\\\/0 {
+[class^='text-'], [class*=' text-'] {
   display: block;
-  font-size: 10px;
-  line-height: 10px;
-  transform: translateY(1.3636363636363642px);
-  padding-top: 1px;
 }
 
-.font-sans-400.text-0\\\\/0:before {
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
   content: '';
-  margin-top: -1px;
   display: block;
   height: 0;
+}
+
+.font-sans-400.text-0\\\\/0 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -2.17px;
+}
+
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -1.65px;
 }
 
 .font-sans-400.text-0\\\\/1 {
-  display: block;
   font-size: 10px;
-  line-height: 20px;
-  transform: translateY(6.363636363636364px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-0\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -7.17px;
+}
+
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -6.65px;
 }
 
 .font-sans-400.text-0\\\\/2 {
-  display: block;
   font-size: 10px;
-  line-height: 30px;
-  transform: translateY(11.363636363636363px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-0\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -12.17px;
+}
+
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -11.65px;
 }
 
 .font-sans-400.text-1\\\\/0 {
-  display: block;
   font-size: 20px;
   line-height: 20px;
-  transform: translateY(2.7272727272727284px);
-  padding-top: 1px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: 1.06px;
+}
+
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 2.1px;
 }
 
 .font-sans-400.text-1\\\\/1 {
-  display: block;
   font-size: 20px;
-  line-height: 30px;
-  transform: translateY(7.727272727272728px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -3.94px;
+}
+
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -2.9px;
 }
 
 .font-sans-400.text-1\\\\/2 {
-  display: block;
   font-size: 20px;
-  line-height: 40px;
-  transform: translateY(12.727272727272728px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -8.94px;
+}
+
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -7.9px;
 }
 
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
-    display: block;
     font-size: 10px;
     line-height: 10px;
-    transform: translateY(1.3636363636363642px);
-    padding-top: 1px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -2.17px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -1.65px;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
-    display: block;
     font-size: 10px;
-    line-height: 20px;
-    transform: translateY(6.363636363636364px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -7.17px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -6.65px;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
-    display: block;
     font-size: 10px;
-    line-height: 30px;
-    transform: translateY(11.363636363636363px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -12.17px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -11.65px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
-    display: block;
     font-size: 20px;
     line-height: 20px;
-    transform: translateY(2.7272727272727284px);
-    padding-top: 1px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: 1.06px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 2.1px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
-    display: block;
     font-size: 20px;
-    line-height: 30px;
-    transform: translateY(7.727272727272728px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -3.94px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -2.9px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
-    display: block;
     font-size: 20px;
-    line-height: 40px;
-    transform: translateY(12.727272727272728px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -8.94px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -7.9px;
   }
 }"
 `;
 
 exports[`capheight styles 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.font-sans-400.capheight-0\\\\/0 {
+[class^='text-'], [class*=' text-'] {
   display: block;
+}
+
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.font-sans-400.text-0\\\\/0 {
   font-size: 10px;
-  line-height: 7.272727272727273px;
-  transform: translateY(8.881784197001252e-16px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-0\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -0.6599999999999998px;
 }
 
-.font-sans-400.capheight-0\\\\/1 {
-  display: block;
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -0.1399999999999998px;
+}
+
+.font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 17.272727272727273px;
-  transform: translateY(5.000000000000001px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-0\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -5.66px;
 }
 
-.font-sans-400.capheight-0\\\\/2 {
-  display: block;
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -5.140000000000001px;
+}
+
+.font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 27.272727272727273px;
-  transform: translateY(10px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-0\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -10.66px;
 }
 
-.font-sans-400.capheight-1\\\\/0 {
-  display: block;
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -10.14px;
+}
+
+.font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 14.545454545454547px;
-  transform: translateY(1.7763568394002505e-15px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-1\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: -0.9199999999999996px;
 }
 
-.font-sans-400.capheight-1\\\\/1 {
-  display: block;
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 0.12000000000000044px;
+}
+
+.font-sans-400.text-1\\\\/1 {
   font-size: 20px;
-  line-height: 24.545454545454547px;
-  transform: translateY(5.000000000000002px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-1\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -5.920000000000001px;
 }
 
-.font-sans-400.capheight-1\\\\/2 {
-  display: block;
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -4.880000000000001px;
+}
+
+.font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 34.54545454545455px;
-  transform: translateY(10.000000000000002px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.capheight-1\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -10.92px;
+}
+
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -9.88px;
 }
 
 @media (min-width: 640px) {
-  .font-sans-400.sm\\\\:capheight-0\\\\/0 {
-    display: block;
+  .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
-    line-height: 7.272727272727273px;
-    transform: translateY(8.881784197001252e-16px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -0.6599999999999998px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/1 {
-    display: block;
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -0.1399999999999998px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 17.272727272727273px;
-    transform: translateY(5.000000000000001px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -5.66px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/2 {
-    display: block;
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -5.140000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 27.272727272727273px;
-    transform: translateY(10px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -10.66px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/0 {
-    display: block;
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -10.14px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 14.545454545454547px;
-    transform: translateY(1.7763568394002505e-15px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: -0.9199999999999996px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/1 {
-    display: block;
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 0.12000000000000044px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
-    line-height: 24.545454545454547px;
-    transform: translateY(5.000000000000002px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -5.920000000000001px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/2 {
-    display: block;
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -4.880000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 34.54545454545455px;
-    transform: translateY(10.000000000000002px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -10.92px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -9.88px;
   }
 }"
 `;
 
 exports[`measure styles 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
 }
 
-.font-sans-400 {
+[class^='text-'], [class*=' text-'] {
+  display: block;
 }
 
-.font-sans-400 {
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+  content: '';
+  display: block;
+  height: 0;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -0.6599999999999998px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -0.1399999999999998px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/1 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -5.66px;
+}
+
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -5.140000000000001px;
+}
+
+.font-sans-400.text-0\\\\/2 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -10.66px;
+}
+
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -10.14px;
+}
+
+.font-sans-400.text-1\\\\/0 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: -0.9199999999999996px;
+}
+
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 0.12000000000000044px;
+}
+
+.font-sans-400.text-1\\\\/1 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -5.920000000000001px;
+}
+
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -4.880000000000001px;
+}
+
+.font-sans-400.text-1\\\\/2 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -10.92px;
+}
+
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -9.88px;
 }
 
 .measure-0 {
-  max-width: 10ch
+  max-width: 10ch;
 }
 
 .measure-1 {
-  max-width: 20ch
+  max-width: 20ch;
 }
 
 @media (min-width: 640px) {
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -0.6599999999999998px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -0.1399999999999998px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -5.66px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -5.140000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -10.66px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -10.14px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: -0.9199999999999996px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 0.12000000000000044px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -5.920000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -4.880000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -10.92px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -9.88px;
   }
 
   .sm\\\\:measure-0 {
-    max-width: 10ch
+    max-width: 10ch;
   }
 
   .sm\\\\:measure-1 {
-    max-width: 20ch
+    max-width: 20ch;
   }
 }"
 `;
 
 exports[`rhythm styles 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
 }
 
-.font-sans-400 {
+[class^='text-'], [class*=' text-'] {
+  display: block;
 }
 
-.font-sans-400 {
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+  content: '';
+  display: block;
+  height: 0;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -0.6599999999999998px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -0.1399999999999998px;
 }
 
-.font-sans-400 {
+.font-sans-400.text-0\\\\/1 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -5.66px;
+}
+
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -5.140000000000001px;
+}
+
+.font-sans-400.text-0\\\\/2 {
+  font-size: 10px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -10.66px;
+}
+
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -10.14px;
+}
+
+.font-sans-400.text-1\\\\/0 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: -0.9199999999999996px;
+}
+
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 0.12000000000000044px;
+}
+
+.font-sans-400.text-1\\\\/1 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -5.920000000000001px;
+}
+
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -4.880000000000001px;
+}
+
+.font-sans-400.text-1\\\\/2 {
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
+}
+
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -10.92px;
+}
+
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -9.88px;
 }
 
 .rhythm-0 > * + * {
-  margin-top: 0px
+  margin-top: 0px;
 }
 
 .rhythm-y-0 > * + * {
-  margin-top: 0px
+  margin-top: 0px;
 }
 
 .rhythm-x-0 > * + * {
-  margin-left: 0px
+  margin-left: 0px;
 }
 
 .rhythm-1 > * + * {
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .rhythm-y-1 > * + * {
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .rhythm-x-1 > * + * {
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .rhythm-2 > * + * {
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .rhythm-y-2 > * + * {
-  margin-top: 20px
+  margin-top: 20px;
 }
 
 .rhythm-x-2 > * + * {
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 @media (min-width: 640px) {
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -0.6599999999999998px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -0.1399999999999998px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -5.66px;
   }
 
-  .sm\\\\:font-sans-400 {
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -5.140000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -10.66px;
+  }
+
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -10.14px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: -0.9199999999999996px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 0.12000000000000044px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -5.920000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -4.880000000000001px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2 {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -10.92px;
+  }
+
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -9.88px;
   }
 
   .sm\\\\:rhythm-0 > * + * {
-    margin-top: 0px
+    margin-top: 0px;
   }
 
   .sm\\\\:rhythm-y-0 > * + * {
-    margin-top: 0px
+    margin-top: 0px;
   }
 
   .sm\\\\:rhythm-x-0 > * + * {
-    margin-left: 0px
+    margin-left: 0px;
   }
 
   .sm\\\\:rhythm-1 > * + * {
-    margin-top: 10px
+    margin-top: 10px;
   }
 
   .sm\\\\:rhythm-y-1 > * + * {
-    margin-top: 10px
+    margin-top: 10px;
   }
 
   .sm\\\\:rhythm-x-1 > * + * {
-    margin-left: 10px
+    margin-left: 10px;
   }
 
   .sm\\\\:rhythm-2 > * + * {
-    margin-top: 20px
+    margin-top: 20px;
   }
 
   .sm\\\\:rhythm-y-2 > * + * {
-    margin-top: 20px
+    margin-top: 20px;
   }
 
   .sm\\\\:rhythm-x-2 > * + * {
-    margin-left: 20px
+    margin-left: 20px;
   }
 }"
 `;
 
 exports[`use px 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.font-sans-400.text-0\\\\/0 {
+[class^='text-'], [class*=' text-'] {
   display: block;
+}
+
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.font-sans-400.text-0\\\\/0 {
   font-size: 10px;
   line-height: 10px;
-  transform: translateY(1.3636363636363642px);
-  padding-top: 1px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-0\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -2.17px;
 }
 
-.font-sans-400.capheight-0\\\\/0 {
-  display: block;
-  font-size: 10px;
-  line-height: 7.272727272727273px;
-  transform: translateY(8.881784197001252e-16px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -1.65px;
 }
 
 .font-sans-400.text-0\\\\/1 {
-  display: block;
   font-size: 10px;
-  line-height: 20px;
-  transform: translateY(6.363636363636364px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-0\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -7.17px;
 }
 
-.font-sans-400.capheight-0\\\\/1 {
-  display: block;
-  font-size: 10px;
-  line-height: 17.272727272727273px;
-  transform: translateY(5.000000000000001px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -6.65px;
 }
 
 .font-sans-400.text-0\\\\/2 {
-  display: block;
   font-size: 10px;
-  line-height: 30px;
-  transform: translateY(11.363636363636363px);
-  padding-top: 1px;
+  line-height: 10px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-0\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -12.17px;
 }
 
-.font-sans-400.capheight-0\\\\/2 {
-  display: block;
-  font-size: 10px;
-  line-height: 27.272727272727273px;
-  transform: translateY(10px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -11.65px;
 }
 
 .font-sans-400.text-1\\\\/0 {
-  display: block;
   font-size: 20px;
   line-height: 20px;
-  transform: translateY(2.7272727272727284px);
-  padding-top: 1px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: 1.06px;
 }
 
-.font-sans-400.capheight-1\\\\/0 {
-  display: block;
-  font-size: 20px;
-  line-height: 14.545454545454547px;
-  transform: translateY(1.7763568394002505e-15px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/0:before {
-  content: '';
-  margin-top: -1px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 2.1px;
 }
 
 .font-sans-400.text-1\\\\/1 {
-  display: block;
   font-size: 20px;
-  line-height: 30px;
-  transform: translateY(7.727272727272728px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -3.94px;
 }
 
-.font-sans-400.capheight-1\\\\/1 {
-  display: block;
-  font-size: 20px;
-  line-height: 24.545454545454547px;
-  transform: translateY(5.000000000000002px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/1:before {
-  content: '';
-  margin-top: -11px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -2.9px;
 }
 
 .font-sans-400.text-1\\\\/2 {
-  display: block;
   font-size: 20px;
-  line-height: 40px;
-  transform: translateY(12.727272727272728px);
-  padding-top: 1px;
+  line-height: 20px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
-.font-sans-400.text-1\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -8.94px;
 }
 
-.font-sans-400.capheight-1\\\\/2 {
-  display: block;
-  font-size: 20px;
-  line-height: 34.54545454545455px;
-  transform: translateY(10.000000000000002px);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/2:before {
-  content: '';
-  margin-top: -21px;
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -7.9px;
 }
 
 .bg-baseline {
@@ -803,183 +1051,93 @@ exports[`use px 1`] = `
 
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
-    display: block;
     font-size: 10px;
     line-height: 10px;
-    transform: translateY(1.3636363636363642px);
-    padding-top: 1px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -2.17px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/0 {
-    display: block;
-    font-size: 10px;
-    line-height: 7.272727272727273px;
-    transform: translateY(8.881784197001252e-16px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -1.65px;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
-    display: block;
     font-size: 10px;
-    line-height: 20px;
-    transform: translateY(6.363636363636364px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -7.17px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/1 {
-    display: block;
-    font-size: 10px;
-    line-height: 17.272727272727273px;
-    transform: translateY(5.000000000000001px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -6.65px;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
-    display: block;
     font-size: 10px;
-    line-height: 30px;
-    transform: translateY(11.363636363636363px);
-    padding-top: 1px;
+    line-height: 10px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -12.17px;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/2 {
-    display: block;
-    font-size: 10px;
-    line-height: 27.272727272727273px;
-    transform: translateY(10px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -11.65px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
-    display: block;
     font-size: 20px;
     line-height: 20px;
-    transform: translateY(2.7272727272727284px);
-    padding-top: 1px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: 1.06px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/0 {
-    display: block;
-    font-size: 20px;
-    line-height: 14.545454545454547px;
-    transform: translateY(1.7763568394002505e-15px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/0:before {
-    content: '';
-    margin-top: -1px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 2.1px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
-    display: block;
     font-size: 20px;
-    line-height: 30px;
-    transform: translateY(7.727272727272728px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -3.94px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/1 {
-    display: block;
-    font-size: 20px;
-    line-height: 24.545454545454547px;
-    transform: translateY(5.000000000000002px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/1:before {
-    content: '';
-    margin-top: -11px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -2.9px;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
-    display: block;
     font-size: 20px;
-    line-height: 40px;
-    transform: translateY(12.727272727272728px);
-    padding-top: 1px;
+    line-height: 20px;
+    padding-top: 0.4px;
+    padding-bottom: 0.4px;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -8.94px;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/2 {
-    display: block;
-    font-size: 20px;
-    line-height: 34.54545454545455px;
-    transform: translateY(10.000000000000002px);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/2:before {
-    content: '';
-    margin-top: -21px;
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -7.9px;
   }
 
   .sm\\\\:measure-0 {
@@ -1030,189 +1188,109 @@ exports[`use px 1`] = `
 
 exports[`use rem 1`] = `
 ".font-sans-400 {
-  font-family: \\"Inter\\", sans-serif;
+  font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.font-sans-400.text-0\\\\/0 {
+[class^='text-'], [class*=' text-'] {
   display: block;
+}
+
+[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+.font-sans-400.text-0\\\\/0 {
   font-size: 1rem;
   line-height: 1;
-  transform: translateY(0.1363636363636364em);
-  padding-top: 1px;
+  padding-top: 0.34199999999999997em;
+  padding-bottom: 0.04em;
 }
 
-.font-sans-400.text-0\\\\/0:before {
-  content: '';
-  margin-top: calc(-0.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/0::before {
+  margin-top: -0.217em;
 }
 
-.font-sans-400.capheight-0\\\\/0 {
-  display: block;
-  font-size: 1rem;
-  line-height: 0.7272727272727273;
-  transform: translateY(8.881784197001253e-17em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/0:before {
-  content: '';
-  margin-top: calc(-0.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/0::after {
+  margin-bottom: -0.16499999999999998em;
 }
 
 .font-sans-400.text-0\\\\/1 {
-  display: block;
   font-size: 1rem;
   line-height: 2;
-  transform: translateY(0.6363636363636365em);
-  padding-top: 1px;
+  padding-top: 0.34199999999999997em;
+  padding-bottom: 0.04em;
 }
 
-.font-sans-400.text-0\\\\/1:before {
-  content: '';
-  margin-top: calc(-1.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::before {
+  margin-top: -0.717em;
 }
 
-.font-sans-400.capheight-0\\\\/1 {
-  display: block;
-  font-size: 1rem;
-  line-height: 1.7272727272727273;
-  transform: translateY(0.5000000000000001em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/1:before {
-  content: '';
-  margin-top: calc(-1.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/1::after {
+  margin-bottom: -0.665em;
 }
 
 .font-sans-400.text-0\\\\/2 {
-  display: block;
   font-size: 1rem;
   line-height: 3;
-  transform: translateY(1.1363636363636362em);
-  padding-top: 1px;
+  padding-top: 0.34199999999999997em;
+  padding-bottom: 0.04em;
 }
 
-.font-sans-400.text-0\\\\/2:before {
-  content: '';
-  margin-top: calc(-2.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::before {
+  margin-top: -1.217em;
 }
 
-.font-sans-400.capheight-0\\\\/2 {
-  display: block;
-  font-size: 1rem;
-  line-height: 2.7272727272727275;
-  transform: translateY(1em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-0\\\\/2:before {
-  content: '';
-  margin-top: calc(-2.1em );
-  display: block;
-  height: 0;
+.font-sans-400.text-0\\\\/2::after {
+  margin-bottom: -1.165em;
 }
 
 .font-sans-400.text-1\\\\/0 {
-  display: block;
   font-size: 2rem;
-  line-height: 1;
-  transform: translateY(0.1363636363636364em);
-  padding-top: 1px;
+  line-height: 0.5;
+  padding-top: -0.178em;
+  padding-bottom: 0.02em;
 }
 
-.font-sans-400.text-1\\\\/0:before {
-  content: '';
-  margin-top: calc(-0.05em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::before {
+  margin-top: 0.053000000000000005em;
 }
 
-.font-sans-400.capheight-1\\\\/0 {
-  display: block;
-  font-size: 2rem;
-  line-height: 0.7272727272727273;
-  transform: translateY(8.881784197001253e-17em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/0:before {
-  content: '';
-  margin-top: calc(-0.05em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/0::after {
+  margin-bottom: 0.10500000000000001em;
 }
 
 .font-sans-400.text-1\\\\/1 {
-  display: block;
   font-size: 2rem;
-  line-height: 1.5;
-  transform: translateY(0.3863636363636364em);
-  padding-top: 1px;
+  line-height: 1;
+  padding-top: 0.322em;
+  padding-bottom: 0.02em;
 }
 
-.font-sans-400.text-1\\\\/1:before {
-  content: '';
-  margin-top: calc(-0.55em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::before {
+  margin-top: -0.197em;
 }
 
-.font-sans-400.capheight-1\\\\/1 {
-  display: block;
-  font-size: 2rem;
-  line-height: 1.2272727272727273;
-  transform: translateY(0.2500000000000001em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/1:before {
-  content: '';
-  margin-top: calc(-0.55em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/1::after {
+  margin-bottom: -0.145em;
 }
 
 .font-sans-400.text-1\\\\/2 {
-  display: block;
   font-size: 2rem;
-  line-height: 2;
-  transform: translateY(0.6363636363636365em);
-  padding-top: 1px;
+  line-height: 1.5;
+  padding-top: 0.32199999999999995em;
+  padding-bottom: 0.02em;
 }
 
-.font-sans-400.text-1\\\\/2:before {
-  content: '';
-  margin-top: calc(-1.05em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::before {
+  margin-top: -0.44699999999999995em;
 }
 
-.font-sans-400.capheight-1\\\\/2 {
-  display: block;
-  font-size: 2rem;
-  line-height: 1.7272727272727273;
-  transform: translateY(0.5000000000000001em);
-  padding-top: 1px;
-}
-
-.font-sans-400.capheight-1\\\\/2:before {
-  content: '';
-  margin-top: calc(-1.05em );
-  display: block;
-  height: 0;
+.font-sans-400.text-1\\\\/2::after {
+  margin-bottom: -0.395em;
 }
 
 .bg-baseline {
@@ -1271,183 +1349,93 @@ exports[`use rem 1`] = `
 
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
-    display: block;
     font-size: 1rem;
     line-height: 1;
-    transform: translateY(0.1363636363636364em);
-    padding-top: 1px;
+    padding-top: 0.34199999999999997em;
+    padding-bottom: 0.04em;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/0:before {
-    content: '';
-    margin-top: calc(-0.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::before {
+    margin-top: -0.217em;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/0 {
-    display: block;
-    font-size: 1rem;
-    line-height: 0.7272727272727273;
-    transform: translateY(8.881784197001253e-17em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/0:before {
-    content: '';
-    margin-top: calc(-0.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/0::after {
+    margin-bottom: -0.16499999999999998em;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
-    display: block;
     font-size: 1rem;
     line-height: 2;
-    transform: translateY(0.6363636363636365em);
-    padding-top: 1px;
+    padding-top: 0.34199999999999997em;
+    padding-bottom: 0.04em;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/1:before {
-    content: '';
-    margin-top: calc(-1.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::before {
+    margin-top: -0.717em;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/1 {
-    display: block;
-    font-size: 1rem;
-    line-height: 1.7272727272727273;
-    transform: translateY(0.5000000000000001em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/1:before {
-    content: '';
-    margin-top: calc(-1.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/1::after {
+    margin-bottom: -0.665em;
   }
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
-    display: block;
     font-size: 1rem;
     line-height: 3;
-    transform: translateY(1.1363636363636362em);
-    padding-top: 1px;
+    padding-top: 0.34199999999999997em;
+    padding-bottom: 0.04em;
   }
 
-  .font-sans-400.sm\\\\:text-0\\\\/2:before {
-    content: '';
-    margin-top: calc(-2.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::before {
+    margin-top: -1.217em;
   }
 
-  .font-sans-400.sm\\\\:capheight-0\\\\/2 {
-    display: block;
-    font-size: 1rem;
-    line-height: 2.7272727272727275;
-    transform: translateY(1em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-0\\\\/2:before {
-    content: '';
-    margin-top: calc(-2.1em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-0\\\\/2::after {
+    margin-bottom: -1.165em;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
-    display: block;
     font-size: 2rem;
-    line-height: 1;
-    transform: translateY(0.1363636363636364em);
-    padding-top: 1px;
+    line-height: 0.5;
+    padding-top: -0.178em;
+    padding-bottom: 0.02em;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/0:before {
-    content: '';
-    margin-top: calc(-0.05em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::before {
+    margin-top: 0.053000000000000005em;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/0 {
-    display: block;
-    font-size: 2rem;
-    line-height: 0.7272727272727273;
-    transform: translateY(8.881784197001253e-17em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/0:before {
-    content: '';
-    margin-top: calc(-0.05em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/0::after {
+    margin-bottom: 0.10500000000000001em;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
-    display: block;
     font-size: 2rem;
-    line-height: 1.5;
-    transform: translateY(0.3863636363636364em);
-    padding-top: 1px;
+    line-height: 1;
+    padding-top: 0.322em;
+    padding-bottom: 0.02em;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/1:before {
-    content: '';
-    margin-top: calc(-0.55em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::before {
+    margin-top: -0.197em;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/1 {
-    display: block;
-    font-size: 2rem;
-    line-height: 1.2272727272727273;
-    transform: translateY(0.2500000000000001em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/1:before {
-    content: '';
-    margin-top: calc(-0.55em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/1::after {
+    margin-bottom: -0.145em;
   }
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
-    display: block;
     font-size: 2rem;
-    line-height: 2;
-    transform: translateY(0.6363636363636365em);
-    padding-top: 1px;
+    line-height: 1.5;
+    padding-top: 0.32199999999999995em;
+    padding-bottom: 0.02em;
   }
 
-  .font-sans-400.sm\\\\:text-1\\\\/2:before {
-    content: '';
-    margin-top: calc(-1.05em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::before {
+    margin-top: -0.44699999999999995em;
   }
 
-  .font-sans-400.sm\\\\:capheight-1\\\\/2 {
-    display: block;
-    font-size: 2rem;
-    line-height: 1.7272727272727273;
-    transform: translateY(0.5000000000000001em);
-    padding-top: 1px;
-  }
-
-  .font-sans-400.sm\\\\:capheight-1\\\\/2:before {
-    content: '';
-    margin-top: calc(-1.05em );
-    display: block;
-    height: 0;
+  .font-sans-400.sm\\\\:text-1\\\\/2::after {
+    margin-bottom: -0.395em;
   }
 
   .sm\\\\:measure-0 {

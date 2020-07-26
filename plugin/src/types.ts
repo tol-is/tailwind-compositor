@@ -29,6 +29,7 @@ export interface iFontOpenType {
 	upm: number;
 	xHeight: number;
 	capHeight: number;
+	lineGap: number;
 	ascent: number;
 	descent: number;
 	weight: number;
@@ -53,12 +54,12 @@ export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 
 export interface UtilityOptions {
 	useRem: boolean;
+	snap: boolean;
 	root?: number;
-	xray: boolean;
-	baseline: boolean;
-	capheight: boolean;
+  type: boolean;
 	rhythm: boolean;
 	measure: boolean;
+	xray: boolean;
 }
 
 export interface ICompositorConfig {
@@ -98,25 +99,28 @@ export interface TypeStyleRelParams {
 	root: number;
 	size: number;
 	leading: number;
+  useRem: boolean;
 }
 
 export interface TypeStyleParams {
 	font: iFontOpenType;
 	baseline: number;
 	size: number;
+  snap: boolean;
 	leading: number;
+  root?: number;
+  useRem: boolean;
 }
 
 export interface StyleTypography {
-	display: CSS.DisplayProperty;
 	fontSize: CSS.FontSizeProperty<string>;
 	lineHeight: CSS.LineHeightProperty<string | number>;
-	transform: CSS.TransformProperty;
 	paddingTop: CSS.PaddingTopProperty<string>;
-	'&:before': {
-		content: string;
+	paddingBottom: CSS.PaddingTopProperty<string>;
+	'&::before': {
 		marginTop: CSS.MarginProperty<string>;
-		display: CSS.DisplayProperty;
-		height: CSS.HeightProperty<string | number>;
+	};
+	'&::after': {
+		marginBottom: CSS.MarginProperty<string>;
 	};
 }

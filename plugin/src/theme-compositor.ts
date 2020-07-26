@@ -45,15 +45,15 @@ export const compositor = (compositorConfig: ICompositorConfig) => (
 	let fontsConfig: Array<iFontOpenType> = [];
 	let fontsCached = false;
 
-	try {
-		if (fs.existsSync(cacheFileName)) {
-			const rawCache: any = fs.readFileSync(cacheFileName);
-			fontsConfig = JSON.parse(rawCache);
-			fontsCached = true;
-		}
-	} catch (err) {
-		console.error(err);
-	}
+	// try {
+	// 	if (fs.existsSync(cacheFileName)) {
+	// 		const rawCache: any = fs.readFileSync(cacheFileName);
+	// 		fontsConfig = JSON.parse(rawCache);
+	// 		fontsCached = true;
+	// 	}
+	// } catch (err) {
+	// 	console.error(err);
+	// }
 
 	// first get some tailwind
 	// tailwind config values

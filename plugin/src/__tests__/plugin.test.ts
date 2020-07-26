@@ -56,11 +56,11 @@ test('baseline styles', () => {
 	const config = {
 		options: {
 			useRem: false,
-			xray: false,
-			baseline: true,
-			capheight: false,
+			snap: true,
+      type: true,
 			rhythm: false,
 			measure: false,
+			xray: false,
 		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {
@@ -72,11 +72,11 @@ test('capheight styles', () => {
 	const config = {
 		options: {
 			useRem: false,
-			xray: false,
-			baseline: false,
-			capheight: true,
+			snap: false,
+      type: true,
 			rhythm: false,
 			measure: false,
+			xray: false,
 		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {
@@ -88,11 +88,11 @@ test('rhythm styles', () => {
 	const config = {
 		options: {
 			useRem: false,
-			xray: false,
-			baseline: false,
-			capheight: false,
+			snap: false,
+      type: false,
 			rhythm: true,
 			measure: false,
+			xray: false,
 		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {
@@ -104,11 +104,11 @@ test('measure styles', () => {
 	const config = {
 		options: {
 			useRem: false,
-			xray: false,
-			baseline: false,
-			capheight: false,
+			snap: false,
+      type: false,
 			rhythm: false,
 			measure: true,
+			xray: false,
 		},
 	};
 	return createPostCSSConfig({ config: config }).then(css => {

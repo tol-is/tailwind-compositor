@@ -177,6 +177,7 @@ The `key` property is used to name the utility classes. The configuration bellow
   upm: 2816,
   xHeight: 1536,
   capHeight: 2048,
+  lineGap: 0,
   ascent: 2728,
   descent: -680
 }
@@ -288,10 +289,10 @@ Capheight utilities, trim the white-space of text blocks from the baseline, to t
 // type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56]
 
 // sans semibold italic - 56px / leading 3
-<h3 class="font-sans-600i capheight-10/3" />
+<h3 class="font-sans-600i capsize-10/3" />
 
 // sans regular - 20px / leading 3
-<p class="font-sans-400 capheight-2/3" />
+<p class="font-sans-400 capsize-2/3" />
 
 // sans regular italic - 18px / leading 2
 <p class="font-sans-400i text-1/2" />
