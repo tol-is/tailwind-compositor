@@ -56,7 +56,7 @@ export interface UtilityOptions {
 	useRem: boolean;
 	snap: boolean;
 	root?: number;
-  type: boolean;
+	type: boolean;
 	rhythm: boolean;
 	measure: boolean;
 	xray: boolean;
@@ -91,6 +91,12 @@ export interface StyleFamily {
 	fontFamily: CSS.FontFamilyProperty;
 	fontWeight: CSS.FontWeightProperty;
 	fontStyle: CSS.FontStyleProperty;
+	display: CSS.DisplayProperty;
+	'&::before, &::after': {
+		content: CSS.ContentProperty;
+		height: CSS.HeightProperty<number>;
+		display: CSS.DisplayProperty;
+	};
 }
 
 export interface TypeStyleRelParams {
@@ -99,17 +105,17 @@ export interface TypeStyleRelParams {
 	root: number;
 	size: number;
 	leading: number;
-  useRem: boolean;
+	useRem: boolean;
 }
 
 export interface TypeStyleParams {
 	font: iFontOpenType;
 	baseline: number;
 	size: number;
-  snap: boolean;
+	snap: boolean;
 	leading: number;
-  root?: number;
-  useRem: boolean;
+	root?: number;
+	useRem: boolean;
 }
 
 export interface StyleTypography {

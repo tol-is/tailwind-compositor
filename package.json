@@ -17,12 +17,14 @@
 	"scripts": {
 		"postinstall": "lerna bootstrap",
 		"develop": "npm-run-all -p plugin example",
+		"build": "npm-run-all -p plugin:build example:build",
 		"plugin": "lerna exec --scope tailwind-compositor -- yarn develop",
 		"example": "lerna exec --scope example -- yarn run develop",
 		"tdd": "jest --u --watch --onlyChanged --watchman --forceExit --detectOpenHandles --notify --notifyMode=failure",
 		"release": "yarn test && yarn build && lerna publish --no-git-reset",
 		"test": "jest --forceExit --detectOpenHandles --notify --notifyMode=failure",
-		"build": "lerna exec --scope tailwind-compositor -- yarn build"
+		"plugin:build": "lerna exec --scope tailwind-compositor -- yarn build",
+		"example:build": "lerna exec --scope example -- yarn build"
 	},
 	"devDependencies": {
 		"@types/jest": "^25.2.3",
