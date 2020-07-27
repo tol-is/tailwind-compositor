@@ -5,13 +5,10 @@ exports[`baseline styles 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;
@@ -205,13 +202,10 @@ exports[`capheight styles 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;
@@ -405,13 +399,10 @@ exports[`measure styles 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;
@@ -621,13 +612,10 @@ exports[`rhythm styles 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;
@@ -893,13 +881,10 @@ exports[`use px 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;
@@ -1191,13 +1176,10 @@ exports[`use rem 1`] = `
   font-family: \\"IBM Plex Sans\\", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-[class^='text-'], [class*=' text-'] {
   display: block;
 }
 
-[class^='text-']::before, [class^='text-']::after, [class*=' text-']::before, [class*=' text-']::after {
+.font-sans-400::before, .font-sans-400::after {
   content: '';
   display: block;
   height: 0;

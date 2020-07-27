@@ -1,10 +1,7 @@
 import { iTailwindTheme, ICompositorConfig, iFontOpenType } from './types';
 var flattenDeep = require('lodash.flattendeep');
 
-import {
-	styleFontFamily,
-  styleText
-} from './styles';
+import { styleFontFamily, styleText } from './styles';
 
 /**
  *
@@ -30,14 +27,6 @@ export const createTextStyles = ({
 	const familyStyles = fonts.map((font: iFontOpenType) => {
 		return {
 			[`.font-${font.key}`]: styleFontFamily({ font }),
-      [`[class^='text-'], [class*=' text-']`]: {
-        display: 'block',
-        ['&::before, &::after']: {
-			    content: `''`,
-			    display: 'block',
-		    	height: 0,
-		    },
-      }
 		};
 	});
 
@@ -50,14 +39,14 @@ export const createTextStyles = ({
 					//
 					// create baseline styles
 					const outputTextStyle = styleText({
-            font: font,
-            baseline: baseline,
-            size: size,
-            leading: lead,
-            snap: options.snap,
-            root: options.root,
-            useRem: options.useRem
-          });
+						font: font,
+						baseline: baseline,
+						size: size,
+						leading: lead,
+						snap: options.snap,
+						root: options.root,
+						useRem: options.useRem,
+					});
 
 					// apply if variant type is enabled
 					const textStyles = {

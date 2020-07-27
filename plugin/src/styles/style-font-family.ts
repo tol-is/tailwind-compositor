@@ -12,5 +12,11 @@ export const styleFontFamily = (params: TypeFamilyParams): StyleFamily => {
 		fontFamily: `"${font.familyName}", ${font.fallback}`,
 		fontWeight: font.weight,
 		fontStyle: font.italic ? 'italic' : 'normal',
+		display: 'block',
+		['&::before, &::after']: {
+			content: `''`,
+			display: 'block',
+			height: 0,
+		},
 	};
 };
