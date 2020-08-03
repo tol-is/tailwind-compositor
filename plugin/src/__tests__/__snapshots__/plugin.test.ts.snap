@@ -500,67 +500,67 @@ exports[`matrix styles 1`] = `
 
 .matrix-0 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-1 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(auto,1fr));
 }
 
 .matrix-3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(auto,1fr));
 }
 
 .matrix-4 {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(auto,1fr));
 }
 
 .matrix-5 {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
+  grid-template-columns: repeat(5, minmax(auto,1fr));
 }
 
 .matrix-6 {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-template-columns: repeat(6, minmax(auto,1fr));
 }
 
 .matrix-7 {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0,1fr));
+  grid-template-columns: repeat(7, minmax(auto,1fr));
 }
 
 .matrix-8 {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0,1fr));
+  grid-template-columns: repeat(8, minmax(auto,1fr));
 }
 
 .matrix-9 {
   display: grid;
-  grid-template-columns: repeat(9, minmax(0,1fr));
+  grid-template-columns: repeat(9, minmax(auto,1fr));
 }
 
 .matrix-10 {
   display: grid;
-  grid-template-columns: repeat(10, minmax(0,1fr));
+  grid-template-columns: repeat(10, minmax(auto,1fr));
 }
 
 .matrix-11 {
   display: grid;
-  grid-template-columns: repeat(11, minmax(0,1fr));
+  grid-template-columns: repeat(11, minmax(auto,1fr));
 }
 
 .matrix-12 {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(auto,1fr));
 }
 
 .matrix-rhythm-0 {
@@ -811,67 +811,67 @@ exports[`matrix styles 1`] = `
 
   .sm\\\\:matrix-0 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-1 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-2 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-3 {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-4 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-columns: repeat(4, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-5 {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
+    grid-template-columns: repeat(5, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-6 {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0,1fr));
+    grid-template-columns: repeat(6, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-7 {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0,1fr));
+    grid-template-columns: repeat(7, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-8 {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0,1fr));
+    grid-template-columns: repeat(8, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-9 {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0,1fr));
+    grid-template-columns: repeat(9, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-10 {
     display: grid;
-    grid-template-columns: repeat(10, minmax(0,1fr));
+    grid-template-columns: repeat(10, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-11 {
     display: grid;
-    grid-template-columns: repeat(11, minmax(0,1fr));
+    grid-template-columns: repeat(11, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-12 {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-rhythm-0 {
@@ -1673,67 +1673,67 @@ exports[`use px 1`] = `
 
 .matrix-0 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-1 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(auto,1fr));
 }
 
 .matrix-3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(auto,1fr));
 }
 
 .matrix-4 {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(auto,1fr));
 }
 
 .matrix-5 {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
+  grid-template-columns: repeat(5, minmax(auto,1fr));
 }
 
 .matrix-6 {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-template-columns: repeat(6, minmax(auto,1fr));
 }
 
 .matrix-7 {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0,1fr));
+  grid-template-columns: repeat(7, minmax(auto,1fr));
 }
 
 .matrix-8 {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0,1fr));
+  grid-template-columns: repeat(8, minmax(auto,1fr));
 }
 
 .matrix-9 {
   display: grid;
-  grid-template-columns: repeat(9, minmax(0,1fr));
+  grid-template-columns: repeat(9, minmax(auto,1fr));
 }
 
 .matrix-10 {
   display: grid;
-  grid-template-columns: repeat(10, minmax(0,1fr));
+  grid-template-columns: repeat(10, minmax(auto,1fr));
 }
 
 .matrix-11 {
   display: grid;
-  grid-template-columns: repeat(11, minmax(0,1fr));
+  grid-template-columns: repeat(11, minmax(auto,1fr));
 }
 
 .matrix-12 {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(auto,1fr));
 }
 
 .matrix-rhythm-0 {
@@ -2028,67 +2028,67 @@ exports[`use px 1`] = `
 
   .sm\\\\:matrix-0 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-1 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-2 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-3 {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-4 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-columns: repeat(4, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-5 {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
+    grid-template-columns: repeat(5, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-6 {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0,1fr));
+    grid-template-columns: repeat(6, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-7 {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0,1fr));
+    grid-template-columns: repeat(7, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-8 {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0,1fr));
+    grid-template-columns: repeat(8, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-9 {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0,1fr));
+    grid-template-columns: repeat(9, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-10 {
     display: grid;
-    grid-template-columns: repeat(10, minmax(0,1fr));
+    grid-template-columns: repeat(10, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-11 {
     display: grid;
-    grid-template-columns: repeat(11, minmax(0,1fr));
+    grid-template-columns: repeat(11, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-12 {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-rhythm-0 {
@@ -2408,67 +2408,67 @@ exports[`use rem 1`] = `
 
 .matrix-0 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-1 {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0,1fr));
+  grid-template-columns: repeat(1, minmax(auto,1fr));
 }
 
 .matrix-2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
+  grid-template-columns: repeat(2, minmax(auto,1fr));
 }
 
 .matrix-3 {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(3, minmax(auto,1fr));
 }
 
 .matrix-4 {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(auto,1fr));
 }
 
 .matrix-5 {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
+  grid-template-columns: repeat(5, minmax(auto,1fr));
 }
 
 .matrix-6 {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-template-columns: repeat(6, minmax(auto,1fr));
 }
 
 .matrix-7 {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0,1fr));
+  grid-template-columns: repeat(7, minmax(auto,1fr));
 }
 
 .matrix-8 {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0,1fr));
+  grid-template-columns: repeat(8, minmax(auto,1fr));
 }
 
 .matrix-9 {
   display: grid;
-  grid-template-columns: repeat(9, minmax(0,1fr));
+  grid-template-columns: repeat(9, minmax(auto,1fr));
 }
 
 .matrix-10 {
   display: grid;
-  grid-template-columns: repeat(10, minmax(0,1fr));
+  grid-template-columns: repeat(10, minmax(auto,1fr));
 }
 
 .matrix-11 {
   display: grid;
-  grid-template-columns: repeat(11, minmax(0,1fr));
+  grid-template-columns: repeat(11, minmax(auto,1fr));
 }
 
 .matrix-12 {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0,1fr));
+  grid-template-columns: repeat(12, minmax(auto,1fr));
 }
 
 .matrix-rhythm-0 {
@@ -2763,67 +2763,67 @@ exports[`use rem 1`] = `
 
   .sm\\\\:matrix-0 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-1 {
     display: grid;
-    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-2 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-3 {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
+    grid-template-columns: repeat(3, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-4 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-columns: repeat(4, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-5 {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
+    grid-template-columns: repeat(5, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-6 {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0,1fr));
+    grid-template-columns: repeat(6, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-7 {
     display: grid;
-    grid-template-columns: repeat(7, minmax(0,1fr));
+    grid-template-columns: repeat(7, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-8 {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0,1fr));
+    grid-template-columns: repeat(8, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-9 {
     display: grid;
-    grid-template-columns: repeat(9, minmax(0,1fr));
+    grid-template-columns: repeat(9, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-10 {
     display: grid;
-    grid-template-columns: repeat(10, minmax(0,1fr));
+    grid-template-columns: repeat(10, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-11 {
     display: grid;
-    grid-template-columns: repeat(11, minmax(0,1fr));
+    grid-template-columns: repeat(11, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-12 {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0,1fr));
+    grid-template-columns: repeat(12, minmax(auto,1fr));
   }
 
   .sm\\\\:matrix-rhythm-0 {

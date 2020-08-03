@@ -44,7 +44,6 @@ Object {
         "matrix": true,
         "measure": true,
         "rhythm": true,
-        "root": 10,
         "snap": true,
         "type": true,
         "useRem": false,
@@ -55,6 +54,7 @@ Object {
         1,
         2,
       ],
+      "root": 10,
       "styles": Object {
         "ruler": Object {
           "color": "rgba(255, 0, 255, 0.3)",
@@ -74,20 +74,20 @@ Object {
       "maxHeight": Object {
         "0": "0px",
         "1": "10px",
+        "100": "100px",
         "2": "20px",
-        "extend": "100px",
       },
       "maxWidth": Object {
-        "extend": "100px",
+        "100": "100px",
       },
       "minHeight": Object {
         "0": "0px",
         "1": "10px",
+        "100": "100px",
         "2": "20px",
-        "extend": "100px",
       },
       "minWidth": Object {
-        "extend": "100px",
+        "100": "100px",
       },
     },
     "flex": Object {

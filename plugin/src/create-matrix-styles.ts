@@ -1,7 +1,6 @@
 import { iTailwindTheme, ICompositorConfig } from './types';
 import {
 	matrixColumns,
-	matrixRows,
 	matrixGap,
 	matrixGapX,
 	matrixGapY,
@@ -22,11 +21,11 @@ export const createMatrixStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { options }: ICompositorConfig = theme('compositor');
+	const { matrix, options }: ICompositorConfig = theme('compositor');
 
 	if (!options.matrix) return;
 
-	const columnsScale = Array.from(new Array(12 + 1), (v, i) => i);
+	const columnsScale = Array.from(new Array(matrix + 1), (v, i) => i);
 
 	const rhythmScale: Array<string> = theme('spacing');
 
@@ -53,15 +52,6 @@ export const createMatrixStyles = ({
 		};
 	});
 
-	const matrixRowsStyles = Object.keys(rhythmScale).map(key => {
-		const rhythm = rhythmScale[key];
-		return {
-			[`.${e(`matrix-rhythm-${key}`)}`]: matrixRows({
-				rhythm,
-			}),
-		};
-	});
-
 	const matrixGapStyles = Object.keys(rhythmScale).map(key => {
 		const rhythm = rhythmScale[key];
 		return {
@@ -72,7 +62,6 @@ export const createMatrixStyles = ({
 	});
 
 	addUtilities(matrixColumnsStyles, ['responsive']);
-	addUtilities(matrixRowsStyles, ['responsive']);
 	addUtilities(matrixGapStyles, ['responsive']);
 	addUtilities(matrixCellStyles, ['responsive']);
 };

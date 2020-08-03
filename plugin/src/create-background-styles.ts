@@ -12,7 +12,7 @@ export const createBackgroundStyles = ({
 	e: any;
 	addUtilities: Function;
 }) => {
-	const { options, baseline, styles }: ICompositorConfig = theme(
+	const { options, root, baseline, styles }: ICompositorConfig = theme(
 		'compositor'
 	);
 
@@ -22,7 +22,7 @@ export const createBackgroundStyles = ({
 
 	const baselineBgStyles = {
 		[`.bg-baseline`]: options.useRem
-			? bgBaselineRel({ baseline, root: options.root, color: rulerColor })
+			? bgBaselineRel({ baseline, root: root, color: rulerColor })
 			: bgBaseline({ baseline, color: rulerColor }),
 	};
 

@@ -3,7 +3,7 @@ import { Style } from '../types';
 export const matrixColumns = ({ columns }: { columns: number }): Style => {
 	const result: Style = {
 		display: 'grid',
-		gridTemplateColumns: `repeat(${columns}, minmax(0,1fr))`,
+		gridTemplateColumns: `repeat(${columns}, minmax(auto,1fr))`,
 	};
 
 	return result;
