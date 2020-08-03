@@ -17,7 +17,7 @@ exports[`baseline styles 1`] = `
 .font-sans-400.text-0\\\\/0 {
   font-size: 10px;
   line-height: 10px;
-  padding-top: 0.4px;
+  padding-top: 3.42px;
   padding-bottom: 0.4px;
 }
 
@@ -31,8 +31,8 @@ exports[`baseline styles 1`] = `
 
 .font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 10px;
-  padding-top: 0.4px;
+  line-height: 20px;
+  padding-top: 3.4199999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -46,8 +46,8 @@ exports[`baseline styles 1`] = `
 
 .font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 10px;
-  padding-top: 0.4px;
+  line-height: 30px;
+  padding-top: 3.4199999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -61,8 +61,8 @@ exports[`baseline styles 1`] = `
 
 .font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 20px;
-  padding-top: 0.4px;
+  line-height: 10px;
+  padding-top: -3.56px;
   padding-bottom: 0.4px;
 }
 
@@ -77,7 +77,7 @@ exports[`baseline styles 1`] = `
 .font-sans-400.text-1\\\\/1 {
   font-size: 20px;
   line-height: 20px;
-  padding-top: 0.4px;
+  padding-top: 6.44px;
   padding-bottom: 0.4px;
 }
 
@@ -91,8 +91,8 @@ exports[`baseline styles 1`] = `
 
 .font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 20px;
-  padding-top: 0.4px;
+  line-height: 30px;
+  padding-top: 6.4399999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -108,7 +108,7 @@ exports[`baseline styles 1`] = `
   .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
     line-height: 10px;
-    padding-top: 0.4px;
+    padding-top: 3.42px;
     padding-bottom: 0.4px;
   }
 
@@ -122,8 +122,8 @@ exports[`baseline styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 10px;
-    padding-top: 0.4px;
+    line-height: 20px;
+    padding-top: 3.4199999999999995px;
     padding-bottom: 0.4px;
   }
 
@@ -137,8 +137,8 @@ exports[`baseline styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 10px;
-    padding-top: 0.4px;
+    line-height: 30px;
+    padding-top: 3.4199999999999995px;
     padding-bottom: 0.4px;
   }
 
@@ -152,8 +152,8 @@ exports[`baseline styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 20px;
-    padding-top: 0.4px;
+    line-height: 10px;
+    padding-top: -3.56px;
     padding-bottom: 0.4px;
   }
 
@@ -168,7 +168,7 @@ exports[`baseline styles 1`] = `
   .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
     line-height: 20px;
-    padding-top: 0.4px;
+    padding-top: 6.44px;
     padding-bottom: 0.4px;
   }
 
@@ -182,8 +182,8 @@ exports[`baseline styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 20px;
-    padding-top: 0.4px;
+    line-height: 30px;
+    padding-top: 6.4399999999999995px;
     padding-bottom: 0.4px;
   }
 
@@ -213,7 +213,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-0\\\\/0 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 6.9799999999999995px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -228,7 +228,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 16.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -243,7 +243,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 26.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -258,7 +258,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 13.959999999999999px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -273,7 +273,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-1\\\\/1 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 23.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -288,7 +288,7 @@ exports[`capheight styles 1`] = `
 
 .font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 33.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -304,7 +304,7 @@ exports[`capheight styles 1`] = `
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 6.9799999999999995px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -319,7 +319,7 @@ exports[`capheight styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 16.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -334,7 +334,7 @@ exports[`capheight styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 26.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -349,7 +349,7 @@ exports[`capheight styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 13.959999999999999px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -364,7 +364,7 @@ exports[`capheight styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 23.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -379,7 +379,7 @@ exports[`capheight styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 33.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -410,7 +410,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-0\\\\/0 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 6.9799999999999995px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -425,7 +425,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 16.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -440,7 +440,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 26.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -455,7 +455,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 13.959999999999999px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -470,7 +470,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-1\\\\/1 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 23.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -485,7 +485,7 @@ exports[`measure styles 1`] = `
 
 .font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 33.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -509,7 +509,7 @@ exports[`measure styles 1`] = `
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 6.9799999999999995px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -524,7 +524,7 @@ exports[`measure styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 16.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -539,7 +539,7 @@ exports[`measure styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 26.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -554,7 +554,7 @@ exports[`measure styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 13.959999999999999px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -569,7 +569,7 @@ exports[`measure styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 23.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -584,7 +584,7 @@ exports[`measure styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 33.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -623,7 +623,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-0\\\\/0 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 6.9799999999999995px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -638,7 +638,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 16.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -653,7 +653,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 10px;
+  line-height: 26.98px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -668,7 +668,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 13.959999999999999px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -683,7 +683,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-1\\\\/1 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 23.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -698,7 +698,7 @@ exports[`rhythm styles 1`] = `
 
 .font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 20px;
+  line-height: 33.96px;
   padding-top: 0.4px;
   padding-bottom: 0.4px;
 }
@@ -750,7 +750,7 @@ exports[`rhythm styles 1`] = `
 @media (min-width: 640px) {
   .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 6.9799999999999995px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -765,7 +765,7 @@ exports[`rhythm styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 16.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -780,7 +780,7 @@ exports[`rhythm styles 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 10px;
+    line-height: 26.98px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -795,7 +795,7 @@ exports[`rhythm styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 13.959999999999999px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -810,7 +810,7 @@ exports[`rhythm styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 23.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -825,7 +825,7 @@ exports[`rhythm styles 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 33.96px;
     padding-top: 0.4px;
     padding-bottom: 0.4px;
   }
@@ -893,7 +893,7 @@ exports[`use px 1`] = `
 .font-sans-400.text-0\\\\/0 {
   font-size: 10px;
   line-height: 10px;
-  padding-top: 0.4px;
+  padding-top: 3.42px;
   padding-bottom: 0.4px;
 }
 
@@ -907,8 +907,8 @@ exports[`use px 1`] = `
 
 .font-sans-400.text-0\\\\/1 {
   font-size: 10px;
-  line-height: 10px;
-  padding-top: 0.4px;
+  line-height: 20px;
+  padding-top: 3.4199999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -922,8 +922,8 @@ exports[`use px 1`] = `
 
 .font-sans-400.text-0\\\\/2 {
   font-size: 10px;
-  line-height: 10px;
-  padding-top: 0.4px;
+  line-height: 30px;
+  padding-top: 3.4199999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -937,8 +937,8 @@ exports[`use px 1`] = `
 
 .font-sans-400.text-1\\\\/0 {
   font-size: 20px;
-  line-height: 20px;
-  padding-top: 0.4px;
+  line-height: 10px;
+  padding-top: -3.56px;
   padding-bottom: 0.4px;
 }
 
@@ -953,7 +953,7 @@ exports[`use px 1`] = `
 .font-sans-400.text-1\\\\/1 {
   font-size: 20px;
   line-height: 20px;
-  padding-top: 0.4px;
+  padding-top: 6.44px;
   padding-bottom: 0.4px;
 }
 
@@ -967,8 +967,8 @@ exports[`use px 1`] = `
 
 .font-sans-400.text-1\\\\/2 {
   font-size: 20px;
-  line-height: 20px;
-  padding-top: 0.4px;
+  line-height: 30px;
+  padding-top: 6.4399999999999995px;
   padding-bottom: 0.4px;
 }
 
@@ -1038,7 +1038,7 @@ exports[`use px 1`] = `
   .font-sans-400.sm\\\\:text-0\\\\/0 {
     font-size: 10px;
     line-height: 10px;
-    padding-top: 0.4px;
+    padding-top: 3.42px;
     padding-bottom: 0.4px;
   }
 
@@ -1052,8 +1052,8 @@ exports[`use px 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/1 {
     font-size: 10px;
-    line-height: 10px;
-    padding-top: 0.4px;
+    line-height: 20px;
+    padding-top: 3.4199999999999995px;
     padding-bottom: 0.4px;
   }
 
@@ -1067,8 +1067,8 @@ exports[`use px 1`] = `
 
   .font-sans-400.sm\\\\:text-0\\\\/2 {
     font-size: 10px;
-    line-height: 10px;
-    padding-top: 0.4px;
+    line-height: 30px;
+    padding-top: 3.4199999999999995px;
     padding-bottom: 0.4px;
   }
 
@@ -1082,8 +1082,8 @@ exports[`use px 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/0 {
     font-size: 20px;
-    line-height: 20px;
-    padding-top: 0.4px;
+    line-height: 10px;
+    padding-top: -3.56px;
     padding-bottom: 0.4px;
   }
 
@@ -1098,7 +1098,7 @@ exports[`use px 1`] = `
   .font-sans-400.sm\\\\:text-1\\\\/1 {
     font-size: 20px;
     line-height: 20px;
-    padding-top: 0.4px;
+    padding-top: 6.44px;
     padding-bottom: 0.4px;
   }
 
@@ -1112,8 +1112,8 @@ exports[`use px 1`] = `
 
   .font-sans-400.sm\\\\:text-1\\\\/2 {
     font-size: 20px;
-    line-height: 20px;
-    padding-top: 0.4px;
+    line-height: 30px;
+    padding-top: 6.4399999999999995px;
     padding-bottom: 0.4px;
   }
 
