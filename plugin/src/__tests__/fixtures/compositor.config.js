@@ -1,17 +1,17 @@
+const root = 10;
+
 const baseline = 10;
 
 const leading = 2;
 
-// type scale in px
+const matrix = 6;
+
 const type = [10, 20];
 
-// rhythm scale in baseline units
 const rhythm = [0, 1, 2];
 
-// measure scale in characters unit
 const measure = [10, 20];
 
-// font config
 const fonts = [
 	{
 		key: 'sans-400',
@@ -21,7 +21,7 @@ const fonts = [
 		xHeight: 525,
 		capHeight: 698,
 		ascent: 1025,
-    lineGap: 0,
+		lineGap: 0,
 		descent: -275,
 		weight: 400,
 		italic: false,
@@ -29,19 +29,21 @@ const fonts = [
 ];
 
 module.exports = {
+	root,
 	baseline,
 	leading,
+	matrix,
 	type,
 	rhythm,
 	measure,
 	fonts,
 	options: {
 		useRem: false,
-		root: 10,
 		snap: true,
 		type: true,
 		rhythm: true,
 		measure: true,
+		matrix: true,
 		xray: true,
 	},
 };

@@ -1,8 +1,16 @@
+import { ICompositorConfig } from './types';
+
 // baseline grid row height in px
-export const baseline = 4;
+export const root = 16;
+
+// baseline grid row height in px
+export const baseline = 8;
 
 // max leading count
-export const leading = 8;
+export const leading = 4;
+
+// matrix columns
+export const matrix = 12;
 
 // type scale in px
 export const type = [
@@ -84,11 +92,11 @@ export const fonts = [
 ];
 
 export const options = {
-	root: 16,
+	snap: true,
 	useRem: true,
-	xray: true,
-	baseline: true,
-	capheight: true,
+	type: true,
 	rhythm: true,
 	measure: true,
+	matrix: true,
+	xray: true,
 };

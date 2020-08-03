@@ -55,16 +55,18 @@ export type FontsConfig = Array<FontConfigFile | iFontOpenType>;
 export interface UtilityOptions {
 	useRem: boolean;
 	snap: boolean;
-	root?: number;
 	type: boolean;
 	rhythm: boolean;
 	measure: boolean;
+	matrix: boolean;
 	xray: boolean;
 }
 
 export interface ICompositorConfig {
+	root: number;
 	baseline: number;
 	leading: number;
+	matrix: number;
 	type: NumberScale;
 	measure: NumberScale;
 	rhythm: NumberScale;

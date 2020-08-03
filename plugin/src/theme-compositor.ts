@@ -20,6 +20,8 @@ import scaleAddSuffix from './utils/scale-add-suffix';
 const cacheFileName = '.compositor';
 
 import {
+	root as defaultRoot,
+	matrix as defaultMatrix,
 	type as defaultType,
 	rhythm as defaultRhythm,
 	measure as defaultMeasure,
@@ -71,6 +73,7 @@ export const compositor = (compositorConfig: ICompositorConfig) => (
 	// to transform to px or rem usings
 	// based on useRem, root and baseline params
 	const {
+		root = defaultRoot,
 		baseline = defaultBaseline,
 		fonts = defaultFonts as FontsConfig,
 		type = defaultType,
@@ -82,8 +85,8 @@ export const compositor = (compositorConfig: ICompositorConfig) => (
 
 	const options: UtilityOptions = merge(defaultOptions, configOptions);
 
-	if (options.useRem && !is.exists(options.root)) {
-		throw 'With options.useRem:true, options.root is required';
+	if (options.useRem && !is.exists(root)) {
+		throw 'With options.useRem:true, root is required';
 	}
 
 	if (!fontsCached) {
@@ -106,14 +109,14 @@ export const compositor = (compositorConfig: ICompositorConfig) => (
 	// type scale is described in px units
 	// so transform to rem or px
 	// depending on useRem
-	const typeScale = options.useRem ? pxScaleToRem(options.root)(type) : type;
+	const typeScale = options.useRem ? pxScaleToRem(root)(type) : type;
 
 	// [1,2,3,4,5]
 	// rhythm scale is described in baseline units
 	// transform to tailwind format
 	// rem or px depending on useRem param
 	const spacingScale = options.useRem
-		? baselineScaleToRem(baseline)(options.root)(rhythm)
+		? baselineScaleToRem(baseline)(root)(rhythm)
 		: baselineScaleToPx(baseline)(rhythm);
 
 	//

@@ -1,10 +1,15 @@
 const path = require('path');
 
+// root font size
+const root = 16;
+
 // baseline grid row height in px
 const baseline = 8;
 
 // max leading count
 const leading = 4;
+
+const matrix = 12;
 
 // type scale in px
 const type = [
@@ -59,19 +64,21 @@ const fonts = [
 ];
 
 module.exports = {
+	root,
 	baseline,
 	leading,
+	matrix,
 	type,
 	rhythm,
 	measure,
 	fonts,
 	options: {
-		root: 16,
 		useRem: true,
 		snap: true,
 		type: true,
 		rhythm: true,
 		measure: true,
+		matrix: true,
 		xray: true,
 	},
 };

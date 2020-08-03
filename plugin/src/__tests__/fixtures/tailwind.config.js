@@ -46,16 +46,16 @@ module.exports = {
 		},
 		extend: {
 			maxHeight: {
-				extend: '100px',
+				'100': '100px',
 			},
 			maxWidth: {
-				extend: '100px',
+				'100': '100px',
 			},
 			minHeight: {
-				extend: '100px',
+				'100': '100px',
 			},
 			minWidth: {
-				extend: '100px',
+				'100': '100px',
 			},
 		},
 	},

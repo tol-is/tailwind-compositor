@@ -49,12 +49,17 @@ module.exports = {
 
 ```
 const compositorConfig = {
+  // root unit
+  root: 16,
 
   // baseline grid height in px units
   baseline: 8,
 
   // maximum leading
   leading: 4,
+
+  // matrix max columns
+  matrix: 4,
 
   // type scale in px units
   type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72],
@@ -90,11 +95,11 @@ const compositorConfig = {
   // compositor options
   options: {
     useRem: true,
-    root: 16,
     snap: true,
     type: true,
     rhythm: true,
     measure: true,
+    matrix: true,
     xray: true,
   },
 }
@@ -102,19 +107,31 @@ const compositorConfig = {
 
 ---
 
-#### 1/7 - baseline: integer
+#### 1/9 - root: integer
+
+The root font size, in `px` units.
+
+---
+
+#### 2/9 - baseline: integer
 
 The baseline grid row height, in `px` units.
 
 ---
 
-#### 2/7 - leading: integer
+#### 3/9 - leading: integer
 
 The maximum leading value in baseline units.
 
 ---
 
-#### 3/7 - type : array[integer]
+#### 4/9 - matrix: integer
+
+The maximum columns on the matrix utility
+
+---
+
+#### 5/9 - type : array[integer]
 
 ```
 type: [16, 18, 20, 22, 24, 28, 30, 32, 40, 48, 56, 60, 72]
@@ -124,7 +141,7 @@ The system's typographic scale, in `px` units.
 
 ---
 
-#### 4/7 - rhythm : array[integer]
+#### 6/9 - rhythm : array[integer]
 
 ```
 rhythm: [0, 1, 2, 3, 4, 5, 6, 8, 10, 12]
@@ -134,7 +151,7 @@ The system's size and spacing scale, in `baseline` units, used for `rhythm`, `ma
 
 ---
 
-#### 5/7 - measure : array[integer]
+#### 7/9 - measure : array[integer]
 
 ```
 measure: [10, 15, 20, 30, 35, 50, 55, 60, 65]
@@ -144,7 +161,7 @@ Separate scale used for `measure` (line-width) utilities, configured in `ch` uni
 
 ---
 
-#### 6/7 - fonts : array[opentype]
+#### 8/9 - fonts : array[opentype]
 
 The font scale provides all the information needed to render text styles. Each entry describes a font/weight/style set, and only those that are part of the system will be enabled.
 
@@ -193,7 +210,7 @@ The `key` property is used to name the utility classes. The configuration bellow
 
 ---
 
-#### 7/7 - Options : object
+#### 9/9 - Options : object
 
 Options properties, are used to enable/disable individual compositor utilities.
 
@@ -201,22 +218,22 @@ If `useRem` is set to true, compositor will use the root unit value, to transfor
 
 If `snap` is true, compositor will align each line text to the nearest baseline grid row, otherwise will trim the line-height above the capHeight and below the baseline, and apply a constant lineGap between lines of text.
 
--   `root: integer` The root font size `1rem` in `px` units
 -   `useRem: boolean` transform to relative units
 -   `snap: boolean` Align text styles to a baseline grid
     `type: boolean` Enable typographic utilities
 -   `rhythm: boolean` Enable rhythm utilities
 -   `measure: boolean` Enable measure utilities
+-   `matrix: boolean` Enable matrix utilities
 -   `xray: boolean` Enable debug utilities
 
 ```
 options: {
-  root: 16,
   useRem: true,
   snap: true,
   type: true,
   rhythm: true,
   measure: true,
+  matrix: true,
   xray: true,
 }
 ```
@@ -225,7 +242,7 @@ options: {
 
 ## Tailwind Utility Classes
 
-#### 1/6 - Typography
+#### 1/7 - Typography
 
 ##### Font & Font Style
 
@@ -271,7 +288,7 @@ options: {
 
 ---
 
-#### 2/6 - Line Width
+#### 2/7 - Line Width
 
 -   `measure-{measure_scale_index}`
 
@@ -293,7 +310,7 @@ options: {
 
 ---
 
-#### 3/6 - Spacing
+#### 3/7 - Spacing
 
 When the tailwind theme is composed, the rhythm scale is transformed to tailwindcss spacing scale and can be used for all spacing utilities, margin, padding and grid-gap.
 
@@ -315,7 +332,7 @@ When the tailwind theme is composed, the rhythm scale is transformed to tailwind
 
 ---
 
-#### 4/6 - Size
+#### 4/7 - Size
 
 Compositor also applies the spacing scale to tailwind sizing scales, width, min/max width and also height min/max.
 
@@ -333,7 +350,7 @@ Compositor also applies the spacing scale to tailwind sizing scales, width, min/
 
 ---
 
-#### 5/6 - Lobotomized Owls
+#### 5/7 - Lobotomized Owls
 
 -   Vertical rhythm (alias): `rhythm-{rhythm_scale_index}`
 -   Vertical rhythm: `rhythm-y-{rhythm_scale_index}`
@@ -355,14 +372,26 @@ Compositor also applies the spacing scale to tailwind sizing scales, width, min/
 
 ---
 
-#### 6/6 - Dev Utils
+#### 6/7 - Matrix Utils
+
+##### Matrix
+-   Matrix: `matrix-{columns_length}`
+-   Matrix Gap: `matrix-gap-{rhythm_scale_index}`
+-   Matrix Gap X: `matrix-gap-x-{rhythm_scale_index}`
+-   Matrix Gap Y: `matrix-gap-y-{rhythm_scale_index}`
+
+##### Cells
+By default every child of the matrix, will be placed in the next available column and will span for 1 column. In many cases you might not need any cell utilities or only the `cell-span-x` utility.
+
+-   Cell Start X: `cell-start-x-{columns_index}`
+-   Cell Span X: `cell-span-x-{columns_index}`
+
+---
+
+#### 7/7 - Dev Utils
 
 -   Background grid lines: `bg-baseline`
 
 ```
 <section class="bg-baseline" />
 ```
-
----
-
-_Inspired by [basekick](https://github.com/michaeltaranto/basekick)_

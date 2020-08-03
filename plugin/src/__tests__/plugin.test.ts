@@ -57,9 +57,10 @@ test('baseline styles', () => {
 		options: {
 			useRem: false,
 			snap: true,
-      type: true,
+			type: true,
 			rhythm: false,
 			measure: false,
+			matrix: false,
 			xray: false,
 		},
 	};
@@ -73,9 +74,10 @@ test('capheight styles', () => {
 		options: {
 			useRem: false,
 			snap: false,
-      type: true,
+			type: true,
 			rhythm: false,
 			measure: false,
+			matrix: false,
 			xray: false,
 		},
 	};
@@ -89,9 +91,10 @@ test('rhythm styles', () => {
 		options: {
 			useRem: false,
 			snap: false,
-      type: false,
+			type: false,
 			rhythm: true,
 			measure: false,
+			matrix: false,
 			xray: false,
 		},
 	};
@@ -105,9 +108,27 @@ test('measure styles', () => {
 		options: {
 			useRem: false,
 			snap: false,
-      type: false,
+			type: false,
 			rhythm: false,
 			measure: true,
+			matrix: false,
+			xray: false,
+		},
+	};
+	return createPostCSSConfig({ config: config }).then(css => {
+		expect(css).toMatchSnapshot();
+	});
+});
+
+test('matrix styles', () => {
+	const config = {
+		options: {
+			useRem: false,
+			snap: false,
+			type: false,
+			rhythm: false,
+			measure: false,
+			matrix: true,
 			xray: false,
 		},
 	};

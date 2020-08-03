@@ -17,6 +17,7 @@ export const createTextStyles = ({
 	addUtilities: Function;
 }) => {
 	const {
+		root,
 		baseline,
 		leading,
 		fonts,
@@ -40,11 +41,11 @@ export const createTextStyles = ({
 					// create baseline styles
 					const outputTextStyle = styleText({
 						font: font,
+						root: root,
 						baseline: baseline,
 						size: size,
 						leading: lead,
 						snap: options.snap,
-						root: options.root,
 						useRem: options.useRem,
 					});
 
