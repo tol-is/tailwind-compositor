@@ -59,6 +59,7 @@ export interface UtilityOptions {
 	type: boolean;
 	rhythm: boolean;
 	measure: boolean;
+	matrix: boolean;
 	xray: boolean;
 }
 

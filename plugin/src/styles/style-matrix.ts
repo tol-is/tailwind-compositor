@@ -1,26 +1,5 @@
 import { Style } from '../types';
 
-export const gridMatrix = ({
-	columns,
-	rhythm,
-	gapX,
-	gapY,
-}: {
-	columns: number;
-	rhythm: string;
-	gapX: string;
-	gapY: string;
-}): Style => {
-	const result = {
-		...(columns && gridMatrixColumns({ columns })),
-		...(rhythm && gridMatrixRows({ rhythm: rhythm })),
-		...(gapX && gridMatrixGapX({ space: gapX })),
-		...(gapY && gridMatrixGapY({ space: gapY })),
-	};
-
-	return result;
-};
-
 export const gridMatrixColumns = ({ columns }: { columns: number }): Style => {
 	const result: Style = {
 		display: 'grid',
@@ -38,41 +17,21 @@ export const gridMatrixRows = ({ rhythm }: { rhythm?: string }): Style => {
 	return result;
 };
 
-export const gridMatrixCell = ({
-	start,
-	span = 1,
-}: {
-	start?: number;
-	span: number;
-}): Style => {
-	return start
-		? span >= 0
-			? {
-					gridColumn: `${start} / span ${span}`,
-			  }
-			: {
-					gridColumn: `${start} / ${span}`,
-			  }
-		: {
-				gridColumn: `span ${span}`,
-		  };
-};
-
-export const gridMatrixGap = ({ space }: { space: string }): Style => {
+export const gridMatrixGap = ({ rhythm }: { rhythm: string }): Style => {
 	return {
-		gridRowGap: space,
-		gridColumnGap: space,
+		gridRowGap: rhythm,
+		gridColumnGap: rhythm,
 	};
 };
 
-export const gridMatrixGapX = ({ space }: { space: string }): Style => {
+export const gridMatrixGapX = ({ rhythm }: { rhythm: string }): Style => {
 	return {
-		gridColumnGap: space,
+		gridColumnGap: rhythm,
 	};
 };
 
-export const gridMatrixGapY = ({ space }: { space: string }): Style => {
+export const gridMatrixGapY = ({ rhythm }: { rhythm: string }): Style => {
 	return {
-		gridRowGap: space,
+		gridRowGap: rhythm,
 	};
 };

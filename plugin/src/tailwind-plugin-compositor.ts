@@ -4,6 +4,7 @@ import createTextStyles from './create-text-styles';
 import createBackgroundStyles from './create-background-styles';
 import createMeasureStyles from './create-measure-styles';
 import createRhythmStyles from './create-rhythm-styles';
+import createMatrixStyles from './create-matrix-styles';
 
 export const tailwindPluginCompositor = () => {
 	return ({
@@ -19,6 +20,7 @@ export const tailwindPluginCompositor = () => {
 		createBackgroundStyles({ theme, e, addUtilities });
 		createMeasureStyles({ theme, e, addUtilities });
 		createRhythmStyles({ theme, e, addUtilities });
+		createMatrixStyles({ theme, e, addUtilities });
 	};
 };
 

@@ -35,11 +35,13 @@ Object {
         },
       ],
       "leading": 2,
+      "matrix": 6,
       "measure": Object {
         "0": "10ch",
         "1": "20ch",
       },
       "options": Object {
+        "matrix": true,
         "measure": true,
         "rhythm": true,
         "root": 10,

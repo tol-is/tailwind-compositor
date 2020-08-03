@@ -2,6 +2,8 @@ const baseline = 10;
 
 const leading = 2;
 
+const matrix = 6;
+
 // type scale in px
 const type = [10, 20];
 
@@ -21,7 +23,7 @@ const fonts = [
 		xHeight: 525,
 		capHeight: 698,
 		ascent: 1025,
-    lineGap: 0,
+		lineGap: 0,
 		descent: -275,
 		weight: 400,
 		italic: false,
@@ -31,6 +33,7 @@ const fonts = [
 module.exports = {
 	baseline,
 	leading,
+	matrix,
 	type,
 	rhythm,
 	measure,
@@ -42,6 +45,7 @@ module.exports = {
 		type: true,
 		rhythm: true,
 		measure: true,
+		matrix: true,
 		xray: true,
 	},
 };
