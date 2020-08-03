@@ -6,6 +6,8 @@ const baseline = 8;
 // max leading count
 const leading = 4;
 
+const matrix = 12;
+
 // type scale in px
 const type = [
 	12,
@@ -72,6 +74,7 @@ module.exports = {
 		type: true,
 		rhythm: true,
 		measure: true,
+		matrix: true,
 		xray: true,
 	},
 };

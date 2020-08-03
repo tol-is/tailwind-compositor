@@ -1,10 +1,12 @@
 import { iTailwindTheme, ICompositorConfig } from './types';
 import {
-	gridMatrixColumns,
-	gridMatrixRows,
-	gridMatrixGap,
-	gridMatrixGapX,
-	gridMatrixGapY,
+	matrixColumns,
+	matrixRows,
+	matrixGap,
+	matrixGapX,
+	matrixGapY,
+	matrixCellStartX,
+	matrixCellSpanX,
 } from './styles';
 
 /**
@@ -32,8 +34,21 @@ export const createMatrixStyles = ({
 		const columns = columnIndex === 0 ? 1 : columnIndex;
 
 		return {
-			[`.${e(`matrix-${columnIndex}`)}`]: gridMatrixColumns({
+			[`.${e(`matrix-${columnIndex}`)}`]: matrixColumns({
 				columns,
+			}),
+		};
+	});
+
+	const matrixCellStyles = columnsScale.map(columnIndex => {
+		const column = columnIndex === 0 ? 1 : columnIndex;
+
+		return {
+			[`.${e(`cell-start-x-${column}`)}`]: matrixCellStartX({
+				start: column,
+			}),
+			[`.${e(`cell-span-x-${column}`)}`]: matrixCellSpanX({
+				span: column,
 			}),
 		};
 	});
@@ -41,7 +56,7 @@ export const createMatrixStyles = ({
 	const matrixRowsStyles = Object.keys(rhythmScale).map(key => {
 		const rhythm = rhythmScale[key];
 		return {
-			[`.${e(`matrix-rhythm-${key}`)}`]: gridMatrixRows({
+			[`.${e(`matrix-rhythm-${key}`)}`]: matrixRows({
 				rhythm,
 			}),
 		};
@@ -50,15 +65,16 @@ export const createMatrixStyles = ({
 	const matrixGapStyles = Object.keys(rhythmScale).map(key => {
 		const rhythm = rhythmScale[key];
 		return {
-			[`.${e(`matrix-gap-${key}`)}`]: gridMatrixGap({ rhythm }),
-			[`.${e(`matrix-gap-x-${key}`)}`]: gridMatrixGapX({ rhythm }),
-			[`.${e(`matrix-gap-y-${key}`)}`]: gridMatrixGapY({ rhythm }),
+			[`.${e(`matrix-gap-${key}`)}`]: matrixGap({ rhythm }),
+			[`.${e(`matrix-gap-x-${key}`)}`]: matrixGapX({ rhythm }),
+			[`.${e(`matrix-gap-y-${key}`)}`]: matrixGapY({ rhythm }),
 		};
 	});
 
 	addUtilities(matrixColumnsStyles, ['responsive']);
 	addUtilities(matrixRowsStyles, ['responsive']);
 	addUtilities(matrixGapStyles, ['responsive']);
+	addUtilities(matrixCellStyles, ['responsive']);
 };
 
 export default createMatrixStyles;

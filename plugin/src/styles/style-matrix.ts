@@ -1,6 +1,6 @@
 import { Style } from '../types';
 
-export const gridMatrixColumns = ({ columns }: { columns: number }): Style => {
+export const matrixColumns = ({ columns }: { columns: number }): Style => {
 	const result: Style = {
 		display: 'grid',
 		gridTemplateColumns: `repeat(${columns}, minmax(0,1fr))`,
@@ -9,7 +9,7 @@ export const gridMatrixColumns = ({ columns }: { columns: number }): Style => {
 	return result;
 };
 
-export const gridMatrixRows = ({ rhythm }: { rhythm?: string }): Style => {
+export const matrixRows = ({ rhythm }: { rhythm?: string }): Style => {
 	const result: Style = {
 		gridAutoRows: `minmax(${rhythm}, auto)`,
 	};
@@ -17,20 +17,36 @@ export const gridMatrixRows = ({ rhythm }: { rhythm?: string }): Style => {
 	return result;
 };
 
-export const gridMatrixGap = ({ rhythm }: { rhythm: string }): Style => {
+export const matrixCellStartX = ({ start }: { start: number }): Style => {
+	const result: Style = {
+		gridColumnStart: `${start} !important`,
+	};
+
+	return result;
+};
+
+export const matrixCellSpanX = ({ span }: { span: number }): Style => {
+	const result: Style = {
+		gridColumn: `auto / span ${span}`,
+	};
+
+	return result;
+};
+
+export const matrixGap = ({ rhythm }: { rhythm: string }): Style => {
 	return {
 		gridRowGap: rhythm,
 		gridColumnGap: rhythm,
 	};
 };
 
-export const gridMatrixGapX = ({ rhythm }: { rhythm: string }): Style => {
+export const matrixGapX = ({ rhythm }: { rhythm: string }): Style => {
 	return {
 		gridColumnGap: rhythm,
 	};
 };
 
-export const gridMatrixGapY = ({ rhythm }: { rhythm: string }): Style => {
+export const matrixGapY = ({ rhythm }: { rhythm: string }): Style => {
 	return {
 		gridRowGap: rhythm,
 	};
