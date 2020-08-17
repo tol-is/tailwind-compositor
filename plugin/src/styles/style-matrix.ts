@@ -9,9 +9,9 @@ export const matrixColumns = ({ columns }: { columns: number }): Style => {
 	return result;
 };
 
-export const matrixRows = ({ rhythm }: { rhythm?: string }): Style => {
+export const matrixRows = ({ size }: { size?: string }): Style => {
 	const result: Style = {
-		gridAutoRows: `minmax(${rhythm}, auto)`,
+		gridAutoRows: `minmax(${size}, auto)`,
 	};
 
 	return result;
@@ -28,6 +28,22 @@ export const matrixCellStartX = ({ start }: { start: number }): Style => {
 export const matrixCellSpanX = ({ span }: { span: number }): Style => {
 	const result: Style = {
 		gridColumn: `auto / span ${span}`,
+	};
+
+	return result;
+};
+
+export const matrixCellStartY = ({ start }: { start: number }): Style => {
+	const result: Style = {
+		gridRowStart: `${start} !important`,
+	};
+
+	return result;
+};
+
+export const matrixCellSpanY = ({ span }: { span: number }): Style => {
+	const result: Style = {
+		gridRow: `auto / span ${span}`,
 	};
 
 	return result;

@@ -6,6 +6,9 @@ import {
 	matrixGapY,
 	matrixCellStartX,
 	matrixCellSpanX,
+	matrixCellStartY,
+	matrixCellSpanY,
+	matrixRows,
 } from './styles';
 
 /**
@@ -49,12 +52,21 @@ export const createMatrixStyles = ({
 			[`.${e(`cell-span-x-${column}`)}`]: matrixCellSpanX({
 				span: column,
 			}),
+			[`.${e(`cell-start-y-${column}`)}`]: matrixCellStartY({
+				start: column,
+			}),
+			[`.${e(`cell-span-y-${column}`)}`]: matrixCellSpanY({
+				span: column,
+			}),
 		};
 	});
 
 	const matrixGapStyles = Object.keys(rhythmScale).map(key => {
 		const rhythm = rhythmScale[key];
 		return {
+			[`.${e(`matrix-row-h-${key}`)}`]: matrixRows({
+				size: rhythm,
+			}),
 			[`.${e(`matrix-gap-${key}`)}`]: matrixGap({ rhythm }),
 			[`.${e(`matrix-gap-x-${key}`)}`]: matrixGapX({ rhythm }),
 			[`.${e(`matrix-gap-y-${key}`)}`]: matrixGapY({ rhythm }),
