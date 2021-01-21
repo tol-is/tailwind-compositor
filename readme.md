@@ -48,7 +48,7 @@ module.exports = {
 #### - compositor.config.js
 
 ```
-const compositorConfig = {
+module.exports = {
   // root unit
   root: 16,
 
