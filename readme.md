@@ -23,7 +23,7 @@ In your `postcss.config.js` you will need to import your standard `tailwind.conf
 The `{ compositor }` will receive both, merge with your tailwind config, and return a standard tailwind configuration.
 
 ```
-const tailwindcss = require('tailwindcss');]
+const tailwindcss = require('tailwindcss');
 const { compositor } = require('tailwind-compositor');
 
 // import both configurations
@@ -83,7 +83,7 @@ module.exports = {
       capHeight: 2048,
       ascent: 2728,
       descent: -680
-    }
+    },
     {
       key: 'sans-600',
       familyName: "Inter",
@@ -187,7 +187,7 @@ The `key` property is used to name the utility classes. The configuration bellow
   lineGap: 0,
   ascent: 2728,
   descent: -680
-}
+},
 {
   key: 'sans-400i',
   familyName: "Inter",
